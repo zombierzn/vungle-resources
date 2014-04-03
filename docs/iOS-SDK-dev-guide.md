@@ -6,11 +6,11 @@ This guide will show you how you can easily integrate our SDK into your app so y
 
 If you haven't already done so, head over to our dashboard and add your app to your account. You need to do this so that you can get your App ID that you’ll be adding to your app with our SDK. It’s in red on your app’s page.
 
-If you’d rather just jump right in with our sample app, head [[here]]. If you’re using one of the following development platforms, check out our plugins for [[**Adobe Air**]], [Unity-iOS](http://prime31.com/docs#iosVungle), [Unity-Android](http://prime31.com/docs#androidVungle), [Corona](http://docs.coronalabs.com/daily/plugin/vungle/index.html), and [[**Marmalade**]]. Otherwise, read on!
+If you’d rather just jump right in with our sample app, head **here**. If you’re using one of the following development platforms, check out our plugins for **Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona**, and **Marmalade**. Otherwise, read on!
 
 ## 1. Download the SDK
 
-Next, head [[**here**]] to donwload our SDK. Unzip it.
+Next, head **here** to donwload our SDK. Unzip it.
 
 ## 2. Add Our SDk to Your Project
 
