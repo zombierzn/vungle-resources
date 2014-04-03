@@ -6,7 +6,7 @@ This guide will show you how you can easily integrate our SDK into your app so y
 
 If you haven't already done so, head over to our dashboard and add your app to your account. You need to do this so that you can get your App ID that you’ll be adding to your app with our SDK. It’s in red on your app’s page.
 
-If you’d rather just jump right in with our sample app, head **here**. If you’re using one of the following development platforms, check out our plugins for **Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona**, and **Marmalade**. Otherwise, read on!
+If you’d rather just jump right in with our sample app, head [here]{https://github.com/Vungle/vungle-resources/tree/master/iOS-docs/iOS-sample-app). If you’re using one of the following development platforms, check out our plugins for **Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona**, and **Marmalade**. Otherwise, read on!
 
 ## 1. Download the SDK
 
@@ -77,7 +77,7 @@ That's it! Quick start guide complete. Stick around if you'd like to check out s
 
 ## Advanced Settings
 
-Check out our [reference](https://github.com/Vungle/publisher-sdks/blob/master/docs/ios.md) for specific methods that you call to use these settings.
+Check out our [reference](https://github.com/Vungle/vungle-resources/blob/master/iOS-docs/iOS-SDK-API-reference.md) for specific methods that you call to use these settings.
 
 ### Mute
 
@@ -89,7 +89,7 @@ You can choose to be notified whenever a user has completed an ad. A typical use
 
 ### Options
 
-You can choose to pass in a dictionary into playAd which changes the default behaviour of the experience. We’ll list them here, but see the [reference](https://github.com/Vungle/publisher-sdks/blob/master/docs/ios.md) for the specific keys and values that they should take. Each is optional to add to the dictionary, and if omitted they will take a default value. You need to pass in the options each time you show an ad, else the default settings will be used.
+You can choose to pass in a dictionary into playAd which changes the default behaviour of the experience. We’ll list them here, but see the [reference](https://github.com/Vungle/vungle-resources/blob/master/iOS-docs/iOS-SDK-API-reference.md) for the specific keys and values that they should take. Each is optional to add to the dictionary, and if omitted they will take a default value. You need to pass in the options each time you show an ad, else the default settings will be used.
 
 ### Orientations
 
@@ -109,7 +109,7 @@ A switch to determine whether you would like to give the user the option to skip
 
 ### Events
 
-You can implement the VungleSDK Delegate which can alert you to some useful events with regards to the ad experience. See the [reference](https://github.com/Vungle/publisher-sdks/blob/master/docs/ios.md) for specific implementation details.
+You can implement the VungleSDK Delegate which can alert you to some useful events with regards to the ad experience. See the [reference](https://github.com/Vungle/vungle-resources/blob/master/iOS-docs/iOS-SDK-API-reference.md) for specific implementation details.
 
 ### willShowAd
 
