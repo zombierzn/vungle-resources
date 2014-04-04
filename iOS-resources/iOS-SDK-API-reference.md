@@ -46,7 +46,7 @@
   Attaches a logger, that will receive every log sent internally and externally using `log:`. It's up to the developer to properly detach the logger (internally, the logger is retained).
 
 * `- (void)detachLogger:(id<VungleSDKLogger>)logger;`
-  Detacches a logger object.
+  Detaches a logger object.
 
 ### Protocols
 

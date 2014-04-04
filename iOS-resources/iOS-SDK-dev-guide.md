@@ -10,7 +10,7 @@ If you’d rather just jump right in with our sample app, head [here](https://gi
 
 ## 1. Download the SDK
 
-Next, head **here** to donwload our SDK. Unzip it.
+Next, head **here** to download our SDK. Unzip it.
 
 ## 2. Add Our SDk to Your Project
 
