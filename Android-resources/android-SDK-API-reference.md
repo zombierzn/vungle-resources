@@ -199,6 +199,54 @@ public class GameActivity extends android.app.Activity {
 #### The `AdConfig` Object
 
 One global `AdConfig` option controls settings for all ad plays, and you can optionally pass override instances to each ad play. These are the available setters in `AdConfig`:
+<table>
+	<thead>
+		<tr>
+			<th>Method</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>setOrientation</td>
+			<td>Orientation.autoRotate</td>
+			<td>Sets the orientation of the ad. Orientation options include portrait, landscape, or auto</td>
+		</tr>
+		<tr>
+			<td>setSoundEnabled</td>
+			<td>true</td>
+			<td>Sets the starting sound state for the ad. If true, audio respects device volume and sound settings. If false, video begins muted but user may modify</td>
+		</tr>
+		<tr>
+			<td>setIncentivized</td>
+			<td>false</td>
+			<td>Sets the incentivized mode. If true, user will be prompted with a confirmation dialog when attempting to skip the ad. If false, no confirmation is shown.</td>
+		</tr>
+		<tr>
+			<td>setIncentivizedCancelDialogTitle</td>
+			<td>"Close video?"</td>
+			<td>Sets the title of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized.</td>
+		</tr>
+		<tr>
+			<td>setIncentivizedCancelDialogBodyText</td>
+			<td>"Closing this video early will prevent you from earning your reward. Are you sure?"</td>
+			<td>Sets the body of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized.</td>
+		</tr>
+		<tr>
+			<td>setIncentivizedCancelDialogCloseButtonText</td>
+			<td>"Close video"</td>
+			<td>Sets the 'cancel button' text of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized.</td>
+		</tr>
+		<tr>
+			<td>setIncentivizedCancelDialogKeepWatchingButtonText</td>
+			<td>"Keep watching"</td>
+			<td>Sets the 'keep watching button' text of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized.</td>
+		</tr>
+	</tbody>
+
+
+
 | Method        | Default | Description|
 | ------------- |--------------| 
 | setOrientation | Orientation.autoRotate | Sets the orientation of the ad. Orientation options include portrait, landscape, or auto|
