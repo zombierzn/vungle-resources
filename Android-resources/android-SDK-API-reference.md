@@ -244,15 +244,3 @@ One global `AdConfig` option controls settings for all ad plays, and you can opt
 			<td>Sets the 'keep watching button' text of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized.</td>
 		</tr>
 	</tbody>
-
-
-
-| Method        | Default | Description|
-| ------------- |--------------| 
-| setOrientation | Orientation.autoRotate | Sets the orientation of the ad. Orientation options include portrait, landscape, or auto|
-| setSoundEnabled | true | Sets the starting sound state for the ad. If true, audio respects device volume and sound settings. If false, video begins muted but user may modify|
-| setIncentivized | false | Sets the incentivized mode. If true, user will be prompted with a confirmation dialog when attempting to skip the ad. If false, no confirmation is shown.|
-| setIncentivizedCancelDialogTitle | "Close video?" | Sets the title of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized.| 
-| setIncentivizedCancelDialogBodyText | "Closing this video early will prevent you from earning your reward. Are you sure?" | Sets the body of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized.| 
-| setIncentivizedCancelDialogCloseButtonText | "Close video" | Sets the 'cancel button' text of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized.| 
-| setIncentivizedCancelDialogKeepWatchingButtonText | "Keep watching" | Sets the 'keep watching button' text of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized.| 
