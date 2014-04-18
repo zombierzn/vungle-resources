@@ -88,7 +88,7 @@ public class FirstActivity extends android.app.Activity {
 
 ##### Each Activity
 
-In addition, override the onPause() and onResume() methods in each `Activity` (including the first) to notify the Publisher SDK when your application gains or loses focus:
+In addition, override the `onPause` and `onResume` methods in each `Activity` (including the first) to notify the Publisher SDK when your application gains or loses focus:
 ```java
 import com.vungle.publisher.VunglePub;
 
@@ -116,7 +116,7 @@ public class EachActivity extends android.app.Activity {
 <a name="advancedStartupConfig"></a>
 ##### Advanced Startup Configuration
 
-After calling `init()` you can optionally get access to the global `AdConfig` object. This object allows you to set options that will be automatically applied to every ad you play.
+After calling `init` you can optionally get access to the global `AdConfig` object. This object allows you to set options that will be automatically applied to every ad you play.
 ```java
 import com.vungle.publisher.VunglePub;
 import com.vungle.publisher.AdConfig;
@@ -134,11 +134,11 @@ public class FirstActivity extends android.app.Activity {
 
       vunglePub.init(this, app_id);
 
-      // get a handle on the global ad config object
+      // get a handle on the global AdConfig object
       final AdConfig globalAdConfig = vunglePub.getGlobalAdConfig();
 
       // set any configuration options you like. 
-      // For a full description of available options, see the end of this document
+      // For a full description of available options, see the 'Configuration Options' section.
       globalAdConfig.setSoundEnabled(true);
       globalAdConfig.setOrientation(Orientation.portrait);
 
@@ -175,7 +175,6 @@ import com.vungle.publisher.VunglePub;
 import com.vungle.publisher.AdConfig;
 
 public class GameActivity extends android.app.Activity {
-
   ...
   
   private void onLevelComplete() {
@@ -183,7 +182,7 @@ public class GameActivity extends android.app.Activity {
   	  final AdConfig overrideConfig = new AdConfig();
 
   	  // set any configuration options you like. 
-  	  // For a full description of available options, see the end of this document
+  	  // For a full description of available options, see the 'Configuration Options' section.
   	  overrideConfig.setIncentivized(true);
   	  overrideConfig.setSoundEnabled(false);
 
@@ -198,7 +197,7 @@ public class GameActivity extends android.app.Activity {
 
 #### The `AdConfig` Object
 
-One global `AdConfig` option controls settings for all ad plays, and you can optionally pass override instances to each ad play. These are the available setters in `AdConfig`:
+One global `AdConfig` object controls settings for all ad plays, and you can optionally pass override instances to each individual ad play. These are the available setters in `AdConfig`:
 <table>
 	<thead>
 		<tr>
@@ -244,3 +243,47 @@ One global `AdConfig` option controls settings for all ad plays, and you can opt
 			<td>Sets the 'keep watching button' text of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized.</td>
 		</tr>
 	</tbody>
+
+#### The `EventListener` Interface
+The Publisher SDK raises several events that you can handle programmatically by implementing `com.vungle.publisher.EventListener` and setting it in your `VunglePub` instance using `setEventListener`
+```java
+import com.vungle.publisher.EventListener;
+...
+
+public class FirstActivity extends android.app.Activity {
+  ...
+
+  private final EventListener vungleListener = new EventListener(){
+
+    @Override
+    public void onVungleView(int watchedMillis, int videoDurationMillis) {
+        // Called each time a video completes      
+    }
+
+    @Override
+    public void onVungleAdStart() {
+        // Called before playing an ad
+    }
+
+    @Override
+    public void onVungleAdEnd() {
+        // Called when the user leaves the ad and control is returned to your application
+    }
+
+    @Override
+    public void onVungleAdPrepared() {
+        // Called when ad is downloaded and ready to be played
+    }
+    
+  };
+
+  @Override
+  public void onCreate(Bundle savedInstanceState) {
+      ...
+
+      vunglePub.init(this, app_id);
+      vunglePub.setEventListener(vungleListener);
+
+  }
+}
+```
