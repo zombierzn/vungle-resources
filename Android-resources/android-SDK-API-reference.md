@@ -217,11 +217,26 @@ One global `AdConfig` object controls settings for all ad plays, and you can opt
 			<td>true</td>
 			<td>Sets the starting sound state for the ad. If true, audio respects device volume and sound settings. If false, video begins muted but user may modify</td>
 		</tr>
+    <tr>
+      <td>setBackButtonImmediatelyEnabled</td>
+      <td>false</td>
+      <td>Enables or disables the back button. If true the user can back out of the ad, otherwise they cannot</td>
+    </tr>
+    <tr>
+      <td>setShowClose</td>
+      <td>true</td>
+      <td>Enables or disables the close button on the video ad. If false, the close button will never appear</td>
+    </tr>
 		<tr>
 			<td>setIncentivized</td>
 			<td>false</td>
-			<td>Sets the incentivized mode. If true, user will be prompted with a confirmation dialog when attempting to skip the ad. If false, no confirmation is shown.</td>
+			<td>Sets the incentivized mode. If true, user will be prompted with a confirmation dialog when attempting to skip the ad. If false, no confirmation is shown</td>
 		</tr>
+    <tr>
+      <td>setIncentivizedUserId</td>
+      <td>""</td>
+      <td>Set the unique user id to be passed to your application to verify that this user should rewarded for watching an incentivized ad. N/A if ad is not incentivized.</td>
+    </tr>
 		<tr>
 			<td>setIncentivizedCancelDialogTitle</td>
 			<td>"Close video?"</td>
