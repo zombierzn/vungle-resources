@@ -243,6 +243,7 @@ One global `AdConfig` object controls settings for all ad plays, and you can opt
 			<td>Sets the 'keep watching button' text of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized.</td>
 		</tr>
 	</tbody>
+</table>
 
 #### The `EventListener` Interface
 The Publisher SDK raises several events that you can handle programmatically by implementing `com.vungle.publisher.EventListener` and setting it in your `VunglePub` instance using `setEventListener`
