@@ -234,7 +234,7 @@ One global `AdConfig` object controls settings for all ad plays, and you can opt
 		</tr>
     <tr>
       <td>setIncentivizedUserId</td>
-      <td>""</td>
+      <td></td>
       <td>Set the unique user id to be passed to your application to verify that this user should rewarded for watching an incentivized ad. N/A if ad is not incentivized.</td>
     </tr>
 		<tr>
@@ -272,22 +272,22 @@ public class FirstActivity extends android.app.Activity {
   private final EventListener vungleListener = new EventListener(){
 
     @Override
-    public void onVungleView(int watchedMillis, int videoDurationMillis) {
-        // Called each time a video completes      
+    public void onVideoView(boolean isCompletedView, int watchedMillis, int videoDurationMillis) {
+        // Called each time a video completes. isCompletedView is true if the video was not skipped.     
     }
 
     @Override
-    public void onVungleAdStart() {
+    public void onAdStart() {
         // Called before playing an ad
     }
 
     @Override
-    public void onVungleAdEnd() {
+    public void onAdEnd() {
         // Called when the user leaves the ad and control is returned to your application
     }
 
     @Override
-    public void onVungleAdPrepared() {
+    public void onCachedAdAvailable() {
         // Called when ad is downloaded and ready to be played
     }
     
