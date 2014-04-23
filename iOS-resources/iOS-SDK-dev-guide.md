@@ -4,6 +4,8 @@
 
 This guide will show you how you can easily integrate our SDK into your app so you can start monetizing!
 
+If you have already integrated a previous version of the Vungle SDK, you'll want to use [this guide](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-migration-guide.md).
+
 If you haven't already done so, head over to our dashboard and add your app to your account. You need to do this so that you can get your App ID that you’ll be adding to your app with our SDK. It’s in red on your app’s page.
 
 If you’d rather just jump right in with our sample app, head [here](https://github.com/Vungle/vungle-resources/tree/master/iOS-resources/iOS-sample-app). If you’re using one of the following development platforms, check out our plugins for **Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona**, and **Marmalade**. Otherwise, read on!
@@ -89,7 +91,7 @@ You can choose to be notified whenever a user has completed an ad. A typical use
 
 ### Options
 
-You can choose to pass in a dictionary into playAd which changes the default behaviour of the experience. We’ll list them here, but see the [reference](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-SDK-API-reference.md) for the specific keys and values that they should take. Each is optional to add to the dictionary, and if omitted they will take a default value. You need to pass in the options each time you show an ad, else the default settings will be used.
+You can choose to pass in a dictionary into playAd which changes the default behaviour of the experience. We’ll list them here, but see the [reference](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-SDK-API-reference.md) for the specific keys and values that they should take. Each is optional to add to the dictionary, and if omitted they will take a default value. You need to pass in the options each time you show an ad, else the default settings will be used. You can also find an example of an options dictionary on [line 70](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-sample-app/Vungle%20Sample%20App/FirstViewController.m) of the sample app.
 
 ### Orientations
 
