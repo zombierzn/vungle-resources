@@ -1,6 +1,6 @@
-# Android Publisher SDK API Reference
+# VungleSDK 
 
-## VungleSDK
+## Android Developer Guide
 
 ### Overview
 

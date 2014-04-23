@@ -1,6 +1,6 @@
-# iOS Publisher SDK API Reference
+# VungleSDK
 
-## VungleSDK
+## iOS Publisher SDK API Reference
 
 ### Properties
 

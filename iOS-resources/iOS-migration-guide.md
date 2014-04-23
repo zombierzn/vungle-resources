@@ -1,4 +1,6 @@
-# Vungle iOS Migration Guide
+# VungleSDK 
+
+## iOS Migration Guide
 
 ## Before You Begin...
 
