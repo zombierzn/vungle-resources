@@ -70,9 +70,11 @@ VungleSDK* sdk = [VungleSDK sharedSDK];
 [sdk playAd:self];
 ```
 
-* Options object: To configure an ad's mute settings, orientation, and other customizeable options, you will now be creating and passing in a dictionary. See [line 70 of the sample app](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-sample-app/Vungle%20Sample%20App/FirstViewController.m) for an example. The advanced settings below will cover the rest.
+### Want to change the ads' default settings?
 
-* Incentivized ads: This will also be an option in your dictionary. There are no longer separate methods to play incentivized and non-incentivized ads.
+* **Options object:** To configure an ad's mute settings, orientation, and other customizeable options, you will now be creating and passing in a dictionary. See [line 70 of the sample app](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-sample-app/Vungle%20Sample%20App/FirstViewController.m) for an example. The advanced settings below will cover the rest.
+
+* **Incentivized ads:** This will also be an option in your dictionary. There are no longer separate methods to play incentivized and non-incentivized ads.
 
 That's it! Migration guide complete. Stick around to learn more about customizing your ads!
 
