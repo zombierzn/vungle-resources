@@ -4,9 +4,9 @@
 
 This guide will show you how to upgrade to our newest SDK- version 3.0!
 
-### Here are a few important tips:
+If you're new to Vungle, you'll want to use [this guide](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-SDK-dev-guide.md).
 
-* This guide is for those of you who already have an older version of our SDK in your app. If you're new to Vungle, you'll want to use [this guide](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-SDK-dev-guide.md).
+### Here are a few important tips:
 
 * **This is a brand-new SDK!** As you go through this guide, you'll want to check **all** of your existing Vungle-related code. Our public methods have changed, but they will generally have an equivalent. 
 
