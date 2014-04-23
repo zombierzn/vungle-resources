@@ -8,7 +8,7 @@ If you have already integrated a previous version of the Vungle SDK, you'll want
 
 ### Here are a few important tips:
 
-8 If you haven't already done so, head over to our dashboard and add your app to your account. You need to do this so that you can get your App ID that you’ll be adding to your app with our SDK. It’s in red on your app’s page.
+* If you haven't already done so, head over to our dashboard and add your app to your account. You need to do this so that you can get your App ID that you’ll be adding to your app with our SDK. It’s in red on your app’s page.
 
 * If you’d rather just jump right in with our sample app, head [here](https://github.com/Vungle/vungle-resources/tree/master/iOS-resources/iOS-sample-app). 
 
