@@ -4,11 +4,11 @@
 
 This guide will show you how to upgrade to our newest SDK- version 3.0!
 
-Here are a few important tips:
+### Here are a few important tips:
 
 * This guide is for those of you who already have an older version of our SDK in your app. If you're new to Vungle, you'll want to use [this guide](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-SDK-dev-guide.md).
 
-* This is a brand-new SDK! As you go through this guide, you'll want to check **all** of your existing Vungle-related code. Our public methods have changed, but they will generally have an equivalent. 
+* **This is a brand-new SDK!** As you go through this guide, you'll want to check **all** of your existing Vungle-related code. Our public methods have changed, but they will generally have an equivalent. 
 
 * Our new SDK comes with a sample app, which is also available [here](https://github.com/Vungle/vungle-resources/tree/master/iOS-docs/iOS-sample-app). The Github version is missing our SDK, but a full copy is included in your SDK download.
 
@@ -40,9 +40,6 @@ Add the following if you haven't already:
 
 It's also a good idea to check that the VungleSDK framework appears in there. If the drag-n-drop didn't link it automatically, then manually add it by clicking the '+' and then 'Add Other'.
 
-
-
-
 ## 3. Initialize the Vungle SDK
 
 Find the code you've used to initialize our SDK and replace it with the following:
@@ -60,6 +57,8 @@ VungleSDK* sdk = [VungleSDK sharedSDK];
 [sdk startWithAppId:appID];
 ```
 
+* The SDK no longer needs to be shut down, so you can remove [VGVunglePub stop] from your application delegate's applicationWillTerminate: method.
+
 ## 4. Play an Ad!
 
 Nearly there! Now we just need to play an advert. Make sure you have the correct import statement in any header files. 
@@ -71,9 +70,11 @@ VungleSDK* sdk = [VungleSDK sharedSDK];
 [sdk playAd:self];
 ```
 
-* Please note that you will now be using the above code for **both** incentivized and non-incentivized ads. Incentivized ads are now configured as an option, just like sound and close buttons. See "Advanced Settings" below for instructions. Check out our [sample app](https://github.com/Vungle/vungle-resources/tree/master/iOS-docs/iOS-sample-app) for examples.
+* Options object: To configure an ad's mute settings, orientation, and other customizeable options, you will now be creating and passing in a dictionary. See [line 70 of the sample app](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-sample-app/Vungle%20Sample%20App/FirstViewController.m) for an example. The advanced settings below will cover the rest.
 
-That's it! Migration guide complete. Stick around if your app uses some of the more customized options. As mentioned earlier, the methods have changed, but you'll find something comparable.
+* Incentivized ads: This will also be an option in your dictionary. There are no longer separate methods to play incentivized and non-incentivized ads.
+
+That's it! Migration guide complete. Stick around to learn more about customizing your ads!
 
 
 ## Advanced Settings
