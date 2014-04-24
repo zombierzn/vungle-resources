@@ -113,6 +113,27 @@ public class EachActivity extends android.app.Activity {
 }
 ```
 
+#### 4. Play Video Ad
+
+##### Default Configuration
+
+When you want to actually play the ad in your application, simply call `playAd`
+```java
+import com.vungle.publisher.VunglePub;
+
+public class GameActivity extends android.app.Activity {
+
+  // get the VunglePub instance
+  final VunglePub vunglePub = VunglePub.getInstance();
+
+  ...
+  
+  private void onLevelComplete() {
+      vunglePub.playAd();
+  }
+}
+```
+
 <a name="advancedStartupConfig"></a>
 ##### Advanced Startup Configuration
 
@@ -142,27 +163,6 @@ public class FirstActivity extends android.app.Activity {
       globalAdConfig.setSoundEnabled(true);
       globalAdConfig.setOrientation(Orientation.portrait);
 
-  }
-}
-```
-
-#### 4. Play Video Ad
-
-##### Default Configuration
-
-When you want to actually play the ad in your application, simply call `playAd`
-```java
-import com.vungle.publisher.VunglePub;
-
-public class GameActivity extends android.app.Activity {
-
-  // get the VunglePub instance
-  final VunglePub vunglePub = VunglePub.getInstance();
-
-  ...
-  
-  private void onLevelComplete() {
-      vunglePub.playAd();
   }
 }
 ```
