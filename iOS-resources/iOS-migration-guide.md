@@ -1,4 +1,4 @@
-# Vungle iOS Migration Guide
+# VungleSDK- iOS Migration Guide
 
 ## Before You Begin...
 
@@ -68,9 +68,13 @@ VungleSDK* sdk = [VungleSDK sharedSDK];
 [sdk playAd:self];
 ```
 
-* Please note that you will now be using the above code for **both** incentivized and non-incentivized ads. Incentivized ads are now configured as an option, just like sound and close buttons. See "Advanced Settings" below for instructions. Check out our [sample app](https://github.com/Vungle/vungle-resources/tree/master/iOS-docs/iOS-sample-app) for examples.
+### Want to change the ads' default settings?
 
-That's it! Migration guide complete. Stick around if your app uses some of the more customized options. As mentioned earlier, the methods have changed, but you'll find something comparable.
+* **Options object:** To configure an ad's mute settings, orientation, and other customizeable options, you will now be creating and passing in a dictionary. See [line 70](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-sample-app/Vungle%20Sample%20App/FirstViewController.m) of the sample app for an example. The advanced settings below will cover the rest.
+
+* **Incentivized ads:** This will also be an option in your dictionary. There are no longer separate methods to play incentivized and non-incentivized ads.
+  
+That's it! Migration guide complete. Stick around to learn more about customizing your ads!
 
 
 ## Advanced Settings

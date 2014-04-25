@@ -1,6 +1,4 @@
-# VungleSDK 
-
-## iOS Developer Guide
+# VungleSDK- iOS Developer Guide
 
 ## Before You Begin...
 
