@@ -14,7 +14,7 @@ Applicable to Version 3.0+
 
 * If you’d rather just jump right in with our sample app, head [here](https://github.com/Vungle/vungle-resources/tree/master/iOS-resources/iOS-sample-app). 
 
-* If you’re using one of the following development platforms, check out our plugins for **Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona**, and **Marmalade**. 
+* If you’re using one of the following development platforms, check out our plugins for **Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona**, and **Marmalade**. **NOTE- OUR PARTNERS ARE IN-PROCESS OF UPDATING THESE PLUGINS, WE WILL UPDATE THESE LINKS AS THEY BECOME AVAILABLE**
 
 Otherwise, read on!
 
@@ -88,5 +88,5 @@ That's it! Quick start guide complete. Stick around if you'd like to check out s
 
 ## Advanced Settings
 
-Check out our [API reference](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-SDK-API-reference.md) for instructions on ad customization, debugging, and event callbacks!
+Check out our [advanced settings](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-advanced-settings.md) for instructions on ad customization, debugging, and event callbacks!
 
