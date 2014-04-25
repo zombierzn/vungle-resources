@@ -4,7 +4,7 @@
 
 This guide will show you how to upgrade to our newest SDK- version 3.0!
 
-If you're new to Vungle, you'll want to use [this guide](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-SDK-dev-guide.md).
+If you're new to Vungle, you'll want to use [this guide](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-dev-guide.md).
 
 ### Here are a few important tips:
 
@@ -12,7 +12,7 @@ If you're new to Vungle, you'll want to use [this guide](https://github.com/Vung
 
 * Our new SDK comes with a sample app, which is also available [here](https://github.com/Vungle/vungle-resources/tree/master/iOS-docs/iOS-sample-app). The Github version is missing our SDK, but a full copy is included in your SDK download.
 
-* If you’re using one of the following development platforms, check out our plugins for updates: **Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona**, and **Marmalade**. 
+* If you’re using one of the following development platforms, check out our plugins for updates: **Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona**, and **Marmalade**. **Note- our partners are in-process of updating these plugins, we will update these links as they become available.**
 
 Allright, let's upgrade!
 
@@ -70,7 +70,7 @@ VungleSDK* sdk = [VungleSDK sharedSDK];
 
 ### Want to change the ads' default settings?
 
-* **Options object:** To configure an ad's mute settings, orientation, and other customizeable options, you will now be creating and passing in a dictionary. See [line 70](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-sample-app/Vungle%20Sample%20App/FirstViewController.m) of the sample app for an example. The [API reference](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-SDK-API-reference.md) will cover the rest.
+* **Options object:** To configure an ad's mute settings, orientation, and other customizeable options, you will now be creating and passing in a dictionary. See [line 70](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-sample-app/Vungle%20Sample%20App/FirstViewController.m) of the sample app for an example. The [Advanced Settings](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-advanced-settings.md) will cover the rest.
 
 * **Incentivized ads:** This will also be an option in your dictionary. There are no longer separate methods to play incentivized and non-incentivized ads.
   
@@ -79,4 +79,4 @@ That's it! Migration guide complete. Stick around to learn more about customizin
 
 ## Advanced Settings
 
-Check out our [API reference](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-SDK-API-reference.md) for instructions on ad customization, debugging, and event callbacks!
+Check out our [Advanced Settings](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-advanced-settings.md) for instructions on ad customization, debugging, and event callbacks!
