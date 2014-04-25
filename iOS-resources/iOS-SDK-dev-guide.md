@@ -14,11 +14,13 @@ If you have already integrated a previous version of the Vungle SDK, you'll want
 
 * If you’d rather just jump right in with our sample app, head [here](https://github.com/Vungle/vungle-resources/tree/master/iOS-resources/iOS-sample-app). 
 
-* If you’re using one of the following development platforms, check out our plugins for **Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona**, and **Marmalade**. Otherwise, read on!
+* If you’re using one of the following development platforms, check out our plugins for **Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona**, and **Marmalade**. 
+
+Otherwise, read on!
 
 ## 1. Download the SDK
 
-Next, head **here** to download our SDK. Unzip it.
+Next, head [here](https://v.vungle.com/dev/ios) to download our SDK. Unzip it.
 
 ## 2. Add Our SDk to Your Project
 

@@ -4,7 +4,7 @@
 
 This guide will show you how to upgrade to our newest SDK- version 3.0!
 
-Here are a few important tips:
+### Here are a few important tips:
 
 * This guide is for those of you who already have an older version of our SDK in your app. If you're new to Vungle, you'll want to use [this guide](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-SDK-dev-guide.md).
 
@@ -20,7 +20,7 @@ Allright, let's upgrade!
 
 Remove vunglepub.embeddedframework from your project directory and from Xcode Frameworks.
 
-Next, head **here** to download our new SDK. Unzip it.
+Next, head [here](https://v.vungle.com/dev/ios) to download our new SDK. Unzip it.
 
 ## 2. Frameworks
 
