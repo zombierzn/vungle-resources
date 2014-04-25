@@ -2,6 +2,8 @@
 
 ## Android Developer Guide
 
+Applicable to Version 3.0+
+
 ### Overview
 
 The Publisher SDK allows you to integrate Vungle full screen video ads into your Android application. Please note the following requirements:
