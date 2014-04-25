@@ -17,7 +17,7 @@ You can integrate the Publisher SDK by following these 4 easy steps:
 
 #### 1. Add Vungle SDK To Your Project
 
-[Download](http://bd.vungle.com/dev/android#download) the latest Android Publisher SDK zip file. Unzip it and copy `vungle-publisher-[version].jar` to the `/libs` directory of your project. (Create the directory if it doesn't already exist.)
+[Download](http://bd.vungle.com/dev/android#download) the latest Android Publisher SDK zip file. Unzip it and copy `vungle-publisher-[version].jar`, `javax.inject.jar`, and `android-support-v13.jar` to the `/libs` directory of your project (Create the directory if it doesn't already exist). If you already include the android-support or javax-inject libraries, you won't need to include them again.
 
 This should automatically add the Publisher SDK to your build path.
 
