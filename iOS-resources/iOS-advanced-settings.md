@@ -2,7 +2,7 @@
 
 ## Please note:
 
-This reference covers the more advanced settings and customizeable aspects of Vungle ads. If you're just getting started, you'll want to check out this [guide](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-SDK-dev-guide.md). 
+This reference covers the more advanced settings and customizeable aspects of Vungle ads. If you're just getting started, you'll want to check out this [guide](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-dev-guide.md). 
 
 Applicable to Version 3.0+
 
