@@ -1,5 +1,9 @@
-Welcome to the repository for Vungle mobile video ads.
+Welcome to Vungle's resource hub!
 
-As an alpha tester, you’ve been emailed a zip file with the SDK and a full sample app. You can find our Getting Started Guide [here](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-SDK-dev-guide.md). If you encounter any issues, please write us at alpha-testers@vungle.com.
+Here you'll find developer guides and documentation for our newest SDK's (version 3.0 and up). 
 
-Thank you!
+We've also posted sample apps so you can get a look at some practical integration. Note that our SDK's are not open-sourced, so you'll have to download them [here-iOS](https://v.vungle.com/dev/ios) and [here-Android](https://v.vungle.com/dev/android) for the full versions.
+
+If you encounter any issues, feel free to ping us at tech-support@vungle.com.
+
+Cheers!
