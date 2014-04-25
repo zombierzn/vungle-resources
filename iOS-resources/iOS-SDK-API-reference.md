@@ -4,7 +4,6 @@
 
 ### Properties
 
-* `userData` (`NSDictionary`): holds user data that will be sent to our servers when playing an incentivized ad.
 * `delegate` (`id<VungleSDKDelegate>`): any object that implements Vungle's delegate protocol.
 * `assetLoader` (`id<VungleAssetLoader>`): used mostly for 3rd party plugins (corona, adobe), but you can use it if you want for your own projects: should provide the required assets for vungle's view controller.
 * `incentivizedAlertText` (`NSString`): The string displayed when the user tries to skip an incentivized ad.
