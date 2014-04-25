@@ -14,7 +14,7 @@ Applicable to Version 3.0+
 
 * If you’d rather just jump right in with our sample app, head [here](https://github.com/Vungle/vungle-resources/tree/master/iOS-resources/iOS-sample-app). 
 
-* If you’re using one of the following development platforms, check out our plugins for **Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona**, and **Marmalade**. **NOTE- OUR PARTNERS ARE IN-PROCESS OF UPDATING THESE PLUGINS, WE WILL UPDATE THESE LINKS AS THEY BECOME AVAILABLE**
+* If you’re using one of the following development platforms, check out our plugins for **Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona**, and **Marmalade**. **Note- our partners are in-process of updating these plugins, we will update these links as they become available.**
 
 Otherwise, read on!
 
