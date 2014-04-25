@@ -1,4 +1,4 @@
-# VungleSDK- iOS Publisher SDK Advanced Settings
+# VungleSDK- iOS Advanced Settings
 
 ## Please note:
 
