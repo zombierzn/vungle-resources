@@ -86,50 +86,5 @@ That's it! Quick start guide complete. Stick around if you'd like to check out s
 
 ## Advanced Settings
 
-### Options
-
-You can choose to pass in a dictionary into playAd which changes the default behaviour of the experience. Each is optional to add to the dictionary, and if omitted they will take a default value. You need to pass in the options each time you show an ad, else the default settings will be used. You can find an example of an options dictionary on [line 70](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-sample-app/Vungle%20Sample%20App/FirstViewController.m) of the sample app.
-
-<table>
-	<thead>
-		<tr>
-			<th>Key</th>
-			<th>Default Value</th>
-			<th>Type</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>orientations</td>
-			<td>UIInterfaceOrientationMaskAll</td>
-			<td>An NSNumber representing a bitmask with orientations.</td>
-			<td>Sets the orientation of the ad.</td>
-		</tr>
-		<tr>
-			<td>muted (here or in properties?)</td>
-			<td>NO</td>
-			<td>Sets the starting sound state for the ad. By default, audio respects device volume and sound settings. If YES, video begins muted, but user can toggle sound once the ad unit has started.</td>
-		</tr>
-	    <tr>
-		    <td>showClose</td>
-		    <td>YES</td>
-		    <td>Determines whether you would like to give the user the option to skip out of the video. `YES` means a close button will be displayed. Note that this can be overridden by an option on our dashboard that will remove all skip buttons in your app (which will likely boost your performance).</td>
-	    </tr>
-	    <tr>
-	    	<td>incentivized</td>
-	    	<td>NO</td>
-	    	<td>You can choose to be notified whenever a user has completed an ad. A typical use case of this is when you are offering some sort of value exchange (‘watch this video and receive 100 gems!’). If you choose to make your ads incentivized, we’ll immediately send a message to your server along with a user id (that you provide) so that you can reward your users. `YES` means this ad will be incentivized.</td>
-	    </tr>
-		<tr>
-			<td>userInfo</td>
-			<td></td>
-			<td>An NSDictionary with user info that will be passed if the ad is incentivized. The key `user` is the one passed as `user` in the S2S call (if there are any).</td>
-		</tr>
-	</tbody>
-</table>
-
-### Other
-
-Check out our [reference](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-SDK-API-reference.md) for specific methods that you call to use these settings.
+Check out our [API reference](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-SDK-API-reference.md) for instructions on ad customization, debugging, and event callbacks!
 
