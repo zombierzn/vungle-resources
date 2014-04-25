@@ -10,7 +10,7 @@ Applicable to Version 3.0+
 
 ### Here are a few important tips:
 
-* If you haven't already done so, head over to our dashboard and add your app to your account. You need to do this so that you can get your App ID that you’ll be adding to your app with our SDK. It’s in red on your app’s page.
+* If you haven't already done so, head over to our [dashboard](https://v.vungle.com/dashboard/login) and add your app to your account. You need to do this so that you can get your App ID that you’ll be adding to your app with our SDK. It’s in **red** on your app’s page.
 
 * If you’d rather just jump right in with our sample app, head [here](https://github.com/Vungle/vungle-resources/tree/master/iOS-resources/iOS-sample-app). 
 
@@ -22,7 +22,7 @@ Otherwise, read on!
 
 Next, head [here](https://v.vungle.com/dev/ios) to download our SDK. Unzip it.
 
-## 2. Add Our SDk to Your Project
+## 2. Add VungleSDK to Your Project
 
 ### Add Our Framework
 
@@ -57,7 +57,7 @@ It's also a good idea to check that the VungleSDK framework appears in there. If
 
 We recommend that our ads play without the iOS status bar at the top of the screen for two reasons. Firstly, it makes it easier for the user to close out of our ad experiences. Secondly, they look waaay better. To do this, open up your Info.pList and add the key *"View controller-based status bar appearance"* and set it to *"No"*.
 
-## 4. Initialize the Vungle SDK
+## 4. Initialize the SDK
 
 We strongly recommend that you initialize our SDK as early as possible within your app. We need to pre-cache the first ad before we can play it, so the earlier the better. Add the following:
 
