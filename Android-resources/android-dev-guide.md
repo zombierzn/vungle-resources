@@ -76,7 +76,7 @@ Add the following lines:
 </manifest>
 ```
 
-## 4. Initialize the SDK
+## 4. Initialize & Integrate the SDK
 
 ### Application Startup
 
