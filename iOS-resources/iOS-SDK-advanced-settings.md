@@ -1,4 +1,4 @@
-# VungleSDK- iOS Publisher SDK API Reference
+# VungleSDK- iOS Publisher SDK Advanced Settings
 
 ## Please note:
 
