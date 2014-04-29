@@ -10,7 +10,7 @@ If you're new to Vungle, you'll want to use [this guide](https://github.com/Vung
 
 * **This is a brand-new SDK!** As you go through this guide, you'll want to check **all** of your existing Vungle-related code. Our public methods have changed, but they will generally have an equivalent. 
 
-* Our new SDK comes with a sample app, which is also available [here](https://github.com/Vungle/vungle-resources/tree/master/iOS-docs/iOS-sample-app). The Github version is missing our SDK, but a full copy is included in your SDK download.
+* Our new SDK comes with a sample app, which is also available [here](https://github.com/Vungle/vungle-resources/tree/master/iOS-docs/iOS-sample-app). The Github version is missing our SDK, but you'll be able to check out the source code.
 
 * If you’re using one of the following development platforms, check out our plugins for updates: **Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona**, and **Marmalade**. **Note- our partners are in-process of updating these plugins, we will update these links as they become available.**
 
