@@ -83,7 +83,7 @@ One global `AdConfig` object controls settings for all ad plays, and you can opt
 		<tr>
 			<td>setOrientation</td>
 			<td>Orientation.autoRotate</td>
-			<td>Sets the orientation of the ad. Orientation.matchVideo is the slternate option.</td>
+			<td>Sets the orientation of the ad. Orientation.matchVideo is the alternate option.</td>
 		</tr>
 		<tr>
 			<td>setSoundEnabled</td>
