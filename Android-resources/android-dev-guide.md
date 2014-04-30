@@ -56,11 +56,6 @@ Add the following lines:
     
     <!--
       Required Activity for playback of Vungle video ads
-      
-      NOTE:  The 'configChanges' value 'screenSize' was introduced in Android 3.2 (API level 13).
-      If your 'targetSdKVersion' is less than 13, you can either:
-      * increase your 'targetSdkVersion' to 13 or greater (recommended)
-      * omit the 'screenSize' value
     -->
     <activity
       android:name="com.vungle.publisher.FullScreenAdActivity"
