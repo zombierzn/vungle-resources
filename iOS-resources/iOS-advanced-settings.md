@@ -110,11 +110,11 @@ You can implement the VungleSDK Delegate which can alert you to some useful even
 	</thead>
 	<tbody>
 		<tr>
-			<td>willShowAd</td>
+			<td>(void)vungleSDKwillShowAd</td>
 			<td>This callback will be fired when the SDK is about to play an ad, so this is a useful place to have your game pause, mute, etc.</td>
 		</tr>
 		<tr>
-			<td>willCloseAdWithViewInfo</td>
+			<td>(void)vungleSDKwillCloseAdWithViewInfo: willPresentProductSheet:</td>
 			<td>At the end of our ad, there are two ways for the user to dismiss our unit: either by pressing the close button, or by clicking on the download button, in which case we will open the in-app app-store that iOS provides (using the StoreKit framework).
 
 <p>In both of these cases, this callback will get fired, as our ViewController exits. There is a boolean to alert you whether the ProductSheet will show. If the boolean is false, then this is the time to resume your app’s state. If it’s true, you’ll want to wait until the next callback fires.</p>
@@ -122,7 +122,7 @@ You can implement the VungleSDK Delegate which can alert you to some useful even
 <p>There is also a viewInfo dictionary passed which contains some information about the user’s ad experience, which is useful if you’d like to provide client-side rewards.</p></td>
 		</tr>
 	    <tr>
-		    <td>willCloseProductSheet</td>
+		    <td>(void)vungleSDKwillCloseProductSheet:</td>
 		    <td>This final callback will fire in the case when a user had opted to download the advertised app, and is now closing out of the in-app app store. This is when you’ll want to resume the state of your app.
 </td>
 	    </tr>
@@ -150,7 +150,7 @@ You can implement the VungleSDK Delegate which can alert you to some useful even
  * - "didDownlaod": NSNumber representing a BOOL whether or not the user clicked the download
  *                  button.
  */
-- (void)vungleSDKwillCloseAdWithViewInfo:(NSDictionary*)viewInfo willPrensetProductSheet:(BOOL)willPresentProductSheet;
+- (void)vungleSDKwillCloseAdWithViewInfo:(NSDictionary*)viewInfo willPresentProductSheet:(BOOL)willPresentProductSheet;
 
 /**
  * if implemented, this will get called when the product sheet is about to be closed.
