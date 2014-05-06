@@ -158,3 +158,19 @@ You can implement the VungleSDK Delegate which can alert you to some useful even
 - (void)vungleSDKwillCloseProductSheet:(id)productSheet;
 @end			   
 ```
+
+### Registering The Delegate
+
+You need to explicitly register your delegate with the Vungle SDK. In the class where you implement the delegate methods:
+
+```obj-c
+[[VungleSDK sharedSDK] setDelegate:self];
+```
+
+IMPORTANT: do not forget to unregister the delegate before it disappears! The Vungle SDK retains a copy of your delegate, so it will continue to send messages as long as the delegate is set, which can cause memory leaks. 
+
+You can also do this any time you no longer want to receive messages from the SDK.
+
+```obj-c
+[[VungleSDK sharedSDK] setDelegate:nil];
+```
