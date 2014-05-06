@@ -169,7 +169,7 @@ You need to explicitly register your delegate with the Vungle SDK. In the class 
 
 IMPORTANT: do not forget to unregister the delegate before it disappears! The Vungle SDK retains a copy of your delegate, so it will continue to send messages as long as the delegate is set, which can cause memory leaks. 
 
-You can also do this anytime you no longer want to receive messages from the SDK.
+You can also do this any time you no longer want to receive messages from the SDK.
 
 ```obj-c
 [[VungleSDK sharedSDK] setDelegate:nil];
