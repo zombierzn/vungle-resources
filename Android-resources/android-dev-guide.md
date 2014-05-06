@@ -10,7 +10,7 @@ Applicable to Version 3.0+
 
 ### Requirements
 
-* Android 2.3 (Gingerbread - API version 8) or later
+* Android 2.3 (Gingerbread - API version 9) or later
 * If your application is written in C/C++, you'll need to use JNI to interface with the Publisher SDK written in Java
 
 ### Here are a few important tips:
