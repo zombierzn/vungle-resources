@@ -144,11 +144,11 @@ public class GameActivity extends android.app.Activity {
 }
 ```
 
-<a name="advancedStartupConfig"></a>
+**Tip-** If you'd like to check if a cached ad is available, use: `vunglePub.isCachedAdAvailable();`
 
 That's it! Quick start guide complete. Stick around if you'd like to check out some of the ways you can customize the ad experience, but otherwise go forth and monetize!
 
-
+<a name="advancedStartupConfig"></a>
 ## Advanced Settings
 
 Check out our [advanced settings](https://github.com/Vungle/vungle-resources/blob/master/Android-resources/android-advanced-settings.md) for instructions on ad customization, debugging, and event callbacks!
