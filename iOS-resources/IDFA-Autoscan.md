@@ -1,12 +1,15 @@
 # IDFA- Autoscan
 
-### What is Autoscan?
+### What is Autoscan (and IDFA)?
 
 In April 2014, Apple released a new feature called [Autoscan](http://techcrunch.com/2014/04/11/apple-developers-must-now-agree-to-ad-identifier-rules-or-risk-app-store-rejection/). Upon submission to the App Store, this scanner will verify that your app complies with the guidelines outlined in the [iOS Developer Library](https://developer.apple.com/library/ios/documentation/AdSupport/Reference/ASIdentifierManager_Ref/ASIdentifierManager.html).
 
+In case you're unfamiliar, IDFA is "a temporary device identifier used by Apple devices. It provides device identification while giving end users the ability to limit the device/consumer information accessed by advertisers or apps." -[Techopedia](http://www.techopedia.com/definition/29032/identifier-for-advertisers-ifa-ifda)
+
 ### Why does it concern you?
 
-Many developers had their app rejected by Apple due to an error titled "Improper Advertiser Identifier Usage".
+
+Apple's submission process now uses Autoscan, as well as a section on the submission form, to check apps for proper IDFA usage. Following the recommendations in this document will ensure that your implementation of the Vungle SDK is compliant with Apple's guidelines. If you don't follow these tips, your app could get rejected due to an error titled "Improper Advertiser Identifier Usage".
 
 ### How is Vungle handling this?
 
