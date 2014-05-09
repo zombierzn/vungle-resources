@@ -144,7 +144,7 @@ You can implement the VungleSDK Delegate which can alert you to some useful even
  * a product sheet that will be presented. This point might be a good place to resume your game
  * if there's no product sheet being presented. The viewInfo dictionary will contain the
  * following keys:
- * - "completed": NSNumber representing a BOOL whether or not the video can be considered a
+ * - "completedView": NSNumber representing a BOOL whether or not the video can be considered a
  *                full view.
  * - "playTime": NSNumber representing the time in seconds that the user watched the video.
  * - "didDownlaod": NSNumber representing a BOOL whether or not the user clicked the download
