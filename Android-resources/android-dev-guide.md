@@ -10,7 +10,7 @@ Applicable to Version 3.0+
 
 ### Requirements
 
-* Android 2.2 (Froyo - API version 8) or later
+* Android 2.3 (Gingerbread - API version 9) or later
 * If your application is written in C/C++, you'll need to use JNI to interface with the Publisher SDK written in Java
 
 ### Here are a few important tips:
@@ -47,7 +47,6 @@ Add the following lines:
   <!-- permissions to download and cache video ads for playback -->
   <uses-permission android:name="android.permission.INTERNET" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-  <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   
   <application>
@@ -145,11 +144,11 @@ public class GameActivity extends android.app.Activity {
 }
 ```
 
-<a name="advancedStartupConfig"></a>
+**Tip-** If you'd like to check if a cached ad is available, use: `vunglePub.isCachedAdAvailable();`
 
 That's it! Quick start guide complete. Stick around if you'd like to check out some of the ways you can customize the ad experience, but otherwise go forth and monetize!
 
-
+<a name="advancedStartupConfig"></a>
 ## Advanced Settings
 
 Check out our [advanced settings](https://github.com/Vungle/vungle-resources/blob/master/Android-resources/android-advanced-settings.md) for instructions on ad customization, debugging, and event callbacks!
