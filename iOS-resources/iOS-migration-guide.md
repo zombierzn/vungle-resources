@@ -28,6 +28,8 @@ Next, head [here](https://v.vungle.com/dev/ios) to download our new SDK. Unzip i
 
 From the new SDK download, copy *VungleSDK.embeddedframework/* into your project directory, then drag and drop it into Xcode (*Frameworks*) to have it linked to your project.
 
+Note- the .embeddedframework directory should be added as a group (yellow folder) and not as a reference (blue folder).
+
 ### Add Additional Framework
 
 The new SDK requires an additional framework that was not required in previous versions, so click on your project and head to:
