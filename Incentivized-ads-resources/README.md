@@ -6,7 +6,7 @@ To maximize revenue while maintaining a great UX, Vungle [recommends](http://www
 
 When a user successfully completes an ad view, you can configure a callback from Vungle's servers to your own to notify you of the user's completed action.
 
-One benefit here is control- make changes and updates directly on the server side (no need to push an update). Another is security to prevent replay attacks. 
+One benefit here is control. This method allows you to make changes and updates directly on the server side so there's no need to push an update. Another is security to prevent replay attacks. 
 
 **In-App Rewards**
 
