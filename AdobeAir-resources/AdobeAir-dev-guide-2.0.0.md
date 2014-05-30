@@ -141,7 +141,7 @@ To display an incentivized ad, call displayIncentivizedAd(). You'll want to firs
 if(Vungle.vungle.isAdAvailable())
 { 
 // Parameters for displayIncentivizedAd(name:String=null, showCloseButton:Boolean=false, orientationHint:int=0)
-Vungle.vungle.displayIncentivizedAd(null, false, VungleOrientation.IOS_LANDSCAPE | VungleOrientation.ANDROID_AUTOROTATE);
+Vungle.vungle.displayIncentivizedAd("userName123", false, VungleOrientation.IOS_LANDSCAPE | VungleOrientation.ANDROID_AUTOROTATE);
 }
 ```
 
@@ -212,21 +212,6 @@ You can use the setBackButtonEnabled() and setIncentivizedBackButtonEnabled() me
 Vungle.vungle.setBackButtonEnabled(true); 
 Vungle.vungle.setIncentivizedBackButtonEnabled(true);
 ```
-
-### Configure Video Cache (iOS Only)
-
-You can control how much disk space the Vungle SDK will use as a cache in iOS using the getCacheSize() and setCacheSize() methods:
-
-```as3
-Vungle.vungle.setCacheSize(25); 
-var cacheSize=Vungle.vungle.getCacheSize();
-```
-
-These methods are unsupported on Android, in which case setCacheSize will have no effect and getCacheSize will always return 0. 
-
-The default cache size is 20MB. Note that Vungle cached ads and all other files it uses are stored in an iOS cache directory. That means the files will not be backed up or synced, and they may be automatically purged by the device if it is running low on disk space. 
-
-The size of the videos range from 0.5-2MB, approximately, with the average video size being 1.5MB. Our SDK automatically purges ads that are cached, but not viewed, after 24 hours to ensure that the highest yielding ads for that day get shown. However ads that remain in the cache can be viewed several times, as long as it's within the 24h period.
 
 ## Troubleshooting and FAQ
 
