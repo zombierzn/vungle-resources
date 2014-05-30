@@ -39,7 +39,9 @@ If you're upgrading from a version **prior to 1.3.x**, don't forget to add the n
 
   ...
 
-    <service android:name="com.vungle.publisher.VungleService" android:exported="false"/>
+    <service android:name="com.vungle.publisher.VungleService" android:exported="false"
+      android:exported="false"
+    />
     
   </application>
   
