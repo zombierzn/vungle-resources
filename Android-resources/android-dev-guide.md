@@ -63,7 +63,9 @@ Add the following lines:
     />
     
     
-    <service android:name="com.vungle.publisher.VungleService" android:exported="false"/>
+    <service android:name="com.vungle.publisher.VungleService" android:exported="false"
+      android:exported="false"
+    />
     
   </application>
   
