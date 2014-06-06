@@ -99,7 +99,7 @@ public class GameActivity extends android.app.Activity {
 
 * **AdConfig object:** To configure an ad's mute settings, orientation, and other customizeable options, you will now be configuring this global object. The [Advanced Settings](https://github.com/Vungle/vungle-resources/blob/master/Android-resources/android-advanced-settings.md) will cover the rest.
 
-* **Incentivized ads:** This will also be configured in the ADConfig object. There are no longer separate methods to play incentivized and non-incentivized ads.
+* **Incentivized ads:** This will also be configured in the AdConfig object. There are no longer separate methods to play incentivized and non-incentivized ads.
 
 That's it! Migration guide complete. Stick around to learn more about customizing your ads!
 
