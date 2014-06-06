@@ -78,7 +78,7 @@ One global `AdConfig` object controls settings for all ad plays, and you can opt
 | `setSoundEnabled` | `true` | Sets the starting sound state for the ad. If true, audio respects device volume and sound settings. If false, video begins muted but user may modify |
 | `setBackButtonImmediatelyEnabled` | `false` | Enables or disables the back button. If true the user can back out of the ad, otherwise they cannot |
 | `setShowClose` | `true` | Enables or disables the close button on the video ad. If false, the close button will never appear <br> *Note- this method was deprecated in v3.0.2. You can use the forced view options in your app's advanced settings, on the dashboard |
-| `setIncentivized` | `false` | Sets the incentivized mode. If true, user will be prompted with a confirmation dialog when attempting to skip the ad. If false, no confirmation is shown |
+| `setIncentivized` | `false` | Sets the incentivized mode- you must set this to true if you're using server-to-server callbacks for your rewarded ads. If true, user will be prompted with a confirmation dialog when attempting to skip the ad. If false, no confirmation is shown |
 | `setIncentivizedUserId` | none | Set the unique user id to be passed to your application to verify that this user should rewarded for watching an incentivized ad. N/A if ad is not incentivized. |
 | `setIncentivizedCancelDialogTitle` | "Close video?" | Sets the title of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized. |
 | `setIncentivizedCancelDialogBodyText` | "Closing this video early will prevent you from earning your reward. Are you sure?" | Sets the body of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized. | 
