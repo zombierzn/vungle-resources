@@ -69,11 +69,11 @@ For Vungle to work, changes are required to the application XML file for your ap
       android:configChanges="keyboardHidden|orientation|screenSize"
       android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
     />
+    
+    <service android:name="com.vungle.sdk.VungleIntentService"
+      android:exported="false"
+    />
   </application> 
-
-  <service android:name="com.vungle.sdk.VungleIntentService"
-    android:exported="false"
-  />
 
 </manifest> 
 ]]></manifestAdditions>
