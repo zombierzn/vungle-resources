@@ -14,7 +14,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // REPLACE THIS APPID WITH YOUR OWN (found on dashboard, in red)
-    NSString* appID = @"5330ae09c8bb4291060000f0";
+    NSString* appID = @"vungleTest";
     VungleSDK *sdk = [VungleSDK sharedSDK];
     // start vungle publisher library
     [sdk startWithAppId:appID];

@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.main);
 
         // get your App ID from the app's main page on the Vungle Dashboard after setting up your app
-        final String app_id = "530da5e38f6efc0e0400001d";
+        final String app_id = "vungleTest";
 
         // initialize the Publisher SDK
         vunglePub.init(this, app_id);
