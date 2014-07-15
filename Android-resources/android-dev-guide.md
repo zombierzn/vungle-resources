@@ -72,6 +72,35 @@ Add the following lines:
 </manifest>
 ```
 
+### Additional Steps for SDK Version 3.1.0 or Higher:
+
+1) Add the following to your Manifest:
+
+```xml
+<manifest>
+
+  ...
+  
+  <application>
+
+    <meta-data android:name="com.google.android.gms.version"
+      android:value="@integer/google_play_services_version" />
+
+    ...
+
+  </application>
+  
+</manifest>
+```
+
+2) Add Google Play Services to your project:
+
+http://developer.android.com/google/play-services/setup.html#Setup
+
+3) In your app, ensure that the device has a sufficiently up-to-date version of Google Play Services:
+
+http://developer.android.com/google/play-services/setup.html#ensure
+
 ## 4. Initialize & Integrate the SDK
 
 ### Application Startup
