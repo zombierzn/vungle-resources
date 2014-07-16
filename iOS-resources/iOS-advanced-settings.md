@@ -12,10 +12,13 @@ You can pass a dictionary into playAd which changes the default behaviour of the
 
 | Key          | Default Value / Type | Description | 
 | :----------- | :------------------- |:----------- |
-| `orientations` | `UIInterfaceOrientationMaskAll` <br> An NSNumber representing a bitmask with orientations. | Sets the orientation of the ad. |
-| `showClose` | `YES` <br> NSNumber representing a bool value. | Determines whether you would like to give the user the option to skip out of the video. `YES` means a close button will be displayed. Note that this can be overridden by an option on our dashboard that will remove all skip buttons in your app (which will likely boost your performance). |
-| `incentivized` | `NO` <br> NSNumber representing a bool value. | You can choose to be notified whenever a user has completed an ad. A typical use case of this is when you are offering some sort of value exchange (‘watch this video and receive 100 gems!’). If you choose to make your ads incentivized, we’ll immediately send a message to your server along with a user id (that you provide) so that you can reward your users. `YES` means this ad will be incentivized. |
-| `userInfo` | `nil` <br> NSDictionary with user info that will be passed if the ad is incentivized. | The key `user` is the one passed as `user` in the S2S call (if there are any). | 
+| `VunglePlayAdOptionKeyIncentivized` | `NO` <br> NSNumber representing a bool value. | You can choose to be notified whenever a user has completed an ad. A typical use case of this is when you are offering some sort of value exchange (‘watch this video and receive 100 gems!’). If you choose to make your ads incentivized, we’ll immediately send a message to your server along with a user id (that you provide) so that you can reward your users. YES means this ad will be incentivized. |
+| `VunglePlayAdOptionKeyShowClose` | `NO` <br> NSNumber representing a bool value. | Determines whether you would like to give the user the option to skip out of the video. YES means a close button will be displayed. Note that this can be overridden by an option on our dashboard that will remove all skip buttons in your app (which will likely boost your performance). |
+| `VunglePlayAdOptionKeyOrientations` | `UIInterfaceOrientationMaskAll` <br> An NSNumber representing a bitmask with orientations. | Sets the orientation of the ad. | 
+| `VunglePlayAdOptionKeyUser` | `nil` <br> NSString with user identifier that will be passed if the ad is incentivized. | The key user is the one passed as user in the S2S call (if there are any). | 
+| `VunglePlayAdOptionKeyPlacement` | `nil` <br> NSString that will eventually used for reporting (coming soon!). | You'll want to pass an indicator of which ad was played, for example, 'Level2'. | 
+| `VunglePlayAdOptionKeyExtraInfoDictionary` | `nil` <br> NSDictionary containing the extra keys (defined below). | You can use this to keep track of metrics such as age group, gender, etc. | 
+| `VunglePlayAdOptionKeyExtra1..8` | `nil` <br> NSString representing each user metric you are tracking. | We have 8 keys built in here, for example, `VunglePlayAdOptionKeyExtra1`, `VunglePlayAdOptionKeyExtra2`, and so on. | 
 
 
 ## SDK Instances
