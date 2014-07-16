@@ -1,16 +1,23 @@
 settings = {
+
         orientation = {
                 default = "landscapeRight",
                 supported = {
                         "landscapeLeft"
                 },
         },
+        
         plugins = {
-                -- key is the name passed to Lua's 'require()'
+                -- Add Vungle
                 ["CoronaProvider.ads.vungle"] =
                 {
-                        -- required
                         publisherId = "com.vungle",
                 },
-        },  
+                -- Add Google Play Services
+                ["plugin.google.play.services"] =
+                {
+                        publisherId = "com.coronalabs"
+                },
+        },
+        
 }
