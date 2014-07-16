@@ -39,7 +39,7 @@ If you're upgrading from a version **prior to 1.3.x**, don't forget to add the n
 
   ...
 
-    <service android:name="com.vungle.publisher.VungleService" android:exported="false"
+    <service android:name="com.vungle.publisher.VungleService"
       android:exported="false"
     />
     
@@ -47,6 +47,36 @@ If you're upgrading from a version **prior to 1.3.x**, don't forget to add the n
   
 </manifest>
 ```
+
+### Additional Steps for SDK Version 3.1.0 or Higher:
+
+1) Add the following to your Manifest:
+
+```xml
+<manifest>
+
+  ...
+  
+  <application>
+
+    <meta-data android:name="com.google.android.gms.version"
+      android:value="@integer/google_play_services_version" />
+
+    ...
+
+  </application>
+  
+</manifest>
+```
+
+2) Add Google Play Services to your project:
+
+http://developer.android.com/google/play-services/setup.html#Setup
+
+3) In your app, ensure that the device has a sufficiently up-to-date version of Google Play Services:
+
+http://developer.android.com/google/play-services/setup.html#ensure
+
 
 ## 4. Initialize the Vungle SDK
 
