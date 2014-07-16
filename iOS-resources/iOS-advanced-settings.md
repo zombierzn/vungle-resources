@@ -16,7 +16,7 @@ You can pass a dictionary into playAd which changes the default behaviour of the
 | `VunglePlayAdOptionKeyShowClose` | `NO` <br> NSNumber representing a bool value. | Determines whether you would like to give the user the option to skip out of the video. YES means a close button will be displayed. Note that this can be overridden by an option on our dashboard that will remove all skip buttons in your app (which will likely boost your performance). |
 | `VunglePlayAdOptionKeyOrientations` | `UIInterfaceOrientationMaskAll` <br> An NSNumber representing a bitmask with orientations. | Sets the orientation of the ad. | 
 | `VunglePlayAdOptionKeyUser` | `nil` <br> NSString with user identifier that will be passed if the ad is incentivized. | The key user is the one passed as user in the S2S call (if there are any). | 
-| `VunglePlayAdOptionKeyPlacement` | `nil` <br> NSString that will eventually used for reporting (coming soon!). | You'll want to pass an indicator of which ad was played, for example, 'Level2'. | 
+| `VunglePlayAdOptionKeyPlacement` | `nil` <br> NSString that will eventually be used for reporting (coming soon!). | You'll want to pass an indicator of which ad was played, for example, 'Level2'. | 
 | `VunglePlayAdOptionKeyExtraInfoDictionary` | `nil` <br> NSDictionary containing the extra keys (defined below). | You can use this to keep track of metrics such as age group, gender, etc. | 
 | `VunglePlayAdOptionKeyExtra1..8` | `nil` <br> NSString representing each user metric you are tracking. | We have 8 keys built in here, for example, `VunglePlayAdOptionKeyExtra1`, `VunglePlayAdOptionKeyExtra2`, and so on. | 
 
@@ -61,6 +61,9 @@ You can pass a dictionary into playAd which changes the default behaviour of the
   Attaches a logger, that will receive every log sent internally and externally using `log:`. It's up to the developer to properly detach the logger (internally, the logger is retained).
 * `- (void)detachLogger:(id<VungleSDKLogger>)logger;`
   Detaches a logger object.
+
+* `NSString* VungleSDKVersion`
+  This is not an instance method, it's a constant who's value is the current version of the SDK. You can use this for debugging purposes.
 
 ### SDKLogger Protocol
 
