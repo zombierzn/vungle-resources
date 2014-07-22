@@ -19,4 +19,4 @@ Once you've gotten an ad to play, our [advanced settings](https://github.com/Vun
 * fixed `Activity` and `Fragment` recreation if they are destroyed while in the background
 * fixed sound bug with ads starting muted
 * fixed bugs affecting session length calculation 
-* added `logcat` warning messages for missing permissions and config in `AndroidManifest.xml`
+* added `logcat` warning messages for missing `AndroidManifest.xml` permissions and config
