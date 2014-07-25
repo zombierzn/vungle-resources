@@ -76,7 +76,7 @@ For Vungle to work, changes are required to the application XML file for your ap
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
 
   <application>
-    <meta-data android:name=“com.google.android.gms.version” android:value=“@integer/google_play_services_version”/>
+    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version"/>
 
     <activity
       android:name="com.vungle.publisher.FullScreenAdActivity"
