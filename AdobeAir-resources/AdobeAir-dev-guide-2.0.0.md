@@ -103,26 +103,26 @@ Initialize the API when your application starts. (If using pure ActionScript, do
 
 1. Import the API Classes:
 
-```as3
-import com.vungle.extensions.*; 
-import com.vungle.extensions.events.*;
-```
+  ```as3
+  import com.vungle.extensions.*; 
+  import com.vungle.extensions.events.*;
+  ```
 
 2. Initialize the API by calling Vungle.create(), and passing in an array containing your application ID from the Vungle Dashboard. If you are targeting both iOS and Android from the same project, include both IDs in the array- with the iOS id first and the Android id second.
 
-You should also check the Vungle.isSupported() method first, to ensure the current platform is supported before initializing (for instance, the extension won't run on the Desktop):
+  You should also check the Vungle.isSupported() method first, to ensure the current platform is supported before initializing (for instance, the extension won't run on the Desktop):
 
-```as3
-// check if the current platform supports the extension 
-if (Vungle.isSupported()) 
-{ 
-  // initialize with your app id 
-  Vungle.create(["your_vungle_id"]); 
+  ```as3
+  // check if the current platform supports the extension 
+  if (Vungle.isSupported()) 
+  { 
+    // initialize with your app id 
+    Vungle.create(["your_vungle_id"]); 
 
-  // -OR- initialize including both ios and android ids for multiplatform apps 
-  // Vungle.create(["your_ios_vungle_id","your_android_vungle_id"]); 
-}
-```
+    // -OR- initialize including both ios and android ids for multiplatform apps 
+    // Vungle.create(["your_ios_vungle_id","your_android_vungle_id"]); 
+  }
+  ```
 
 ### Display an Interstitial Ad
 
@@ -166,40 +166,40 @@ The Vungle Extension dispatches three events: VungleEvent.AD_STARTED, VungleEven
 
 1. The AD_STARTED and AD_FINISHED events are dispatched when an ad is displayed and dismissed, respectively:
 
-```as3
-Vungle.vungle.addEventListener(VungleEvent.AD_STARTED, onAdStarted); 
-Vungle.vungle.addEventListener(VungleEvent.AD_FINISHED, onAdFinished); 
- 
-function onAdStarted(e:VungleEvent):void 
-{ 
-  trace("ad displayed"); 
-} 
+  ```as3
+  Vungle.vungle.addEventListener(VungleEvent.AD_STARTED, onAdStarted); 
+  Vungle.vungle.addEventListener(VungleEvent.AD_FINISHED, onAdFinished); 
+   
+  function onAdStarted(e:VungleEvent):void 
+  { 
+    trace("ad displayed"); 
+  } 
 
-function onAdFinished(e:VungleEvent):void
-{ 
-  trace("ad dismissed"); 
-}
-```
+  function onAdFinished(e:VungleEvent):void
+  { 
+    trace("ad dismissed"); 
+  }
+  ```
 
 2. The AD_VIEWED event is triggered when the user is no longer in a Vungle ad, and has watched some portion of the video. The 'watched' property is the amount of time, in seconds, of a video that the user watched. The 'property' is the total length of the video. 
 
-(This event may not be called in some cases, such as when there is a pre-roll HTML asset in the advertisement and the user opts out of the ad before seeing the video.) 
+  (This event may not be called in some cases, such as when there is a pre-roll HTML asset in the advertisement and the user opts out of the ad before seeing the video.) 
 
-For incentivized ads, Vungle considers a viewing where more than 80% of the video was seen as a completed view:
+  For incentivized ads, Vungle considers a viewing where more than 80% of the video was seen as a completed view:
 
-```as3
-Vungle.vungle.addEventListener(VungleEvent.AD_VIEWED, onAdViewed); 
+  ```as3
+  Vungle.vungle.addEventListener(VungleEvent.AD_VIEWED, onAdViewed); 
 
-function onAdStarted(e:VungleEvent):void 
-{ 
-  trace("watched"+e.watched+" of "+e.length+" second video."); 
-  var percentComplete:Number=e.watched/e.length; 
-  if(percentComplete>0.80) 
+  function onAdStarted(e:VungleEvent):void 
   { 
-    trace("counts a completed view- present reward."); 
-  } 
-}
-```
+    trace("watched"+e.watched+" of "+e.length+" second video."); 
+    var percentComplete:Number=e.watched/e.length; 
+    if(percentComplete>0.80) 
+    { 
+      trace("counts a completed view- present reward."); 
+    } 
+  }
+  ```
 
 ### Toggle Auto-rotation
 
