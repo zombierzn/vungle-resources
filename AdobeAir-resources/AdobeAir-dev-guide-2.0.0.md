@@ -2,7 +2,7 @@
 
 ### Before you begin:
 
-* **The Vungle Extension Requires Adobe AIR SDK 3.5 or higher.** For instructions on updating the AIR SDK in Flash Builder or Flash Professional, refer to “How do I update the AIR SDK?” at the end of this guide.
+* **The Vungle Extension Requires Adobe AIR SDK 4.0 or higher.** For instructions on updating the AIR SDK in Flash Builder or Flash Professional, refer to “How do I update the AIR SDK?” at the end of this guide.
 
 * You can view the ActionScript 3 Class Documentation [here](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/index.html).
 
@@ -12,6 +12,8 @@
 
 Start by creating a new AIR for mobile project and adding the native extension.
 
+If targeting *Android*: you may also need to add Google Play Services to your project. Many other extensions include this library already so you might not need to add it. To add the extension, repeat the steps below but use com.vungle.extensions.android.GooglePlayServices.ane instead of com.vungle.extensions.Vungle.ane.
+
 ### In Flash Professional CS6 or Higher:
 
 1. Create a new AIR for Android or AIR for iOS project
@@ -20,7 +22,7 @@ Start by creating a new AIR for mobile project and adding the native extension.
 4. Select the Library Path tab
 5. Click 'Browse for Native Extension (ANE) File' and select the com.vungle.extensions.Vungle.ane file. Press OK
 6. Select the wrench icon next to 'Target' for Player Settings
-7. If targeting *Android*: Select the 'Permissions' tab and enable 'INTERNET', 'WRITE_EXTERNAL_STORAGE', 'ACCESS_WIFI_STATE', and 'ACCESS_NETWORK_STATE'
+7. If targeting *Android*: Select the 'Permissions' tab and enable 'INTERNET', 'WRITE_EXTERNAL_STORAGE', and 'ACCESS_NETWORK_STATE'
 8. Check the 'Manually manage permissions and manifest additions for this app' box
 9. Press OK
 
@@ -37,17 +39,21 @@ Start by creating a new AIR for mobile project and adding the native extension.
 
 For Vungle to work, changes are required to the application XML file for your app. modify the XML file created by your IDE with the following changes (if you're a Flash Professional user, make sure you've followed the steps above for 'Include the Library in Flash Professional CS6 or Higher', otherwise Flash might undo your changes as you make them):
 
-1. Set your AIR SDK to 3.5 (or later) in the app descriptor file:
+1. Set your AIR SDK to 4.0 (or later) in the app descriptor file:
 
-`<application xmlns="http://ns.adobe.com/air/application/3.5">`
+  ```as3
+  <application xmlns="http://ns.adobe.com/air/application/4.0">
+  ```
 
 2. Include a link to the extension in the descriptor:
 
-```as3
-<extensions>
-<extensionID>com.vungle.extensions.Vungle</extensionID>
-</extensions>
-```
+  ```as3
+  <extensions>
+  <extensionID>com.vungle.extensions.Vungle</extensionID>
+  </extensions>
+  ```
+
+3.
 
 ### For AIR Applications Targeting Android
 
@@ -227,11 +233,11 @@ Vungle.vungle.setIncentivizedBackButtonEnabled(true);
 
 5. Build and install the application.
 
-**“How do I install a newer version of the AIR SDK (3.5 or higher) in Flash Professional CS6?”**
+**“How do I install a newer version of the AIR SDK (4.0 or higher) in Flash Professional CS6?”**
 
-You can download the latest AIR SDK [here](http://www.adobe.com/devnet/air/air-sdk-download.html). If you have already installed AIR 3.5 or higher, you may skip this step. Otherwise, follow the instructions below:
+You can download the latest AIR SDK [here](http://www.adobe.com/devnet/air/air-sdk-download.html). If you have already installed AIR 4.0 or higher, you may skip this step. Otherwise, follow the instructions below:
 
-1. Unzip the AIR 3.5 or later SDK package to a location on your hard drive. 
+1. Unzip the AIR 4.0 or later SDK package to a location on your hard drive. 
 
 2. Launch Flash Professional CS6. 
 
@@ -245,7 +251,7 @@ You can download the latest AIR SDK [here](http://www.adobe.com/devnet/air/air-s
 
 7. Select the latest AIR SDK for iOS from the 'Target' Dropdown menu
 
-**“How do I install a newer version of the AIR SDK (3.5 or higher) in Flash Builder?”**
+**“How do I install a newer version of the AIR SDK (4.0 or higher) in Flash Builder?”**
 
-You can download the latest AIR SDK [here](http://www.adobe.com/devnet/air/air-sdk-download.html). If you have already installed AIR 3.5 or higher, you may skip this step. You can find Adobe's latest instructions for updating Flash Builder AIR SDKs [here](http://helpx.adobe.com/flash-builder/kb/overlay-air-sdk-flash-builder.html).
+You can download the latest AIR SDK [here](http://www.adobe.com/devnet/air/air-sdk-download.html). If you have already installed AIR 4.0 or higher, you may skip this step. You can find Adobe's latest instructions for updating Flash Builder AIR SDKs [here](http://helpx.adobe.com/flash-builder/kb/overlay-air-sdk-flash-builder.html).
 
