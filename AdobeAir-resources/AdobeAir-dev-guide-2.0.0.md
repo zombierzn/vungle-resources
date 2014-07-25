@@ -53,11 +53,18 @@ For Vungle to work, changes are required to the application XML file for your ap
   </extensions>
   ```
 
-3.
+3. If targeting *Android*: you may need to include the Google Play Services extension. Add its extension ID here as well.
+
+  ```as3
+  <extensions>
+  <extensionID>com.vungle.extensions.Vungle</extensionID>
+  <extensionID>com.vungle.extensions.android.GooglePlayServices</extensionID>
+  </extensions>
+  ```
 
 ### For AIR Applications Targeting Android
 
-*If targeting Android*, update your Android Manifest Additions in the <android> XML element, to include the INTERNET, WRITE_EXTERNAL_STORAGE, ACCESS_WIFI_STATE permissions; add the VungleAdvert activity definition; and add the VungleIntentService:
+*If targeting Android*, update your Android Manifest Additions in the android XML element, to include the INTERNET, WRITE_EXTERNAL_STORAGE, and ACCESS_NETWORK_STATE permissions; add the FullScreenAdActivity activity definition; add the VungleService service; and add the google-play-services version meta-data tag:  
 
 ```as3
 <android> 
@@ -68,19 +75,19 @@ For Vungle to work, changes are required to the application XML file for your ap
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> 
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
 
-  <application> 
+  <application>
+    <meta-data android:name=“com.google.android.gms.version” android:value=“@integer/google_play_services_version”/>
 
-   <activity
+    <activity
       android:name="com.vungle.publisher.FullScreenAdActivity"
       android:configChanges="keyboardHidden|orientation|screenSize"
       android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
     />
     
-    <service android:name="com.vungle.sdk.VungleIntentService"
+    <service android:name="com.vungle.publisher.VungleService"
       android:exported="false"
     />
   </application> 
-
 </manifest> 
 ]]></manifestAdditions>
 </android>
