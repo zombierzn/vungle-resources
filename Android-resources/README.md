@@ -8,6 +8,17 @@ Once you've gotten an ad to play, our [advanced settings](https://github.com/Vun
 
 ## Changelog
 
+### VERSION 3.1.1
+
+* added geolocation support in apps with `ACCESS_COARSE_LOCATION` or `ACCESS_FINE_LOCATION` permission
+* fixed bug where ads would stop playing until app was restarted
+* fixed bug in reporting streaming ads
+* fixed bug where some ad progress messages were not being sent
+* fixed bug where the ad report of the currently playing ad could be deleted
+* reduced delay between `VunglePub.init()` and initial ad request from 3 seconds to 2 seconds
+* delete old version 1.x.x cache directory if it exists
+* hid some debug logging messages that were being shown in production mode 
+
 ### VERSION 3.1.0
 
 * added support for [Android Advertising ID](https://developer.android.com/google/play-services/id.html)
