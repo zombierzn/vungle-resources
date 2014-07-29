@@ -77,7 +77,7 @@ One global `AdConfig` object controls settings for all ad plays, and you can opt
 | `setOrientation` | `Orientation.autoRotate` | Sets the orientation of the ad. Orientation.matchVideo is the alternate option. This means the ad will play in its ideal orientation (usually landscape). |
 | `setSoundEnabled` | `true` | Sets the starting sound state for the ad. If true, audio respects device volume and sound settings. If false, video begins muted but user may modify |
 | `setBackButtonImmediatelyEnabled` | `false` | Enables or disables the back button. If true the user can back out of the ad, otherwise they cannot |
-| `setShowClose` | `true` | Enables or disables the close button on the video ad. If false, the close button will never appear <br> *Note- this method was deprecated in v3.0.2. You can use the forced view options in your app's advanced settings, on the dashboard |
+| `setShowClose` | `true` | Enables or disables the close button on the video ad. If false, the close button will never appear <br> *Note- this method was deprecated in v3.0.2 and removed in v3.1.0. You can use the forced view options in your app's advanced settings, on the dashboard |
 | `setIncentivized` | `false` | Sets the incentivized mode- you must set this to true if you're using server-to-server callbacks for your rewarded ads. If true, user will be prompted with a confirmation dialog when attempting to skip the ad. If false, no confirmation is shown |
 | `setIncentivizedUserId` | none | Set the unique user id to be passed to your application to verify that this user should rewarded for watching an incentivized ad. N/A if ad is not incentivized. |
 | `setIncentivizedCancelDialogTitle` | "Close video?" | Sets the title of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized. |
@@ -98,7 +98,10 @@ public class FirstActivity extends android.app.Activity {
 
     @Override
     public void onVideoView(boolean isCompletedView, int watchedMillis, int videoDurationMillis) {
-        // Called each time a video completes. isCompletedView is true if the video was not skipped.     
+        // Called each time an ad completes. isCompletedView is true if at least  
+        // 80% of the video was watched, which constitutes a completed view.  
+        // watchedMillis is for the longest video view (if the user replayed the 
+        // video).
     }
 
     @Override
@@ -113,12 +116,12 @@ public class FirstActivity extends android.app.Activity {
 
     @Override
     public void onCachedAdAvailable() {
-        // Called when ad is downloaded and ready to be played
+        // Called when a cached ad is downloaded and ready to be played
     }
     
     @Override
     public void onAdUnavailable() {
-        // Called when play ad is called, but no cached or streaming ad was available
+        // Called when VunglePub.playAd() was called, but no ad was available to play
     }
     
   };
