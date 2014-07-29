@@ -116,6 +116,11 @@ public class FirstActivity extends android.app.Activity {
         // Called when ad is downloaded and ready to be played
     }
     
+    @Override
+    public void onAdUnavailable() {
+        // Called when play ad is called, but no cached or streaming ad was available
+    }
+    
   };
 
   @Override
