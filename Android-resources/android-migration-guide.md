@@ -38,7 +38,26 @@ If you're upgrading from a version **prior to 1.3.x**, don't forget to add the n
 <manifest>
 
   ...
-
+  
+  <!-- permissions to download and cache video ads for playback -->
+  <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  
+  <application>
+  
+    ...
+    
+    <!--
+      Required Activity for playback of Vungle video ads
+    -->
+    <activity
+      android:name="com.vungle.publisher.FullScreenAdActivity"
+      android:configChanges="keyboardHidden|orientation|screenSize"
+      android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+    />
+    
+    
     <service android:name="com.vungle.publisher.VungleService"
       android:exported="false"
     />
