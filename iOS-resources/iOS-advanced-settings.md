@@ -10,6 +10,8 @@ Applicable to Version 3.0+
 
 You can pass a dictionary into playAd which changes the default behaviour of the experience. Each key is optional to add to the dictionary, and if omitted they will take a default value. You need to pass in the dictionary each time you show an ad, else the default settings will be used. You can find an example of an options dictionary on [line 70](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-sample-app/Vungle%20Sample%20App/FirstViewController.m) of the sample app.
 
+* If you are updating from a version prior to 3.0.8, please note that the keys (below) are now constants.
+
 | Key          | Default Value / Type | Description | 
 | :----------- | :------------------- |:----------- |
 | `VunglePlayAdOptionKeyIncentivized` | `NO` <br> NSNumber representing a bool value. | You can choose to be notified whenever a user has completed an ad. A typical use case of this is when you are offering some sort of value exchange (‘watch this video and receive 100 gems!’). If you choose to make your ads incentivized, we’ll immediately send a message to your server along with a user id (that you provide) so that you can reward your users. YES means this ad will be incentivized. |
