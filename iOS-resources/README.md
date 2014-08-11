@@ -8,6 +8,11 @@ Once you've gotten an ad to play, our [advanced settings](https://github.com/Vun
 
 ## Changelog
 
+### VERSION 3.0.9
+
+* improved iOS 5 support
+* fixed TPAT bugs
+
 ### VERSION 3.0.8
 
 * added global playAd options
