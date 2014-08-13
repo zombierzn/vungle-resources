@@ -12,7 +12,7 @@ When a user watches 80% or more of an incentivized ad, it is considered a comple
 
 or
 
-`http://acme.com/bugzBunny/reward?amount=1&uid=%user%&openudid=%udid%&mac=%mac%`
+`http://acme.com/bugzBunny/reward?amount=1&uid=%user%&txid=%txid%&digest=%digest%`
 
 Configure the callback URL in your app's Advanced Settings, on the dashboard. Most publishers only use `%user%`, plus `%txid%` and `%digest%` for security, but all of the following are available:
 
