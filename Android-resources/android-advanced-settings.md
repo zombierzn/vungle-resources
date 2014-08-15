@@ -87,6 +87,13 @@ One global `AdConfig` object controls settings for all ad plays, and you can opt
 
 #### The `EventListener` Interface
 The Publisher SDK raises several events that you can handle programmatically by implementing `com.vungle.publisher.EventListener` and setting it in your `VunglePub` instance using `setEventListener`
+
+Note that the callbacks are executed on a different thread than your main UI thread, so if you interact with your UI in the callback, you will need to use a technique to execute your callback on the main UI thread. Two common ways to run your code on the UI thread include the following:
+
+[Handler](http://developer.android.com/reference/android/os/Handler.html)
+
+[Activity.runOnUiThread(Runnable)](http://developer.android.com/reference/android/app/Activity.html#runOnUiThread(java.lang.Runnable))
+
 ```java
 import com.vungle.publisher.EventListener;
 ...
