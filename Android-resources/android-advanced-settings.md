@@ -74,19 +74,20 @@ One global `AdConfig` object controls settings for all ad plays, and you can opt
 
 | Method | Default | Description |
 |:------ |:------- |:----------- |
-| `setOrientation` | `Orientation.autoRotate` | Sets the orientation of the ad. Orientation.matchVideo is the alternate option. This means the ad will play in its ideal orientation (usually landscape). |
-| `setSoundEnabled` | `true` | Sets the starting sound state for the ad. If true, audio respects device volume and sound settings. If false, video begins muted but user may modify |
-| `setBackButtonImmediatelyEnabled` | `false` | Enables or disables the back button. If true the user can back out of the ad, otherwise they cannot |
-| `setShowClose` | `true` | Enables or disables the close button on the video ad. If false, the close button will never appear <br> *Note- this method was deprecated in v3.0.2 and removed in v3.1.0. You can use the forced view options in your app's advanced settings, on the dashboard |
-| `setIncentivized` | `false` | Sets the incentivized mode- you must set this to true if you're using server-to-server callbacks for your rewarded ads. If true, user will be prompted with a confirmation dialog when attempting to skip the ad. If false, no confirmation is shown |
-| `setIncentivizedUserId` | none | Set the unique user id to be passed to your application to verify that this user should rewarded for watching an incentivized ad. N/A if ad is not incentivized. |
+| `setOrientation` | `Orientation.matchVideo` | `Orientation.autoRotate` indicates that the ad will autorotate with the device orientation. `Orientation.matchVideo` indicates that that the ad will play in the best orientation for the video (usually landscape). |
+| `setSoundEnabled` | `true` | Sets the starting sound state for the ad. If `true`, the audio respects device volume and sound settings. If `false`, video begins muted but user may modify. |
+| `setBackButtonImmediatelyEnabled` | `false` | If `true`, allows the user to immediately exit an ad using the back button.  If `false`, the user cannot use the back button to exit the ad until the on-screen close button is shown.
+| `setShowClose` | `true` | Enables or disables the close button on the video ad. If false, the close button will never appear <br> * Note - this method was deprecated in v3.0.2 and removed in v3.1.0. You can use the forced view options in your app's advanced settings on the [Vungle Dashboard](https://v.vungle.com/). |
+| `setImmersiveMode` | `false` | Enables or disables [immersive mode](https://developer.android.com/training/system-ui/immersive.html) in KitKat+ devices |
+| `setIncentivized` | `false` | Sets the incentivized mode - you must set this to true if you're using server-to-server callbacks for your rewarded ads. If true, user will be prompted with a confirmation dialog when attempting to skip the ad. If false, no confirmation is shown |
+| `setIncentivizedUserId` | none | Sets the unique user id to be passed to your application to verify that this user should rewarded for watching an incentivized ad. N/A if ad is not incentivized. |
 | `setIncentivizedCancelDialogTitle` | "Close video?" | Sets the title of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized. |
 | `setIncentivizedCancelDialogBodyText` | "Closing this video early will prevent you from earning your reward. Are you sure?" | Sets the body of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized. | 
 | `setIncentivizedCancelDialogCloseButtonText` | "Close video" | Sets the 'cancel button' text of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized. | 
 | `setIncentivizedCancelDialogKeepWatchingButtonText` | "Keep watching" | Sets the 'keep watching button' text of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized. |
 
 #### The `EventListener` Interface
-The Publisher SDK raises several events that you can handle programmatically by implementing `com.vungle.publisher.EventListener` and setting it in your `VunglePub` instance using `setEventListener`
+The Publisher SDK raises several events that you can handle programmatically by implementing `com.vungle.publisher.EventListener` and registering it using `VunglePub.setEventListener()`
 
 Note that the callbacks are executed on a different thread than your main UI thread, so if you interact with your UI in the callback, you will need to use a technique to execute your callback on the main UI thread. Two common ways to run your code on the UI thread include the following:
 
