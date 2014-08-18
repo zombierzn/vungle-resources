@@ -29,11 +29,16 @@ Next, head [here](https://v.vungle.com/dev/android) to download our SDK. Unzip i
 
 ## 2. Add VungleSDK To Your Project
 
-Copy `vungle-publisher-[version].jar`, `javax.inject.jar`, and `android-support-v13.jar` to the `/libs` directory of your project. Create the directory if it doesn't already exist. 
+Copy all of the libraries from the unzipped `/libs` directory into your project's `/libs` directory.  Create this directory if it doesn't already exist in your project.  This should automatically add the libraries to the build path of your project.
 
-If you already include the android-support or javax-inject libraries, you won't need to include them again.
+In version 3.2.0+, this should include the following libraries:
+* `dagger-[version].jar`
+* `javax.inject-[version].jar`
+* `nineoldandroids-[version].jar`
+* `support-v4-[version].jar`
+* `vungle-publisher-[version].jar`
 
-This should automatically add the Publisher SDK to your build path.
+If you already include the same versions of any of the above libraries, you don't need to include them again. If you are using a different version of any of the libraries, please test your app to determine which version works best.
 
 ## 3. Update `AndroidManifest.xml`
 
