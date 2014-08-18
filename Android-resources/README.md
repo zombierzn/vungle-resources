@@ -8,6 +8,15 @@ Once you've gotten an ad to play, our [advanced settings](https://github.com/Vun
 
 ## Changelog
 
+### VERSION 3.2.0
+
+* changes to maintain server-determined order for ads
+* added `AdConfig.setImmersiveMode()` to enable immersive mode in KitKat+ devices (default is `false`, which is a change from versions 3.1.1 and prior)
+* added parameter to callback `EventListener.onAdEnd(boolean wasCallToActionClicked)` to indicate whether the user clicked the call-to-action (usually 'Download') button (breaks backwards compatibility)
+* modified `VunglePub.init()` to return a `boolean` indicating whether intialization was successful rather than `void`
+* added missing callbacks to `EventListener.onAdUnavailable()` in a few rare circumstances
+* added Javadoc for `AdConfig`
+
 ### VERSION 3.1.1
 
 * added geolocation support in apps with `ACCESS_COARSE_LOCATION` or `ACCESS_FINE_LOCATION` permission
