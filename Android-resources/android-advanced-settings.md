@@ -117,7 +117,7 @@ public class FirstActivity extends android.app.Activity {
     }
 
     @Override
-    public void onAdEnd() {
+    public void onAdEnd(boolean wasCallToActionClicked) {
         // Called when the user leaves the ad and control is returned to your application
     }
 
