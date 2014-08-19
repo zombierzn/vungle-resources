@@ -8,8 +8,9 @@ Once you've gotten an ad to play, our [advanced settings](https://github.com/Vun
 
 ## Changelog
 
-### VERSION 3.2.0
+### VERSION 3.2.0 
 
+* additional required libs- dagger-[version].jar and nineoldandroids-[version].jar
 * changes to maintain server-determined order for ads
 * added `AdConfig.setImmersiveMode()` to enable immersive mode in KitKat+ devices (default is `false`, which is a change from versions 3.1.1 and prior)
 * added parameter to callback `EventListener.onAdEnd(boolean wasCallToActionClicked)` to indicate whether the user clicked the call-to-action (usually 'Download') button (breaks backwards compatibility)
@@ -28,7 +29,7 @@ Once you've gotten an ad to play, our [advanced settings](https://github.com/Vun
 * delete old version 1.x.x cache directory if it exists
 * hid some debug logging messages that were being shown in production mode 
 
-### VERSION 3.1.0
+### VERSION 3.1.0 
 
 * added support for [Android Advertising ID](https://developer.android.com/google/play-services/id.html)
 * removed references to `android.provider.Settings.Secure.ANDROID_ID`
