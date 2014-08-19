@@ -10,12 +10,12 @@ Once you've gotten an ad to play, our [advanced settings](https://github.com/Vun
 
 ### VERSION 3.2.0 
 
-* additional required libs- dagger-[version].jar and nineoldandroids-[version].jar
 * changes to maintain server-determined order for ads
 * added `AdConfig.setImmersiveMode()` to enable immersive mode in KitKat+ devices (default is `false`, which is a change from versions 3.1.1 and prior)
 * added parameter to callback `EventListener.onAdEnd(boolean wasCallToActionClicked)` to indicate whether the user clicked the call-to-action (usually 'Download') button (breaks backwards compatibility)
 * modified `VunglePub.init()` to return a `boolean` indicating whether intialization was successful rather than `void`
 * added missing callbacks to `EventListener.onAdUnavailable()` in a few rare circumstances
+* unbundled libraries as separate, required jars: `dagger-[version].jar` and `nineoldandroids-[version].jar`
 * added Javadoc for `AdConfig`
 
 ### VERSION 3.1.1
