@@ -144,3 +144,12 @@ public class FirstActivity extends android.app.Activity {
   }
 }
 ```
+### Proguard
+
+If you are using Proguard, please ensure the following lines are in your Proguard config file:
+
+`-keep class com.vungle.** { public *; }`
+
+`-keep class javax.inject.*`
+
+`-keepattributes *Annotation*`
