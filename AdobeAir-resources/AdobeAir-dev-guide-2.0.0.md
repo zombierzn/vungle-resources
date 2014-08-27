@@ -12,7 +12,7 @@
 
 Start by creating a new AIR for mobile project and adding the native extension.
 
-If targeting *Android*: you may also need to add Google Play Services to your project. Many other extensions include this library already so you might not need to add it. To add the extension, repeat the steps below but use com.vungle.extensions.android.GooglePlayServices.ane instead of com.vungle.extensions.Vungle.ane.
+If targeting *Android*: you may also need to add Google Play Services and/or the Android Support v4 library to your project. Many other extensions include these libraries already so you might not need to add them. To add the extensions, repeat the steps below but use com.vungle.extensions.android.GooglePlayServices.ane and/or com.vungle.extensions.android.AndroidSupportLib.ane in place of com.vungle.extensions.Vungle.ane.
 
 ### In Flash Professional CS6 or Higher:
 
@@ -53,12 +53,13 @@ For Vungle to work, changes are required to the application XML file for your ap
   </extensions>
   ```
 
-3. If targeting *Android*: you may need to include the Google Play Services extension. Add its extension ID here as well.
+3. If targeting *Android*: you may need to include the Google Play Services and/or the Android Support Lib extensions. Add their extension IDs here as well.
 
   ```as3
   <extensions>
   <extensionID>com.vungle.extensions.Vungle</extensionID>
   <extensionID>com.vungle.extensions.android.GooglePlayServices</extensionID>
+  <extensionID>com.vungle.extensions.android.AndroidSupportLib</extensionID>
   </extensions>
   ```
 
