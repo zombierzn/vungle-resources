@@ -1,42 +1,43 @@
-# VungleSDK- iOS Developer Guide
+# VungleSDK- iOS開發指南
 
-## Before You Begin...
+## 在你開始之前。。。
 
-This guide will show you how you can easily integrate our SDK into your app so you can start monetizing!
+這份指南能幫助你輕易地安裝SDK到你的APP，讓你開始賺錢。
 
-If you have already integrated a previous version of the Vungle SDK, you'll want to use [this guide](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-migration-guide.md).
+假如你已經安裝了Vungle SDK以前的版本，那你需要看[這份指南](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-migration-guide.md)。
 
-Applicable to Version 3.0+
+應用于版本3.0以上。
 
-### Here are a few important tips:
 
-* If you haven't already done so, head over to our [dashboard](https://v.vungle.com/dashboard/login) and add your app to your account. You need to do this so that you can get your App ID that you’ll be adding to your app with our SDK. It’s in **red** on your app’s page.
+### 幾點重要的建議:
 
-* If you’d rather just jump right in with our sample app, head [here](https://github.com/Vungle/vungle-resources/tree/master/iOS-resources/iOS-sample-app). 
+* 假如你從未安裝過，請先到我們的系統頁面（[儀表板](https://v.vungle.com/dashboard/login)）把你的app加到你的帳戶。使用我們的SDK需要一個App ID, 你可以通過在我們的系統註冊得到一個App (在你的App頁面顯示為**紅色**)
 
-* If you’re using one of the following development platforms, check out our plugins for **Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona**, and **Marmalade**. **Note- our partners are in-process of updating these plugins, we will update these links as they become available.**
+* 假如你想直接跳到範例app中，請參考 [這個鏈接](https://github.com/Vungle/vungle-resources/tree/master/iOS-resources/iOS-sample-app). 
 
-Otherwise, read on!
+* •	假如你正在使用以下的開發平台，請參考我們的第三方插件（**Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona**和**Marmalade**）。**注意：我們的合作夥伴正在更新這些插件，我們會在他們完成之後將鏈接更新**。
 
-## 1. Download the SDK
+除此之外，請讀以下內容。
 
-Next, head [here](https://v.vungle.com/dev/ios) to download our SDK. Unzip it.
+## 1. 下載SDK
 
-## 2. Add VungleSDK to Your Project
+請到[這](https://v.vungle.com/dev/ios)下載SDK，下載完後解壓縮。  
 
-### Add Our Framework
+## 2. 把VungleSDK加到你的项目中
 
-Our SDK is released as a framework, so copy *VungleSDK.embeddedframework/* into your project directory, then drag and drop it into Xcode (*Frameworks*) to have it linked to your project.
+### 加入我們的框架
 
-Note- the .embeddedframework directory should be added as a group (yellow folder) and not as a reference (blue folder).
+我們的SDK是一種框架(Framework)模式發佈的，所以請先將*VungleSDK.embeddedframework/*複製到你的项目地址中，之後把他們拖拽到Xcode(*Frameworks*) 打开，讓它能連到你的项目中。
 
-### Add Required Frameworks
+注意：當添加.embeddedframework資料夾時，请添加资料夹内全部内容（不仅是VungleSDK.framework）,添加成功之后显示为一個群組（图标為黃色）， 不是參考(reference)(图标为蓝色)
 
-The Vungle SDK requires the following frameworks to be linked to your project, so click on your project and head to:
+### 加入其他需要的框架
+
+Vungle SDK需要以下的幾種框架連結到項目，所以點擊你的項目之後跳轉到：
 
 *General > Linked Frameworks and Libraries*
 
-Add any of the following that are not included:
+请将以下未連結的框架添加你的项目中：
 
 * AdSupport.framework
 * AudioToolbox.framework
@@ -53,15 +54,15 @@ Add any of the following that are not included:
 * SystemConfiguration.framework
 * UIKit.framework
 
-It's also a good idea to check that the VungleSDK framework appears in there. If the drag-n-drop didn't link it automatically, then manually add it by clicking the '+' and then 'Add Other'.
+完成以上動作請檢查下在框架(framework)下有沒有VungleSDK，假如之前的拖拽沒有產生自動連結，請點擊’+’然後’Add Other’進行手動連結。
 
-## 3. Remove the iOS Status Bar
+## 3. 移除iOS狀態條
 
-We recommend that our ads play without the iOS status bar at the top of the screen for two reasons. Firstly, it makes it easier for the user to close out of our ad experiences. Secondly, they look waaay better. To do this, open up your Info.pList and add the key *"View controller-based status bar appearance"* and set it to *"No"*.
+我們建議移除在播放我們廣告的同時移除iOS狀態條出於以下兩點原因。第一點，這會讓使用者更容易關閉我們的廣告體驗。第二點，這樣比較好看。要關閉iOS狀態條，打開你的Info.pList然後加入 *"View controller-based status bar appearance"* 然後設置為 *"No"*。
 
-## 4. Initialize the SDK
+## 4. 初始化SDK
 
-We strongly recommend that you initialize our SDK as early as possible within your app. We need to pre-cache the first ad before we can play it, so the earlier the better. Add the following:
+我們強烈建議你在運行App的初期就初始我們的SDK ，因為我們需要播放前提前緩存我們的廣告到app裡面，所以請在相應位置加入以下代碼：
 
 ### AppDelegate.h:
 
@@ -76,19 +77,20 @@ VungleSDK* sdk = [VungleSDK sharedSDK];
 [sdk startWithAppId:appID];
 ```
 
-## 5. Play an Ad!
+## 5. 播放廣告！
 
-Nearly there! Now we just need to play an advert. Remember to add the import statement to any header files. Then:
+我們還有最後一步，就是在播video的時候添加一個提示！請記得在每一個頭文件都import我們的SDK，並且在源文件中加入以下代碼：
 
 ```objc
 VungleSDK* sdk = [VungleSDK sharedSDK];
 [sdk playAd:self];
 ```
 
-That's it! Quick start guide complete. Stick around if you'd like to check out some of the ways you can customize the ad experience, but otherwise go forth and monetize!
+基本步驟就完成了！你可以再繼續看我們的進階設定來定製服務，或者你也可以直接發佈你的App開始賺錢！
 
 
-## Advanced Settings
+## 進階設定
 
-Check out our [advanced settings](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-advanced-settings.md) for instructions on ad customization, debugging, and event callbacks!
+查看我們的[進階設定](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-advanced-settings.md) for instructions on ad customization, debugging, and event callbacks!，裡面有廣告定製、程序調試、事件回調。
+
 
