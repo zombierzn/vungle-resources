@@ -8,6 +8,11 @@ Once you've gotten an ad to play, our [advanced settings](https://github.com/Vun
 
 ## Changelog
 
+## VERSION 3.0.10
+* Fixed crash that killed the app when sent to the background (in rare conditions)
+* Fixed postroll and corrupted video bugs
+* Improved support for iOS 8
+
 ### VERSION 3.0.9
 
 * improved iOS 5 support
