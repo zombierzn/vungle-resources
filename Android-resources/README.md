@@ -13,7 +13,7 @@ Once you've gotten an ad to play, our [advanced settings](https://github.com/Vun
 * fixed Vungle `User-Agent` for requests to Vungle servers
 * use browser `User-Agent` for requests to non-Vungle servers
 * prevented video exit buttons from being clicked multiple times
-* fixed ads not playing under certain conditions in `singleTask` `Activity` mode
+* fixed ads not playing under certain conditions in `singleTask` `Activity` launch mode
 
 ### VERSION 3.2.0 
 
