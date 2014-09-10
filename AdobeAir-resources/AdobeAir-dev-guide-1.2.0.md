@@ -32,6 +32,7 @@ Start by creating a new AIR for mobile project and adding the native extension.
 4. Select *Actionscript Build Packaging > Google Android*
 5. Select the *Native Extensions* tab and click the *'Package'* checkbox next to the extension 
 6. If targeting iOS, repeat steps 4 and 5 for the 'Apple iOS' target
+7. NOTE: Flash Builder can be bad at updating ANE files. If updating an existing file, you may need to do lots of project  cleans and/or rename the ANE file to something different than it was previously (e.g. vungle.ane -> vungle2.ane)
 
 ## 2. Update Your Application Descriptor
 
