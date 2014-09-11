@@ -10,9 +10,9 @@ If you're new to Vungle, you'll want to use [this guide](https://github.com/Vung
 
 * **This is a brand-new SDK!** As you go through this guide, you'll want to check **all** of your existing Vungle-related code. Our public methods have changed, but they will generally have an equivalent. 
 
-* Our new SDK comes with a sample app, which is also available [here](https://github.com/Vungle/vungle-resources/tree/master/Android-resources/androidSampleApp). The Github version is missing our SDK, but you'll be able to check ou the source code. A full copy is included in your SDK download.
+* Our new SDK comes with a sample app, which is also available [here](https://github.com/Vungle/publisher-sample-android). The Github version is missing our SDK, but you'll be able to check ou the source code. A full copy is included in your SDK download.
 
-* If you’re using one of the following development platforms, check out our plugins for updates: **Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona**, and **Marmalade**. **Note- our partners are in-process of updating these plugins, we will update these links as they become available.**
+* If you’re using **Adobe Air**, **Unity**, or **Corona**, check out our [plugins page](https://v.vungle.com/dev/plugins).
 
 Allright, let's upgrade!
 
@@ -22,17 +22,22 @@ Remove your current ```VunglePub.jar``` or ```vungle-publisher-[version].jar``` 
 
 Next, head [here](https://v.vungle.com/dev/android) to download our new SDK. Unzip it.
 
-## 2. Link VungleSDK & Add Required Libraries
+## 2. Add VungleSDK To Your Project
 
-Copy `vungle-publisher-[version].jar`, `javax.inject.jar`, and `android-support-v13.jar` to the `/libs` directory of your project. Create the directory if it doesn't already exist. 
+Copy all of the libraries from the unzipped `/libs` directory into your project's `/libs` directory.  Create this directory if it doesn't already exist in your project.  This should automatically add the libraries to the build path of your project.
 
-If you already include the android-support or javax-inject libraries, you won't need to include them again.
+In version 3.2.0+, this should include the following libraries:
+* `dagger-[version].jar`
+* `javax.inject-[version].jar`
+* `nineoldandroids-[version].jar`
+* `support-v4-[version].jar`
+* `vungle-publisher-[version].jar`
 
-This should automatically add the Publisher SDK to your build path.
+If you already include the same versions of any of the above libraries, you don't need to include them again. If you are using a different version of any of the libraries, please test your app to determine which version works best.
 
-## 3. Verify `AndroidManifest.xml` is Updated
+## 3. Update `AndroidManifest.xml` & add Google Play Services
 
-If you're upgrading from a version **prior to 1.3.x**, don't forget to add the new service element to your manifest.
+1) Add the following lines:
 
 ```xml
 <manifest>
@@ -54,47 +59,29 @@ If you're upgrading from a version **prior to 1.3.x**, don't forget to add the n
     <activity
       android:name="com.vungle.publisher.FullScreenAdActivity"
       android:configChanges="keyboardHidden|orientation|screenSize"
-      android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-    />
+      android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
     
     
     <service android:name="com.vungle.publisher.VungleService"
-      android:exported="false"
-    />
+      android:exported="false"/>
+
+    <meta-data android:name="com.google.android.gms.version"
+      android:value="@integer/google_play_services_version"/>
     
   </application>
   
 </manifest>
 ```
 
-### Additional Steps for SDK Version 3.1.0 or Higher:
-
-1) Add the following to your Manifest:
-
-```xml
-<manifest>
-
-  ...
-  
-  <application>
-
-    <meta-data android:name="com.google.android.gms.version"
-      android:value="@integer/google_play_services_version" />
-
-    ...
-
-  </application>
-  
-</manifest>
-```
-
-2) Add Google Play Services to your project:
+2) Add Google Play Services to your project (we recommend using version 4.0.30):
 
 http://developer.android.com/google/play-services/setup.html#Setup
 
 3) In your app, ensure that the device has a sufficiently up-to-date version of Google Play Services:
 
 http://developer.android.com/google/play-services/setup.html#ensure
+
+[Vungle's Google Play Services FAQs](http://www.vungle.com/google-advertising-id-faqs/)
 
 
 ## 4. Initialize the Vungle SDK
