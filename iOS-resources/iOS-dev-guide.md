@@ -12,9 +12,9 @@ Applicable to Version 3.0+
 
 * If you haven't already done so, head over to our [dashboard](https://v.vungle.com/dashboard/login) and add your app to your account. You need to do this so that you can get your App ID that you’ll be adding to your app with our SDK. It’s in **red** on your app’s page.
 
-* If you’d rather just jump right in with our sample app, head [here](https://github.com/Vungle/vungle-resources/tree/master/iOS-resources/iOS-sample-app). 
+* If you’d rather just jump right in with our sample app, head [here](https://github.com/Vungle/publisher-sample-ios/tree/master). 
 
-* If you’re using one of the following development platforms, check out our plugins for **Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona**, and **Marmalade**. **Note- our partners are in-process of updating these plugins, we will update these links as they become available.**
+* If you’re using Adobe Air, Unity, or Corona, check out our [plugins page](https://v.vungle.com/dev/plugins).
 
 Otherwise, read on!
 
@@ -84,6 +84,8 @@ Nearly there! Now we just need to play an advert. Remember to add the import sta
 VungleSDK* sdk = [VungleSDK sharedSDK];
 [sdk playAd:self];
 ```
+
+* Note for testing ads- until your app is live in the app store, you will not be able to download any of the advertised apps directly. You can click 'download' to view the product sheet, though.
 
 That's it! Quick start guide complete. Stick around if you'd like to check out some of the ways you can customize the ad experience, but otherwise go forth and monetize!
 
