@@ -42,7 +42,7 @@ public class FirstActivity extends android.app.Activity {
 
 ### playAd Configuration 
 
-You can optionally customize each individual ad you play by providing an `AdConfig` object to `playAd`. If you set any options in the [global ad configuration](#advancedStartupConfig), those options will be overriden by the provided options.
+You can optionally customize each individual ad you play by providing an `AdConfig` object to `playAd`. If you set any options in the global ad configuration (below), those options will be overriden by the provided options.
 ```java
 import com.vungle.publisher.VunglePub;
 import com.vungle.publisher.AdConfig;
