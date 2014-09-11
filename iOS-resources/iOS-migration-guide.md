@@ -10,9 +10,9 @@ If you're new to Vungle, you'll want to use [this guide](https://github.com/Vung
 
 * **This is a brand-new SDK!** As you go through this guide, you'll want to check **all** of your existing Vungle-related code. Our public methods have changed, but they will generally have an equivalent. 
 
-* Our new SDK comes with a sample app, which is also available [here](https://github.com/Vungle/vungle-resources/tree/master/iOS-docs/iOS-sample-app). The Github version is missing our SDK, but you'll be able to check out the source code.
+* Our new SDK comes with a sample app, which is also available [here](https://github.com/Vungle/publisher-sample-ios/tree/master). The Github version is missing our SDK, but you'll be able to check out the source code.
 
-* If you’re using one of the following development platforms, check out our plugins for updates: **Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona**, and **Marmalade**. **Note- our partners are in-process of updating these plugins, we will update these links as they become available.**
+* If you’re using Adobe Air, Unity, or Corona, check out our [plugins page](https://v.vungle.com/dev/plugins).
 
 Allright, let's upgrade!
 
@@ -75,6 +75,9 @@ VungleSDK* sdk = [VungleSDK sharedSDK];
 * **Options object:** To configure an ad's mute settings, orientation, and other customizeable options, you will now be creating and passing in a dictionary. See [line 70](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-sample-app/Vungle%20Sample%20App/FirstViewController.m) of the sample app for an example. The [Advanced Settings](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-advanced-settings.md) will cover the rest.
 
 * **Incentivized ads:** This will also be an option in your dictionary. There are no longer separate methods to play incentivized and non-incentivized ads.
+
+
+* Note for testing ads- until your app is live in the app store, you will not be able to download any of the advertised apps directly. You can click 'download' to view the product sheet, though.
   
 That's it! Migration guide complete. Stick around to learn more about customizing your ads!
 
