@@ -17,9 +17,9 @@ Applicable to Version 3.0+
 
 * If you haven't already done so, head over to our [dashboard](https://v.vungle.com/dashboard/login) and add your app to your account. You need to do this so that you can get your App ID that you’ll be adding to your app with our SDK. It’s in **red** on your app’s page.
 
-* If you’d rather just jump right in with our sample app, head [here](https://github.com/Vungle/vungle-resources/tree/master/Android-resources/androidSampleApp). 
+* If you’d rather just jump right in with our sample app, head [here](https://github.com/Vungle/publisher-sample-android). 
 
-* If you’re using one of the following development platforms, check out our plugins for **Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona**, and **Marmalade**. **Note- our partners are in-process of updating these plugins, we will update these links as they become available.**
+* If you’re using **Adobe Air**, **Unity**, or **Corona**, check out our [plugins page](https://v.vungle.com/dev/plugins).
 
 Otherwise, read on!
 
@@ -40,9 +40,9 @@ In version 3.2.0+, this should include the following libraries:
 
 If you already include the same versions of any of the above libraries, you don't need to include them again. If you are using a different version of any of the libraries, please test your app to determine which version works best.
 
-## 3. Update `AndroidManifest.xml`
+## 3. Update `AndroidManifest.xml` & add Google Play Services
 
-Add the following lines:
+1) Add the following lines:
 
 ```xml
 <manifest>
@@ -64,47 +64,29 @@ Add the following lines:
     <activity
       android:name="com.vungle.publisher.FullScreenAdActivity"
       android:configChanges="keyboardHidden|orientation|screenSize"
-      android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
-    />
+      android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
     
     
     <service android:name="com.vungle.publisher.VungleService"
-      android:exported="false"
-    />
+      android:exported="false"/>
+
+    <meta-data android:name="com.google.android.gms.version"
+      android:value="@integer/google_play_services_version" />
     
   </application>
   
 </manifest>
 ```
 
-### Additional Steps for SDK Version 3.1.0 or Higher:
-
-1) Add the following to your Manifest:
-
-```xml
-<manifest>
-
-  ...
-  
-  <application>
-
-    <meta-data android:name="com.google.android.gms.version"
-      android:value="@integer/google_play_services_version" />
-
-    ...
-
-  </application>
-  
-</manifest>
-```
-
-2) Add Google Play Services to your project:
+2) Add Google Play Services to your project (we recommend using version 4.0.30):
 
 http://developer.android.com/google/play-services/setup.html#Setup
 
 3) In your app, ensure that the device has a sufficiently up-to-date version of Google Play Services:
 
 http://developer.android.com/google/play-services/setup.html#ensure
+
+[Vungle's Google Play Services FAQs](http://www.vungle.com/google-advertising-id-faqs/)
 
 ## 4. Initialize & Integrate the SDK
 
