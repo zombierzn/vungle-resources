@@ -4,7 +4,7 @@
 
 這份指南能幫助你輕易地安裝SDK到你的APP，讓你開始賺錢。
 
-假如你已經安裝了Vungle SDK以前的版本，那你需要看[這份指南](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-migration-guide.md)。
+假如你已經安裝了Vungle SDK以前的版本，那你需要看[這份指南](https://github.com/Vungle/vungle-resources/blob/master/Chinese-translation/iOS-resources/iOS-migration-guide.md)。
 
 應用于版本3.0以上。
 
@@ -91,6 +91,6 @@ VungleSDK* sdk = [VungleSDK sharedSDK];
 
 ## 進階設定
 
-查看我們的[進階設定](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-advanced-settings.md) for instructions on ad customization, debugging, and event callbacks!，裡面有廣告定製、程序調試、事件回調。
+查看我們的[進階設定](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-advanced-settings.md)，裡面有廣告定製、程序調試、事件回調。
 
 

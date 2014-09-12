@@ -8,7 +8,7 @@
 
 ## playAd 選項
 
-想要改變廣告體驗的預設行為的話，你可以設定自己的dictionary傳入playAd中。辭典裡面每一個選值可以任意選擇是否改變，假如不改變會默認預設值。你每次撥放廣告前都需要傳入辭典到playAd中，不然的話系統會使用預設值。你可以在樣本app的[第70行](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-sample-app/Vungle%20Sample%20App/FirstViewController.m)找到一個辭典選項的例子。
+想要改變廣告體驗的預設行為的話，你可以設定自己的dictionary傳入playAd中。辭典裡面每一個選值可以任意選擇是否改變，假如不改變會默認預設值。你每次撥放廣告前都需要傳入辭典到playAd中，不然的話系統會使用預設值。你可以在樣本app的[第70行](https://github.com/Vungle/vungle-resources/blob/master/Chinese-translation/iOS-resources/iOS-sample-app/Vungle%20Sample%20App/FirstViewController.m)找到一個辭典選項的例子。
 
 
 
