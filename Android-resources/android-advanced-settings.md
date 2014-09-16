@@ -85,6 +85,9 @@ One global `AdConfig` object controls settings for all ad plays, and you can opt
 | `setIncentivizedCancelDialogBodyText` | "Closing this video early will prevent you from earning your reward. Are you sure?" | Sets the body of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized. | 
 | `setIncentivizedCancelDialogCloseButtonText` | "Close video" | Sets the 'cancel button' text of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized. | 
 | `setIncentivizedCancelDialogKeepWatchingButtonText` | "Keep watching" | Sets the 'keep watching button' text of the confirmation dialog when skipping an incentivized ad. N/A if ad is not incentivized. |
+| `setExtra1..8` | none | You can use this to keep track of metrics such as age group, gender, etc. |
+| `setPlacement` | none | Sets an optional ad placement name for enhanced reporting on the dashboard. |
+
 
 #### The `EventListener` Interface
 The Publisher SDK raises several events that you can handle programmatically by implementing `com.vungle.publisher.EventListener` and registering it using `VunglePub.setEventListener()`
