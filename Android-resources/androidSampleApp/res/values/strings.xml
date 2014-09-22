@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">androidPubSampleApp</string>
-    <string name="init_note">During startup, Vungle is initialized and an ad is cached. Note that it may take a moment before you can Play Ad.</string>
-</resources>
