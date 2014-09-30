@@ -110,18 +110,19 @@ Initialize the API when your application starts. (If using pure ActionScript, do
   ```
 
 2. Initialize the API by calling Vungle.create(), and passing in an array containing your application ID from the Vungle Dashboard. If you are targeting both iOS and Android from the same project, include both IDs in the array- with the iOS id first and the Android id second.
-
-  You should also check the Vungle.isSupported() method first, to ensure the current platform is supported before initializing (for instance, the extension won't run on the Desktop):
+  
+  You should wrap your call to Vungle.create() in a try/catch since Vungle may through an error during the creation process (for instance, the extension throws an error if running on the Desktop):
 
   ```as3
-  // check if the current platform supports the extension 
-  if (Vungle.isSupported()) 
+  try
   { 
     // initialize with your app id 
     Vungle.create(["your_vungle_id"]); 
 
     // -OR- initialize including both ios and android ids for multiplatform apps 
     // Vungle.create(["your_ios_vungle_id","your_android_vungle_id"]); 
+  } catch (error:Error) {
+    // could not create extension. Are you running on something besides iOS/Android?
   }
   ```
 
