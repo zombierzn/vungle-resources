@@ -10,7 +10,7 @@ Once you've gotten an ad to play, our [advanced settings](https://github.com/Vun
 
 ### VERSION 3.2.2
 
-* new 'adaptiveId' that uses [Android Advertising ID](https://developer.android.com/google/play-services/id.html) for attribution if available, otherwise falls back to [Android ID](http://developer.android.com/reference/android/provider/Settings.Secure.html#ANDROID_ID) and Wifi MAC address (if available)
+* new 'adaptiveId' that uses [Android Advertising ID](https://developer.android.com/google/play-services/id.html) for attribution if available, otherwise falls back to [Android ID](http://developer.android.com/reference/android/provider/Settings.Secure.html#ANDROID_ID) and wifi MAC address (if available)
 * support for non-Google Play Services environments (e.g. Kindle devices)
 * fixed a bug with extra `EventListener.onAdEnd()` notifications
 
