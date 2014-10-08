@@ -17,15 +17,15 @@
 
 * 假如你從未安裝過，請先到我們的系統頁面（[儀表板](https://v.vungle.com/dashboard/login) ）把你的app加到你的帳戶。使用我們的SDK需要一個App ID, 你可以通過在我們的系統註冊得到一個App (在你的App頁面顯示為**紅色**)。
 
-* 假如你想直接跳到範例app中，請參考[這個鏈接](https://github.com/Vungle/vungle-resources/tree/master/Android-resources/androidSampleApp)。
+* 假如你想直接跳到範例app中，請參考[這個鏈接](https://github.com/Vungle/publisher-sample-android)。
 
-* 假如你正在使用以下的開發平台，請參考我們的第三方插件（**Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona** 和 **Marmalade**）。**注意：我們的合作夥伴正在更新這些插件，我們會在他們完成之後將鏈接更新**。
+* 假如你正在使用以下第三方插件（**Adobe Air**, **Unity-iOS**, **Unity-Android**, **Corona**),請參考[這個鏈接](https://v.vungle.com/dev/plugins)。
 
 除此之外，請讀以下內容。
 
 ## 1. 下載SDK
 
-請到[這](https://v.vungle.com/dev/android)下載SDK，下載完後解壓縮。 
+請到[這個鏈接](https://v.vungle.com/dev/android)下載SDK，下載完後解壓縮。 
 
 ## 2. 把VungleSDK加到你的項目中
 
