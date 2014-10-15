@@ -162,7 +162,16 @@ public class GameActivity extends android.app.Activity {
 }
 ```
 
-**Tip-** If you'd like to check if a cached ad is available, use: `vunglePub.isCachedAdAvailable();`
+**Tip-** If you'd like to check if an ad is available before playing, use:
+```java
+// 3.3.0+
+// indicates if an ad is downloaded and playable (taking into account frequency cap)
+vunglePub.isAdPlayable()
+
+// 3.2.2 and earlier
+// indicates if an ad is downloaded (but ignores frequency cap)
+vunglePub.isCachedAdAvailable()
+```
 
 That's it! Quick start guide complete. Stick around if you'd like to check out some of the ways you can customize the ad experience, but otherwise go forth and monetize!
 
