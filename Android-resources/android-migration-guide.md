@@ -131,6 +131,17 @@ public class GameActivity extends android.app.Activity {
 }
 ```
 
+**Tip-** If you'd like to check if an ad is available before playing, use:
+```java
+// 3.3.0+
+// indicates if an ad is downloaded and playable (taking into account frequency cap)
+vunglePub.isAdPlayable()
+
+// 3.2.2 and earlier
+// indicates if an ad is downloaded (but ignores frequency cap)
+vunglePub.isCachedAdAvailable()
+```
+
 ### Want to change the ads' default settings?
 
 * **AdConfig object:** To configure an ad's mute settings, orientation, and other customizeable options, you will now be configuring this global object. The [Advanced Settings](https://github.com/Vungle/vungle-resources/blob/master/Android-resources/android-advanced-settings.md) will cover the rest.
