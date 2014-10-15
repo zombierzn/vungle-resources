@@ -90,7 +90,17 @@ One global `AdConfig` object controls settings for all ad plays, and you can opt
 
 
 #### The `EventListener` Interface
-The Publisher SDK raises several events that you can handle programmatically by implementing `com.vungle.publisher.EventListener` and registering it using `VunglePub.setEventListener()`
+The Publisher SDK raises several events that you can handle programmatically by implementing `com.vungle.publisher.EventListener` and registering/removing it using:
+
+```java
+// 3.3.0+
+vunglePub.addEventListener(eventListener)
+vunglePub.removeEventListener(eventListener)
+vunglePub.clearEventListeners()
+
+// 3.2.2 and earlier
+VunglePub.setEventListener(eventListener)
+```
 
 Note that the callbacks are executed on a different thread than your main UI thread, so if you interact with your UI in the callback, you will need to use a technique to execute your callback on the main UI thread. Two common ways to run your code on the UI thread include the following:
 
@@ -125,9 +135,11 @@ public class FirstActivity extends android.app.Activity {
         // Called when the user leaves the ad and control is returned to your application
     }
 
+    // prior to 3.2.2, this method was called onCachedAdAvailable()
     @Override
-    public void onCachedAdAvailable() {
-        // Called when a cached ad is downloaded and ready to be played
+    public void onAdPlayableChanged() {
+        // Called when an ad is downloaded and may be played - taking into account
+        // frequency cap
     }
     
     @Override
