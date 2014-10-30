@@ -121,7 +121,7 @@ Vungle.vungle.create(["your_vungle_id"], VungleOrientation.PORTRAIT, true, 32, V
 
 ### Display an Interstitial Ad
 
-To display an interstitial ad, call displayAd(). You'll want to first check than ad is available using the isVideoAvailable() method:
+To display an interstitial ad, call displayAd(). You'll want to first check than ad is available using the isAdAvailable() method:
 
 ```
 if(Vungle.vungle.isAdAvailable()) 
@@ -132,7 +132,7 @@ Vungle.vungle.displayAd();
 
 ### Display an Incentivized Ad
 
-To display an incentivized ad, call displayIncentivizedAd(). You'll want to first check than ad is available using the isVideoAvailable() method. The function takes two Optional parameters: whether to display a Close button on the ad, and an optional user-identifying string (which can be used with Vungle's server-side webhooks, to trigger an HTTP GET whenever a user completes a view):
+To display an incentivized ad, call displayIncentivizedAd(). You'll want to first check than ad is available using the isAdAvailable() method. The function takes two Optional parameters: whether to display a Close button on the ad, and an optional user-identifying string (which can be used with Vungle's server-side webhooks, to trigger an HTTP GET whenever a user completes a view):
 
 ```
 if(Vungle.vungle.isAdAvailable())
@@ -165,7 +165,7 @@ function onAdFinished(e:VungleEvent):void
 }
 ```
 
-2. The AD_VIEWED event is triggered when the user is no longer in a Vungle ad, and has watched some portion of the video. The 'watched' property is the amount of time, in seconds, of a video that the user watched. The 'property' is the total length of the video. 
+2. The AD_VIEWED event is triggered when the user is no longer in a Vungle ad, and has watched some portion of the video. The 'watched' property is the amount of time, in seconds, of a video that the user watched. The 'length' property is the total length of the video. 
 
 (This event may not be called in some cases, such as when there is a pre-roll HTML asset in the advertisement and the user opts out of the ad before seeing the video.) 
 
