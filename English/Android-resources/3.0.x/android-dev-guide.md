@@ -1,12 +1,6 @@
 # VungleSDK- Android Developer Guide
 
-## Before You Begin...
-
 This guide will show you how you can easily integrate our SDK into your app so you can start monetizing!
-
-If you have already integrated a previous version of the Vungle SDK, you'll want to use [this guide](https://github.com/Vungle/vungle-resources/blob/master/Android-resources/android-migration-guide.md).
-
-Applicable to Version 3.0+
 
 ### Requirements
 
@@ -31,18 +25,16 @@ Next, head [here](https://v.vungle.com/dev/android) to download our SDK. Unzip i
 
 Copy all of the libraries from the unzipped `/libs` directory into your project's `/libs` directory.  Create this directory if it doesn't already exist in your project.  This should automatically add the libraries to the build path of your project.
 
-In version 3.2.0+, this should include the following libraries:
-* `dagger-[version].jar`
+This should include the following libraries:
 * `javax.inject-[version].jar`
-* `nineoldandroids-[version].jar`
 * `support-v4-[version].jar`
 * `vungle-publisher-[version].jar`
 
 If you already include the same versions of any of the above libraries, you don't need to include them again. If you are using a different version of any of the libraries, please test your app to determine which version works best.
 
-## 3. Update `AndroidManifest.xml` & add Google Play Services
+## 3. Update `AndroidManifest.xml`
 
-1) Add the following lines:
+Add the following lines:
 
 ```xml
 <manifest>
@@ -69,24 +61,11 @@ If you already include the same versions of any of the above libraries, you don'
     
     <service android:name="com.vungle.publisher.VungleService"
       android:exported="false"/>
-
-    <meta-data android:name="com.google.android.gms.version"
-      android:value="@integer/google_play_services_version" />
     
   </application>
   
 </manifest>
 ```
-
-2) Add Google Play Services to your project (we recommend using version 4.0.30):
-
-http://developer.android.com/google/play-services/setup.html#Setup
-
-3) In your app, ensure that the device has a sufficiently up-to-date version of Google Play Services:
-
-http://developer.android.com/google/play-services/setup.html#ensure
-
-[Vungle's Google Play Services FAQs](http://www.vungle.com/google-advertising-id-faqs/)
 
 ## 4. Initialize & Integrate the SDK
 
@@ -164,11 +143,6 @@ public class GameActivity extends android.app.Activity {
 
 **Tip-** If you'd like to check if an ad is available before playing, use:
 ```java
-// 3.3.0+
-// indicates if an ad is downloaded and playable (taking into account frequency cap)
-vunglePub.isAdPlayable()
-
-// 3.2.2 and earlier
 // indicates if an ad is downloaded (but ignores frequency cap)
 vunglePub.isCachedAdAvailable()
 ```
@@ -178,4 +152,4 @@ That's it! Quick start guide complete. Stick around if you'd like to check out s
 <a name="advancedStartupConfig"></a>
 ## Advanced Settings
 
-Check out our [advanced settings](https://github.com/Vungle/vungle-resources/blob/master/Android-resources/android-advanced-settings.md) for instructions on ad customization, debugging, and event callbacks!
+Check out our [advanced settings](https://github.com/Vungle/vungle-resources/blob/master/English/Android-resources/3.0.x/android-advanced-settings.md) for instructions on ad customization, debugging, and event callbacks!
