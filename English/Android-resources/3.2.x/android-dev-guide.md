@@ -1,12 +1,6 @@
 # VungleSDK- Android Developer Guide
 
-## Before You Begin...
-
 This guide will show you how you can easily integrate our SDK into your app so you can start monetizing!
-
-If you have already integrated a previous version of the Vungle SDK, you'll want to use [this guide](https://github.com/Vungle/vungle-resources/blob/master/Android-resources/android-migration-guide.md).
-
-Applicable to Version 3.0+
 
 ### Requirements
 
@@ -31,7 +25,7 @@ Next, head [here](https://v.vungle.com/dev/android) to download our SDK. Unzip i
 
 Copy all of the libraries from the unzipped `/libs` directory into your project's `/libs` directory.  Create this directory if it doesn't already exist in your project.  This should automatically add the libraries to the build path of your project.
 
-In version 3.2.0+, this should include the following libraries:
+This should include the following libraries:
 * `dagger-[version].jar`
 * `javax.inject-[version].jar`
 * `nineoldandroids-[version].jar`
@@ -164,11 +158,6 @@ public class GameActivity extends android.app.Activity {
 
 **Tip-** If you'd like to check if an ad is available before playing, use:
 ```java
-// 3.3.0+
-// indicates if an ad is downloaded and playable (taking into account frequency cap)
-vunglePub.isAdPlayable()
-
-// 3.2.2 and earlier
 // indicates if an ad is downloaded (but ignores frequency cap)
 vunglePub.isCachedAdAvailable()
 ```
@@ -178,4 +167,4 @@ That's it! Quick start guide complete. Stick around if you'd like to check out s
 <a name="advancedStartupConfig"></a>
 ## Advanced Settings
 
-Check out our [advanced settings](https://github.com/Vungle/vungle-resources/blob/master/Android-resources/android-advanced-settings.md) for instructions on ad customization, debugging, and event callbacks!
+Check out our [advanced settings](https://github.com/Vungle/vungle-resources/blob/master/English/Android-resources/3.2.x/android-advanced-settings.md) for instructions on ad customization, debugging, and event callbacks!
