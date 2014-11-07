@@ -1,10 +1,8 @@
 ## Android Resources
 
-If you're new to Vungle, get started with the [dev guide](https://github.com/Vungle/vungle-resources/blob/master/Android-resources/android-dev-guide.md).
+Choose the folder that matches the SDK version you will be implementing. Get started with the dev guide, which will help you integrate and play an ad. Once you've done that, our advanced settings doc will help you customize.
 
-Switching from an older version of the SDK ( < v3.0 )? Check out our [migration guide](https://github.com/Vungle/vungle-resources/blob/master/Android-resources/android-migration-guide.md).
-
-Once you've gotten an ad to play, our [advanced settings](https://github.com/Vungle/vungle-resources/blob/master/Android-resources/android-advanced-settings.md) will help you customize the experience.
+You can find our sample app [here](https://github.com/Vungle/publisher-sample-android). Check out the code, or run it for a demo of our ad experience!
 
 ## Changelog
 

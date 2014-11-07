@@ -2,9 +2,7 @@
 
 ## Please note:
 
-This reference covers the more advanced settings and customizeable aspects of Vungle ads. If you're just getting started, you'll want to check out this [guide](https://github.com/Vungle/vungle-resources/blob/master/Android-resources/android-dev-guide.md). 
-
-Applicable to Version 3.0+
+This reference covers the more advanced settings and customizeable aspects of Vungle ads. If you're just getting started, you'll want to check out this [guide](https://github.com/Vungle/vungle-resources/blob/master/English/Android-resources/3.2.x/android-dev-guide.md). 
 
 ## Advanced Configuration 
 
@@ -77,7 +75,6 @@ One global `AdConfig` object controls settings for all ad plays, and you can opt
 | `setOrientation` | `Orientation.matchVideo` | `Orientation.autoRotate` indicates that the ad will autorotate with the device orientation. `Orientation.matchVideo` indicates that that the ad will play in the best orientation for the video (usually landscape). |
 | `setSoundEnabled` | `true` | Sets the starting sound state for the ad. If `true`, the audio respects device volume and sound settings. If `false`, video begins muted but user may modify. |
 | `setBackButtonImmediatelyEnabled` | `false` | If `true`, allows the user to immediately exit an ad using the back button.  If `false`, the user cannot use the back button to exit the ad until the on-screen close button is shown.
-| `setShowClose` | `true` | Enables or disables the close button on the video ad. If false, the close button will never appear <br> * Note - this method was deprecated in v3.0.2 and removed in v3.1.0. You can use the forced view options in your app's advanced settings on the [Vungle Dashboard](https://v.vungle.com/). |
 | `setImmersiveMode` | `false` | Enables or disables [immersive mode](https://developer.android.com/training/system-ui/immersive.html) on KitKat+ devices |
 | `setIncentivized` | `false` | Sets the incentivized mode - you must set this to true if you're using server-to-server callbacks for your rewarded ads. If true, user will be prompted with a confirmation dialog when attempting to skip the ad. If false, no confirmation is shown |
 | `setIncentivizedUserId` | none | Sets the unique user id to be passed to your application to verify that this user should rewarded for watching an incentivized ad. N/A if ad is not incentivized. |
@@ -88,25 +85,24 @@ One global `AdConfig` object controls settings for all ad plays, and you can opt
 | `setExtra1..8` | none | You can use this to keep track of metrics such as age group, gender, etc. |
 | `setPlacement` | none | Sets an optional ad placement name for enhanced reporting on the dashboard. |
 
+##### Showing the Close Button
+
+To control whether a user has the option to close out of an ad, use the forced view options in your app's advanced settings on the [Vungle Dashboard](https://v.vungle.com/).
 
 #### The `EventListener` Interface
 The Publisher SDK raises several events that you can handle programmatically by implementing `com.vungle.publisher.EventListener` and registering/removing it using:
 
 ```java
-// 3.3.0+
-vunglePub.addEventListener(eventListener)
-vunglePub.removeEventListener(eventListener)
-vunglePub.clearEventListeners()
-
-// 3.2.2 and earlier
 VunglePub.setEventListener(eventListener)
 ```
 
-Note that the callbacks are executed on a different thread than your main UI thread, so if you interact with your UI in the callback, you will need to use a technique to execute your callback on the main UI thread. Two common ways to run your code on the UI thread include the following:
+##### UI Thread Note
 
-[Handler](http://developer.android.com/reference/android/os/Handler.html)
+The callbacks are executed on a different thread than your main UI thread, so if you interact with your UI in the callback, you will need to use a technique to execute your callback on the main UI thread. Two common ways to run your code on the UI thread include the following:
 
-[Activity.runOnUiThread(Runnable)](http://developer.android.com/reference/android/app/Activity.html#runOnUiThread(java.lang.Runnable))
+* [Handler](http://developer.android.com/reference/android/os/Handler.html)
+
+* [Activity.runOnUiThread(Runnable)](http://developer.android.com/reference/android/app/Activity.html#runOnUiThread(java.lang.Runnable))
 
 ```java
 import com.vungle.publisher.EventListener;
@@ -135,11 +131,9 @@ public class FirstActivity extends android.app.Activity {
         // Called when the user leaves the ad and control is returned to your application
     }
 
-    // prior to 3.2.2, this method was called onCachedAdAvailable()
     @Override
-    public void onAdPlayableChanged() {
-        // Called when an ad is downloaded and may be played - taking into account
-        // frequency cap
+    public void onCachedAdAvailable() {
+        // Called when an ad is downloaded and may be played
     }
     
     @Override

@@ -1,35 +1,32 @@
-# VungleSDK- Android Migration Guide
+# VungleSDK- Android Developer Guide
 
-## Before You Begin...
+This guide will show you how you can easily integrate our SDK into your app so you can start monetizing!
 
-This guide will show you how to upgrade to our newest SDK- version 3.0!
+### Requirements
 
-If you're new to Vungle, you'll want to use [this guide](https://github.com/Vungle/vungle-resources/blob/master/Android-resources/android-dev-guide.md).
+* Android 2.3 (Gingerbread - API version 9) or later
+* If your application is written in C/C++, you'll need to use JNI to interface with the Publisher SDK written in Java
 
 ### Here are a few important tips:
 
-* **This is a brand-new SDK!** As you go through this guide, you'll want to check **all** of your existing Vungle-related code. Our public methods have changed, but they will generally have an equivalent. 
+* If you haven't already done so, head over to our [dashboard](https://v.vungle.com/dashboard/login) and add your app to your account. You need to do this so that you can get your App ID that you’ll be adding to your app with our SDK. It’s in **red** on your app’s page.
 
-* Our new SDK comes with a sample app, which is also available [here](https://github.com/Vungle/publisher-sample-android). The Github version is missing our SDK, but you'll be able to check ou the source code. A full copy is included in your SDK download.
+* If you’d rather just jump right in with our sample app, head [here](https://github.com/Vungle/publisher-sample-android). 
 
 * If you’re using **Adobe Air**, **Unity**, or **Corona**, check out our [plugins page](https://v.vungle.com/dev/plugins).
 
-Allright, let's upgrade!
+Otherwise, read on!
 
-## 1. Switch out the SDK
+## 1. Download the SDK
 
-Remove your current ```VunglePub.jar``` or ```vungle-publisher-[version].jar``` file. 
-
-Next, head [here](https://v.vungle.com/dev/android) to download our new SDK. Unzip it.
+Next, head [here](https://v.vungle.com/dev/android) to download our SDK. Unzip it.
 
 ## 2. Add VungleSDK To Your Project
 
 Copy all of the libraries from the unzipped `/libs` directory into your project's `/libs` directory.  Create this directory if it doesn't already exist in your project.  This should automatically add the libraries to the build path of your project.
 
-In version 3.2.0+, this should include the following libraries:
-* `dagger-[version].jar`
+This should include the following libraries:
 * `javax.inject-[version].jar`
-* `nineoldandroids-[version].jar`
 * `support-v4-[version].jar`
 * `vungle-publisher-[version].jar`
 
@@ -66,7 +63,7 @@ If you already include the same versions of any of the above libraries, you don'
       android:exported="false"/>
 
     <meta-data android:name="com.google.android.gms.version"
-      android:value="@integer/google_play_services_version"/>
+      android:value="@integer/google_play_services_version" />
     
   </application>
   
@@ -83,11 +80,11 @@ http://developer.android.com/google/play-services/setup.html#ensure
 
 [Vungle's Google Play Services FAQs](http://www.vungle.com/google-advertising-id-faqs/)
 
+## 4. Initialize & Integrate the SDK
 
-## 4. Initialize the Vungle SDK
+### Application Startup
 
-Find the code you've used to initialize our SDK and replace it with the following:
-
+Initialize the Publisher SDK in your application's first `Activity`. This starts video caching and prepares the SDK to display ads.
 ```java
 import com.vungle.publisher.VunglePub;
 
@@ -109,12 +106,38 @@ public class FirstActivity extends android.app.Activity {
 }
 ```
 
+### Each Activity
+
+In addition, override the `onPause` and `onResume` methods in each `Activity` (including the first) to notify the Publisher SDK when your application gains or loses focus:
+```java
+import com.vungle.publisher.VunglePub;
+
+public class EachActivity extends android.app.Activity {
+
+  // get the VunglePub instance
+  final VunglePub vunglePub = VunglePub.getInstance();
+
+  ...
+  
+  @Override
+  protected void onPause() {
+      super.onPause();
+      vunglePub.onPause();
+  }
+  
+  @Override
+  protected void onResume() {
+      super.onResume();
+      vunglePub.onResume();
+  }
+}
+```
+
 ## 5. Play an Ad!
 
 ### Default Configuration
 
-Almost done! Anywhere you play a Vungle ad, you'll want to replace that code with:
-
+Almost done! When you want to actually play the ad in your application, simply call `playAd`
 ```java
 import com.vungle.publisher.VunglePub;
 
@@ -133,24 +156,13 @@ public class GameActivity extends android.app.Activity {
 
 **Tip-** If you'd like to check if an ad is available before playing, use:
 ```java
-// 3.3.0+
-// indicates if an ad is downloaded and playable (taking into account frequency cap)
-vunglePub.isAdPlayable()
-
-// 3.2.2 and earlier
 // indicates if an ad is downloaded (but ignores frequency cap)
 vunglePub.isCachedAdAvailable()
 ```
 
-### Want to change the ads' default settings?
+That's it! Quick start guide complete. Stick around if you'd like to check out some of the ways you can customize the ad experience, but otherwise go forth and monetize!
 
-* **AdConfig object:** To configure an ad's mute settings, orientation, and other customizeable options, you will now be configuring this global object. The [Advanced Settings](https://github.com/Vungle/vungle-resources/blob/master/Android-resources/android-advanced-settings.md) will cover the rest.
-
-* **Incentivized ads:** This will also be configured in the AdConfig object. There are no longer separate methods to play incentivized and non-incentivized ads.
-
-That's it! Migration guide complete. Stick around to learn more about customizing your ads!
-
-
+<a name="advancedStartupConfig"></a>
 ## Advanced Settings
 
-Check out our [advanced settings](https://github.com/Vungle/vungle-resources/blob/master/Android-resources/android-advanced-settings.md) for instructions on ad customization, debugging, and event callbacks!
+Check out our [advanced settings](https://github.com/Vungle/vungle-resources/blob/master/English/Android-resources/3.1.x/android-advanced-settings.md) for instructions on ad customization, debugging, and event callbacks!
