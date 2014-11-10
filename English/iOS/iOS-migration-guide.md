@@ -4,7 +4,7 @@
 
 This guide will show you how to upgrade to our newest SDK- version 3.0!
 
-If you're new to Vungle, you'll want to use [this guide](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-dev-guide.md).
+If you're new to Vungle, you'll want to use [this guide](https://github.com/Vungle/vungle-resources/blob/master/English/iOS/iOS-dev-guide.md).
 
 ### Here are a few important tips:
 
@@ -84,4 +84,4 @@ That's it! Migration guide complete. Stick around to learn more about customizin
 
 ## Advanced Settings
 
-Check out our [Advanced Settings](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-advanced-settings.md) for instructions on ad customization, debugging, and event callbacks!
+Check out our [Advanced Settings](https://github.com/Vungle/vungle-resources/blob/master/English/iOS/iOS-advanced-settings.md) for instructions on ad customization, debugging, and event callbacks!
