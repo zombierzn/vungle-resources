@@ -4,7 +4,7 @@
 
 This guide will show you how you can easily integrate our SDK into your app so you can start monetizing!
 
-If you have already integrated a previous version of the Vungle SDK, you'll want to use [this guide](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-migration-guide.md).
+If you have already integrated a previous version of the Vungle SDK, you'll want to use [this guide](https://github.com/Vungle/vungle-resources/blob/master/English/iOS/iOS-migration-guide.md).
 
 Applicable to Version 3.0+
 
@@ -92,5 +92,5 @@ That's it! Quick start guide complete. Stick around if you'd like to check out s
 
 ## Advanced Settings
 
-Check out our [advanced settings](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-advanced-settings.md) for instructions on ad customization, debugging, and event callbacks!
+Check out our [advanced settings](https://github.com/Vungle/vungle-resources/blob/master/English/iOS/iOS-advanced-settings.md) for instructions on ad customization, debugging, and event callbacks!
 
