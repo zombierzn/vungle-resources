@@ -2,7 +2,7 @@
 
 ## Please note:
 
-This reference covers the more advanced settings and customizeable aspects of Vungle ads. If you're just getting started, you'll want to check out this [guide](https://github.com/Vungle/vungle-resources/blob/master/English/Android-resources/3.2.x/android-dev-guide.md). 
+This reference covers the more advanced settings and customizeable aspects of Vungle ads. If you're just getting started, you'll want to check out this [guide](https://github.com/Vungle/vungle-resources/blob/master/English/Android/3.2.x/android-dev-guide.md). 
 
 ## Advanced Configuration 
 
