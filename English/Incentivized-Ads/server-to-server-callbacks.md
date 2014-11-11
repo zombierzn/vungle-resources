@@ -65,4 +65,4 @@ To prevent a single callback from being replayed multiple times against your ser
 
 #### Sample Code
 
-We have examples to help you implement callbacks security [here](https://github.com/Vungle/vungle-resources/blob/master/Incentivized-ads-resources/security-sample-code.md)!
+We have examples to help you implement callbacks security [here](https://github.com/Vungle/vungle-resources/blob/master/English/Incentivized-Ads/security-sample-code.md)!
