@@ -134,7 +134,7 @@ public class FirstActivity extends android.app.Activity {
     }
     
     @Override
-    public void onAdUnavailable() {
+    public void onAdUnavailable(String reason) {
         // Called when VunglePub.playAd() was called, but no ad was available to play
     }
     
