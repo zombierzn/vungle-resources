@@ -10,6 +10,10 @@ Next, head [here](https://v.vungle.com/dev/ios) to download our SDK. Unzip it.
 
 ## 2. Add VungleSDK to Your Project
 
+### Update Build Settings
+
+In your project's build settings -> Enable Modules (C and Objective-C) should be set to YES
+
 ### Add Our Framework
 
 Our SDK is released as a framework, so copy *VungleSDK.embeddedframework/* into your project directory, then drag and drop it into Xcode (*Frameworks*) to have it linked to your project.
