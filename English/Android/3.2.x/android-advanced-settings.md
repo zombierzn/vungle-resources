@@ -153,6 +153,17 @@ public class FirstActivity extends android.app.Activity {
   }
 }
 ```
+
+### Debugging Sleeps
+
+When your app sends a requestAd, it's possible our server will return a sleep. The most common ones are:
+
+| Sleep Time  | Meaning     | Tips        | 
+| :---------- | :---------- |:----------- |
+| **59** | The server is too busy | You should give it some time and then try again. |
+| **305** | No app / Unknown app | This probably means you are using the wrong AppID. Make sure it's the one in red, on your app's page on the dashboard. |
+| **1800** | Filters eliminated all options | This could be due to fill, or you may have watched the maximum number of daily ads for your app. You can try putting your app in test mode, so you do not have these limits. |
+
 ### Proguard
 
 If you are using Proguard, please ensure the following lines are in your Proguard config file:
