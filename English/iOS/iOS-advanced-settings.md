@@ -49,7 +49,7 @@ You can pass a dictionary into playAd which changes the default behaviour of the
 @end
 ```
 
-### Instance Methods (Debugging)
+### Instance Methods & Debugging
 
 * `- (BOOL)isCachedAdAvailable;`
   Returns `YES` if there's a cached ad ready to be displayed. This doesn't check whether there might be a streaming ad available, even if the publisher is opted in for streaming.
@@ -63,9 +63,18 @@ You can pass a dictionary into playAd which changes the default behaviour of the
   Attaches a logger, that will receive every log sent internally and externally using `log:`. It's up to the developer to properly detach the logger (internally, the logger is retained).
 * `- (void)detachLogger:(id<VungleSDKLogger>)logger;`
   Detaches a logger object.
-
 * `NSString* VungleSDKVersion`
   This is not an instance method, it's a constant who's value is the current version of the SDK. You can use this for debugging purposes.
+
+#### Debugging Sleeps
+
+When your app sends a requestAd, it's possible our server will return a sleep. The most common ones are:
+
+| Sleep Code   | Meaning     | Tips        | 
+| :----------- | :---------- |:----------- |
+| **59** | The server is too busy | You should give it some time and then try again. |
+| **305** | No app / Unknown app | this probably means you are using the wrong AppID. Make sure it's the one in red, on your app's page on the dashboard. |
+| **1800** | Filters eliminated all options | This could be due to fill, or you may have watched the maximum number of daily ads for your app. You can try putting your app in test mode, so you do not have these limits. |
 
 ### SDKLogger Protocol
 
