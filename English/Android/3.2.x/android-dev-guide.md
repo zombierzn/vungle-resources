@@ -32,7 +32,7 @@ This should include the following libraries:
 * `support-v4-[version].jar`
 * `vungle-publisher-[version].jar`
 
-If you already include the same versions of any of the above libraries, you don't need to include them again. If you are using a different version of any of the libraries, please test your app to determine which version works best.
+If you already including the same versions of any of the above libraries, you don't need to include them again. If you are using a different version of any of the libraries, please test your app to determine which version works best.
 
 ## 3. Update `AndroidManifest.xml` & add Google Play Services
 
