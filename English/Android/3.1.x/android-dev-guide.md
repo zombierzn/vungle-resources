@@ -70,7 +70,7 @@ If you already include the same versions of any of the above libraries, you don'
 </manifest>
 ```
 
-2) Add Google Play Services to your project (we recommend using version 4.0.30):
+2) Add Google Play Services to your project (we recommend using version 4.0.30). In this SDK version, we only support Google Play Services up to 6.1:
 
 http://developer.android.com/google/play-services/setup.html#Setup
 
