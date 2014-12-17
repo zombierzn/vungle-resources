@@ -6,7 +6,9 @@ This guide will show you how you can easily integrate our SDK into your app so y
 
 If you have already integrated a previous version of the Vungle SDK, you'll want to use [this guide](https://github.com/Vungle/vungle-resources/blob/master/English/iOS/iOS-migration-guide.md).
 
-Applicable to Version 3.0+
+Applicable to Vungle SDK version 3.0+
+
+Our SDK supports iOS 6 and higher.
 
 ### Here are a few important tips:
 
