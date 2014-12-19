@@ -8,6 +8,14 @@ Once you've gotten an ad to play, our [advanced settings](https://github.com/Vun
 
 ## Changelog
 
+## VERSION 3.0.11
+* Deprecated VunglePlayAdOptionKeyShowClose
+* Deprecated VungleSDK#playAd: & VungleSDK#playAd:withOptions:
+* Fixed some minor memory leaks
+* Fixed orientations issues on iOS 8
+* Fixed some random crashes on very limited edge cases
+* Moved internal database from Documents to App Support
+
 ## VERSION 3.0.10
 * Fixed crash that killed the app when sent to the background (in rare conditions)
 * Fixed postroll and corrupted video bugs
