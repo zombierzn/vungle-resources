@@ -1,9 +1,18 @@
-## Unity Plugin
+# VungleSDK Unity- iOS Developer Guide
 
-Once you have setup your application on the Vungle website you will want to retrieve the application ID and pass it to the startWithAppId method. Vungle's SDK will automatically load up some videos. You can use the isAdAvailable method to determine if an ad is available to display. Once you are ready to show the ad just call playAd. The playAd method takes several options that can be used to customize the way it is displayed. Optionally you can use the playModalAd or playIncentivizedAd to display non-incentivized or incentivized ads respectively.
+## Setup
 
+* If you haven't already done so, head over to our [dashboard](https://v.vungle.com/dashboard/login) and add your app to your account. You need to do this in order to get your App ID. It’s in **red** on your app’s page.
 
-### VungleBinding.cs exposes the following methods:
+* To initialize Vungle, pass your App ID to the `startWithAppId` method. The SDK will automatically begin caching a video. 
+
+* You can use the `isAdAvailable` method to determine if an ad is available to display. 
+
+* Once you are ready to show the ad, just call `playAd`. The `playAd` method takes several options that can be used to customize the way it is displayed.
+
+## API Documentation
+
+#### VungleBinding.cs exposes the following methods:
 ```
 // Starts up the SDK with the given appId
 public static void startWithAppId( string appId )
@@ -21,7 +30,7 @@ public static bool isAdAvailable()
 public static void playAd( bool incentivized = false, string user = "" )
 ```
 
-### VungleManager.cs fires the following events:
+#### VungleManager.cs fires the following events:
 ```
 // Fired when a video has finished playing. Includes the following keys: completedView (bool), playTime (double),
 // didDownload (bool) and willPresentProductSheet (bool).
