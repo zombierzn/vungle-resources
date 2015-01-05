@@ -2,7 +2,7 @@
 
 ## Setup
 
-* If you haven't already done so, head over to our [dashboard](https://v.vungle.com/dashboard/login) and add your apps to your account. You need to do this so that you can get your App ID that you’ll be adding to your app with our SDK. It’s in **red** on your app’s page. You'll need to make separate apps for Android and iOS.
+* If you haven't already done so, head over to our [dashboard](https://v.vungle.com/dashboard/login) and add your apps to your account. You need to do this in order to get your App ID. It’s in **red** on your app’s page. You'll need to make separate apps for Android and iOS.
 
 * To initialize Vungle, pass both App IDs to the `init` method. The SDK will automatically begin caching a video. 
 
