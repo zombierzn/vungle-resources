@@ -10,7 +10,7 @@ A quick refresher on how our API looks. A request to:
 `https://ssl.vungle.com/api/applications/[yourReportingAPIID]?key=[yourAPIKeyHere]&date=2014-01-01 `
 
 will return a result that looks like this:
-```
+```JSON
 {
 "date"        : "2014-01-01",
 "impressions" : 100000,
@@ -32,7 +32,7 @@ If you set the `geo` argument to `all` then you’ll receive an extra array of o
 `https://ssl.vungle.com/api/applications/[yourReportingAPIID]?key=[yourAPIKeyHere]&date=2014-01-01&geo=all`
 
 Will return something of the form:
-```
+```JSON
 {
 "date"        : "2014-01-01",
 "views"       : 98000,
@@ -47,7 +47,7 @@ If you set the `geo` argument to a specific geo, e.g. `US` then you’ll receive
 `https://ssl.vungle.com/api/applications/[yourReportingAPIID]?key=[yourAPIKeyHere]&date=2014-01-01&geo=US`
 
 Will return something of the form:
-```
+```JSON
 {
 "date"        : "2014-01-01",
 "country"     : "US",
@@ -57,7 +57,7 @@ Will return something of the form:
 }
 ```
 This request may also return either of the following self-explanatory errors:
-```
+```JSON
 {
 "date"        : "2014-01-01",
 "country"     : "ZZ",
