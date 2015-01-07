@@ -12,12 +12,12 @@ A quick refresher on how our API looks. A request to:
 will return a result that looks like this:
 ```JSON
 {
-"date"        : "2014-01-01",
-"impressions" : 100000,
-"views"       : 98000,
-"completes"   : 70000,
-"revenue"     : 680.00,
-"eCPM"        : 6.80
+    "date"        : "2014-01-01",
+    "impressions" : 100000,
+    "views"       : 98000,
+    "completes"   : 70000,
+    "revenue"     : 680.00,
+    "eCPM"        : 6.80
 }
 ```
 
@@ -34,11 +34,11 @@ If you set the `geo` argument to `all` then you’ll receive an extra array of o
 Will return something of the form:
 ```JSON
 {
-"date"        : "2014-01-01",
-"views"       : 98000,
-"revenue"     : 680.00,
-"eCPM"        : 6.80,
-"geo_eCPM"    : [{"country" : "US", "views" : 98000, "revenue" : 680.00,"eCPM" : 8.10}, {"country" : "TH", "views" : 98000, "revenue" : 680.00, "eCPM" : 5.11}, ...]
+    "date"        : "2014-01-01",
+    "views"       : 98000,
+    "revenue"     : 680.00,
+    "eCPM"        : 6.80,
+    "geo_eCPM"    : [{"country" : "US", "views" : 98000, "revenue" : 680.00,"eCPM" : 8.10}, {"country" : "TH", "views" : 98000, "revenue" : 680.00, "eCPM" : 5.11}, ...]
 }
 ```
 ##### Individual Results
@@ -49,19 +49,19 @@ If you set the `geo` argument to a specific geo, e.g. `US` then you’ll receive
 Will return something of the form:
 ```JSON
 {
-"date"        : "2014-01-01",
-"country"     : "US",
-"views"       : 98000,
-"revenue"     : 680.00,
-"eCPM"        : 8.10
+    "date"        : "2014-01-01",
+    "country"     : "US",
+    "views"       : 98000,
+    "revenue"     : 680.00,
+    "eCPM"        : 8.10
 }
 ```
 This request may also return either of the following self-explanatory errors:
 ```JSON
 {
-"date"        : "2014-01-01",
-"country"     : "ZZ",
-"error"       : "Geo Not Found"
+    "date"        : "2014-01-01",
+    "country"     : "ZZ",
+    "error"       : "Geo Not Found"
 }
 ```
 
