@@ -16,12 +16,12 @@ Example Response:
 
 ```JSON
 {   
-"rate" : 0.01,
-"rateType" : "complete",
-"campaignId" : "51896da23436ae313c3939b9",
-"type" : "external",
-"name" : "Feed the Rat",
-"spent" : 2131
+    "rate" : 0.01,
+    "rateType" : "complete",
+    "campaignId" : "51896da23436ae313c3939b9",
+    "type" : "external",
+    "name" : "Feed the Rat",
+    "spent" : 2131
 }
 ```
 
@@ -32,15 +32,15 @@ Example Response:
 
 ```JSON
 {
-"clicks" : 1129,
-"completedViews" : 23080,
-"date" : "2012-08-19",
-"campaignId" : "51896da23436ae313c3939b9",
-"installs" : 590,
-"impressions" : 26722,
-"name" : "Feed the Rat",
-"views" : 26546,
-"dailySpend": 566
+    "clicks" : 1129,
+    "completedViews" : 23080,
+    "date" : "2012-08-19",
+    "campaignId" : "51896da23436ae313c3939b9",
+    "installs" : 590,
+    "impressions" : 26722,
+    "name" : "Feed the Rat",
+    "views" : 26546,
+    "dailySpend": 566
 }
 ```
 
@@ -51,16 +51,16 @@ Example Response:
 
 ```JSON
 {
-"time_clicked": "2012-08-17T01:52:32.024Z",
-"time_installed": "2012-08-17T01:54:33.034Z",
-"openUDID": "e2c42c159286124f34702e770cc702240c2707e8",
-"mac": "98d6bb786fdd"
+    "time_clicked": "2012-08-17T01:52:32.024Z",
+    "time_installed": "2012-08-17T01:54:33.034Z",
+    "openUDID": "e2c42c159286124f34702e770cc702240c2707e8",
+    "mac": "98d6bb786fdd"
 },
 {
-"time_clicked": "2012-08-17T01:52:32.024Z",
-"time_installed": "2012-08-17T01:54:33.034Z",
-"openUDID": "e2c42c159286124f34702e770cc702240c2707e8",
-"mac": "98d6bb786fdd"
+    "time_clicked": "2012-08-17T01:52:32.024Z",
+    "time_installed": "2012-08-17T01:54:33.034Z",
+    "openUDID": "e2c42c159286124f34702e770cc702240c2707e8",
+    "mac": "98d6bb786fdd"
 }
 ```
 
@@ -73,12 +73,12 @@ Example Response:
 
 ```JSON
 {
-"status" : "a",
-"platform" : "iOS",
-"appId" : "51896d9c3436ae313c3939b8",
-"installs" : 1372,
-"name" : "Project Comet",
-"connection" : "all", "id": "51896d9c3436ae313c3939b8"
+    "status" : "a",
+    "platform" : "iOS",
+    "appId" : "51896d9c3436ae313c3939b8",
+    "installs" : 1372,
+    "name" : "Project Comet",
+    "connection" : "all", "id": "51896d9c3436ae313c3939b8"
 }
 ```
 
@@ -89,10 +89,10 @@ Example Response:
 
 ```JSON
 {
-"date" : "2012-08-16",
-"impressions" : 5165, "views" : 5156,
-"completes" : 1686,
-"revenue" : 16.86,
-"eCPM" : 3.26<br>
+    "date" : "2012-08-16",
+    "impressions" : 5165, "views" : 5156,
+    "completes" : 1686,
+    "revenue" : 16.86,
+    "eCPM" : 3.26
 }
 ```

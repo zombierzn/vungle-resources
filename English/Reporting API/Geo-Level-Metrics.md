@@ -38,7 +38,20 @@ Will return something of the form:
     "views"       : 98000,
     "revenue"     : 680.00,
     "eCPM"        : 6.80,
-    "geo_eCPM"    : [{"country" : "US", "views" : 98000, "revenue" : 680.00,"eCPM" : 8.10}, {"country" : "TH", "views" : 98000, "revenue" : 680.00, "eCPM" : 5.11}, ...]
+    "geo_eCPM"    : [
+                        {
+                            "country" : "US",
+                            "views" : 98000,
+                            "revenue" : 680.00,
+                            "eCPM" : 8.10
+                        },
+                        {
+                            "country" : "TH",
+                            "views" : 98000,
+                            "revenue" : 680.00,
+                            "eCPM" : 5.11
+                        },...
+                    ]
 }
 ```
 ##### Individual Results
