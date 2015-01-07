@@ -2,7 +2,7 @@
 
 ## 請注意
 
-這份參考文件包含更多有關Vungle廣告的進階設定。假如你才剛開始學習，請先參考[這份指南](https://github.com/Vungle/vungle-resources/blob/master/中文/Android-resources/3.0.x/android-dev-guide.md). 
+這份參考文件包含更多有關Vungle廣告的進階設定。假如你才剛開始學習，請先參考[這份指南](https://github.com/Vungle/vungle-resources/blob/master/%E4%B8%AD%E6%96%87/Android-resources/3.0.x/android-dev-guide.md). 
 
 ## 進階設置
 
