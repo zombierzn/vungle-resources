@@ -4,7 +4,7 @@
 
 这个指南会告诉你如何升级我们的SDK到最新版本- version 3.0!
 
-如果你是新加入Vungle的, 你可能想使用[这份指南](https://github.com/Vungle/vungle-resources/blob/master/中文/iOS-resources/iOS-dev-guide.md).
+如果你是新加入Vungle的, 你可能想使用[这份指南](https://github.com/Vungle/vungle-resources/blob/master/%E4%B8%AD%E6%96%87/iOS-resources/iOS-dev-guide.md).
 
 ### 以下是很重要的贴士:
 
@@ -73,7 +73,7 @@ VungleSDK* sdk = [VungleSDK sharedSDK];
 
 ### 想改变广告的默认设置?
 
-* **Options object:** 要改变广告的静音设置, 方位, 还有其他客制化选项, 你可能要传入一个字典. 请看范例程序 [第70行](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-sample-app/Vungle%20Sample%20App/FirstViewController.m) . 在 [进阶设定](https://github.com/Vungle/vungle-resources/blob/master/中文/iOS/iOS-advanced-settings.md)会有详细的介绍.
+* **Options object:** 要改变广告的静音设置, 方位, 还有其他客制化选项, 你可能要传入一个字典. 请看范例程序 [第70行](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-sample-app/Vungle%20Sample%20App/FirstViewController.m) . 在 [进阶设定](https://github.com/Vungle/vungle-resources/blob/master/%E4%B8%AD%E6%96%87/iOS-resources/iOS-advanced-settings.md)会有详细的介绍.
 
 * **激励性广告** 这个也可以是你字典的一个选项. 没有独立的方法去播放激励性还有非激励性的广告。
   
@@ -82,4 +82,4 @@ VungleSDK* sdk = [VungleSDK sharedSDK];
 
 ## 进阶化设定
 
-看我们的 [进阶设定](https://github.com/Vungle/vungle-resources/blob/master/中文/iOS/iOS-advanced-settings.md),里面有客制化，程序调试，还有事件回调！
+看我们的 [进阶设定](https://github.com/Vungle/vungle-resources/blob/master/%E4%B8%AD%E6%96%87/iOS-resources/iOS-advanced-settings.md),里面有客制化，程序调试，还有事件回调！

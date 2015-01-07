@@ -2,7 +2,7 @@
 
 ## 请注意:
 
-这份参考文件包含更多有关Vungle广告的进阶还有定制服务。假如你才刚开始学习，请先参考[这份指南](https://github.com/Vungle/vungle-resources/blob/master/中文/iOS/iOS-dev-guide.md)。
+这份参考文件包含更多有关Vungle广告的进阶还有定制服务。假如你才刚开始学习，请先参考[这份指南](https://github.com/Vungle/vungle-resources/blob/master/%E4%B8%AD%E6%96%87/iOS-resources/iOS-dev-guide.md)。
 能应用在版本3.0以上。
 
 ## playAd 选项
