@@ -168,4 +168,4 @@ vunglePub.isCachedAdAvailable()
 
 ## 进阶设定
 
-查看我们的[进阶设定](https://github.com/Vungle/vungle-resources/blob/master/中文/Android/3.1.x/android-advanced-settings.md)，里面有广告定制、程序调试、事件回叫。
+查看我们的[进阶设定](https://github.com/Vungle/vungle-resources/blob/master/%E4%B8%AD%E6%96%87/Android-resources/3.1.x/android-advanced-settings.md)，里面有广告定制、程序调试、事件回叫。
