@@ -4,7 +4,7 @@
 
 这份指南能帮助你轻易地安装SDK到你的APP，让你开始赚钱。
 
-假如你已经安装了Vungle SDK以前的版本，那你需要看[这份指南](https://github.com/Vungle/vungle-resources/blob/master/中文/iOS-resources/iOS-migration-guide .md)。
+假如你已经安装了Vungle SDK以前的版本，那你需要看[这份指南](https://github.com/Vungle/vungle-resources/blob/master/%E4%B8%AD%E6%96%87/iOS-resources/iOS-migration-guide.md)。
 
 应用于版本3.0以上。
 
@@ -18,7 +18,7 @@
 * 假如你想直接跳到范例app中，请参考[这个链接](https://github.com/Vungle/publisher-sample-ios/tree/master).
 
 * 假如你正在使用第三方插件（**Adobe Air**, **Unity-iOS**, **Corona**）。请参考[这个链接](https://v.vungle.com/dev/plugins).
-* 因为中国区的网速问题，建议在video成功缓存之后再显示播放按钮（检查广告有没有成功缓存，方法是isCachedAdAvailable）。具体设置请看[这份指南](https://github.com/Vungle/vungle-resources/blob/master/中文/iOS/iOS-advanced-settings.md)。
+* 因为中国区的网速问题，建议在video成功缓存之后再显示播放按钮（检查广告有没有成功缓存，方法是isCachedAdAvailable）。具体设置请看[这份指南](https://github.com/Vungle/vungle-resources/blob/master/%E4%B8%AD%E6%96%87/iOS-resources/iOS-advanced-settings.md)。
 
 除此之外，请读以下内容。
 
@@ -96,6 +96,6 @@ VungleSDK* sdk = [VungleSDK sharedSDK];
 
 ## 进阶设定
 
-查看我们的[进阶设定](https://github.com/Vungle/vungle-resources/blob/master/中文/iOS-resources/iOS-advanced-settings.md)，里面有广告定制、程序调试、事件回调。
+查看我们的[进阶设定](https://github.com/Vungle/vungle-resources/blob/master/%E4%B8%AD%E6%96%87/iOS-resources/iOS-advanced-settings.md)，里面有广告定制、程序调试、事件回调。
 
 

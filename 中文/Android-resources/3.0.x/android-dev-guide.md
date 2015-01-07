@@ -156,4 +156,4 @@ vunglePub.isCachedAdAvailable()
 <a name="advancedStartupConfig"></a>
 ## 進階設定
 
-查看我們的[進階設定](https://github.com/Vungle/vungle-resources/blob/master/中文/Android-resources/3.0.x/android-advanced-settings.md) 裡面有廣告定製、程序調試、事件回叫。
+查看我們的[進階設定](https://github.com/Vungle/vungle-resources/blob/master/%E4%B8%AD%E6%96%87/Android-resources/3.0.x/android-advanced-settings.md) 裡面有廣告定製、程序調試、事件回叫。

@@ -2,7 +2,7 @@
 
 ## 请注意
 
-这份参考文件包含更多有关Vungle广告的进阶设定。假如你才刚开始学习，请先参考[这份指南](https://github.com/Vungle/vungle-resources/blob/master/中文/Android/3.1.x/android-dev-guide.md。
+这份参考文件包含更多有关Vungle广告的进阶设定。假如你才刚开始学习，请先参考[这份指南](https://github.com/Vungle/vungle-resources/blob/master/%E4%B8%AD%E6%96%87/Android-resources/3.1.x/android-dev-guide.md)。
                                                
 ## 进阶设定 
 
