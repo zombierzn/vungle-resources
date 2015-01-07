@@ -18,7 +18,8 @@ will return a result that looks like this:
 "completes"   : 70000,
 "revenue"     : 680.00,
 "eCPM"        : 6.80
-}```
+}
+```
 
 ###Now Introducing Geo!
 The addition to the api is simple - just add an extra argument to your query. The argument is `geo` and you can set it to one of two things: All Results or Individual Results.

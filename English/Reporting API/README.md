@@ -5,7 +5,7 @@ The reporting API is meant to give advertisers and publishers a programmatic way
 
 |Host           |Request Headers        |API            |
 | :-----------  | :-------------------  |:-----------   |
-|`https://ssl.vungle.com`         |`Content-Type: application/json`         |Security is handled by passing an API key as a query parameter. Your API key: `API_KEY_HERE` <br> If you don't have one already, email <a href="mailto:tech-support@vungle.com?Subject=API%20Key%20Request" target="_top">tech-support@vungle.com</a> to request one!'|
+|`https://ssl.vungle.com`         |`Content-Type: application/json`         |Security is handled by passing an API key as a query parameter. Your API key: `API_KEY_HERE` <br> If you don't have one already, email <a href="mailto:tech-support@vungle.com?Subject=API%20Key%20Request" target="_top">tech-support@vungle.com</a> to request one!|
 
 ## Advertisers
 
