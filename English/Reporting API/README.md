@@ -5,7 +5,7 @@ The reporting API is meant to give advertisers and publishers a programmatic way
 
 |Host           |Request Headers        |API            |
 | :-----------  | :-------------------  |:-----------   |
-|`https://ssl.vungle.com`         |`Content-Type: application/json`         |Security is handled by passing an API key as a query parameter. Your API key: `API_KEY_HERE` <br> If you don't have one already, email <a href="mailto:tech-support@vungle.com?Subject=API%20Key%20Request" target="_top">tech-support@vungle.com</a> to request one!|
+|`https://ssl.vungle.com`         |`Content-Type: application/json`         |Security is handled by passing an API key as a query parameter. <br> If you don't have one already, email <a href="mailto:tech-support@vungle.com?Subject=API%20Key%20Request" target="_top">tech-support@vungle.com</a> to request one!|
 
 ## Advertisers
 
@@ -79,5 +79,20 @@ Example Response:
     "installs" : 1372,
     "name" : "Project Comet",
     "connection" : "all", "id": "51896d9c3436ae313c3939b8"
+}
+```
+
+|Resource       |Parameters             |Description    |
+| :-----------  | :-------------------  |:-----------   |
+|`GET /api/applications/[App ID]`         |`key=[API Key] date=[YYYY-MM-DD]` <br> or <br> `key=[API Key] start=[YYYY-MM-DD] end=[YYYY-MM-DD]` | Returns a list of the statistics for the specified application on the specified date(s).|
+Example Response: 
+
+```JSON
+{
+    "date" : "2012-08-16",
+    "impressions" : 5165, "views" : 5156,
+    "completes" : 1686,
+    "revenue" : 16.86,
+    "eCPM" : 3.26
 }
 ```
