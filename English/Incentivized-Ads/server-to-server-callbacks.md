@@ -18,7 +18,7 @@ Configure the callback URL in your app's Advanced Settings, on the dashboard. Mo
 
 | Variables  | Description | 
 | :--------- |:----------- |
-| `%user%`   | the username provided to the Vungle SDK via: <br>**iOS-** the `user` key of the [options dict](https://github.com/Vungle/vungle-resources/blob/master/iOS-resources/iOS-advanced-settings.md) passed to `playAd()` <br>**Android-** the `setIncentivizedUserId` setter of the [global ad config object](https://github.com/Vungle/vungle-resources/blob/master/Android-resources/android-advanced-settings.md) passed to `playAd()` |
+| `%user%`   | the username provided to the Vungle SDK via: <br>**iOS-** the `user` key of the [options dict](https://github.com/Vungle/vungle-resources/blob/master/English/iOS/iOS-advanced-settings.md#playad-options) passed to `playAd()` <br>**Android-** the `setIncentivizedUserId` setter of the [global ad config object](https://github.com/Vungle/vungle-resources/blob/master/English/Android/3.2.x/android-advanced-settings.md#the-adconfig-object) passed to `playAd()` |
 | `%udid%`   | a unique identifier for the device | 
 | `%ifa%`    | iOS- Apple's unique identifier for the device. Android- this will return the Google Advertiser ID. |
 | `%txid%`   | a unique transaction ID for the completed view |
