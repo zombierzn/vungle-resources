@@ -1,7 +1,7 @@
 #Reporting API
 ## Overview
 
-The reporting API is meant to give advertisers and publishers a programmatic way to access data that is present on the dashboard.
+The reporting API is meant to give advertisers and publishers a programmatic way to access data that is present on the dashboard. Your Reporting API Key will be the same for all of your apps. Each app will have a unique Reporting API ID, which can be found on its respective application page. 
 
 |Host           |Request Headers        |API            |
 | :-----------  | :-------------------  |:-----------   |
