@@ -1,6 +1,6 @@
 ##Vungle VAST Integration
 
-### Steps in Integtation:
+### Steps in Integration:
 __________________________________________________________________________________________
 
 ```javascript
@@ -79,11 +79,4 @@ ________________________________________________________________________________
 
 ```javascript
 Please Respond with No Ad or a 403 for impressions not wanted
-```
-
-### Support
-__________________________________________________________________________________________
-
-```javascript
-Please contact TAM @ Vungle . com
 ```
