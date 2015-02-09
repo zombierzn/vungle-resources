@@ -1,6 +1,6 @@
 ## Android Resources
 
-Documentation for our current release can be found [here](https://github.com/Vungle/vungle-resources/tree/master/English/Android/current-release). 
+Documentation for our current release can be found [here](./current-release). 
 
 Get started with the dev guide, which will help you integrate and play an ad. Once you've done that, our advanced settings doc will help you customize.
 
