@@ -6,6 +6,21 @@ You can find our sample app [here](https://github.com/Vungle/publisher-sample-an
 
 ## Changelog
 
+### VERSION 3.3.0
+
+* Added support for latest Google Play Services (6.5.87+)
+* Added support for multiple EventListeners
+* Updated `isCachedAdAvailable()` to `isAdPlayable()`
+* Updated `onCachedAvailable()` to `onAdPlayableChanged(boolean)`
+* Ad close now enabled during and after incentivized alert dialog 
+* Google Play Services is now an optional dependency
+* Improved local caching performance
+* Improved cached ad retrieval logic and timing
+* Improved network request handling
+** Improved notifications around failed network requests
+** Improved logic and timing of queued network requests
+
+
 ### VERSION 3.2.2
 
 * new 'adaptiveId' that uses [Android Advertising ID](https://developer.android.com/google/play-services/id.html) for attribution if available, otherwise falls back to [Android ID](http://developer.android.com/reference/android/provider/Settings.Secure.html#ANDROID_ID) and wifi MAC address (if available)
