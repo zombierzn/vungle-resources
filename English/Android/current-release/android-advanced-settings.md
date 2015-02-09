@@ -89,10 +89,10 @@ One global `AdConfig` object controls settings for all ad plays, and you can opt
 To control whether a user has the option to close out of an ad, use the forced view options in your app's advanced settings on the [Vungle Dashboard](https://v.vungle.com/).
 
 #### The `EventListener` Interface
-The Publisher SDK raises several events that you can handle programmatically by implementing `com.vungle.publisher.EventListener` and registering/removing it using:
+The Publisher SDK raises several events that you can handle programmatically by implementing `com.vungle.publisher.EventListener` classes and registering/removing them using:
 
 ```java
-VunglePub.setEventListener(eventListener)
+VunglePub.setEventListeners(eventListener1, eventListener2, ...)
 ```
 
 ##### UI Thread Note
@@ -131,7 +131,7 @@ public class FirstActivity extends android.app.Activity {
     }
 
     @Override
-    public void onAdPlayableChanged(boolean b) {
+    public void onAdPlayableChanged(boolean isAdPlayable) {
         // Called when an ad is downloaded and may be played
     }
     
