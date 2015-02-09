@@ -1,6 +1,8 @@
 ## Android Resources
 
-Documentation for our current release can be found [here](test.com). Get started with the dev guide, which will help you integrate and play an ad. Once you've done that, our advanced settings doc will help you customize.
+Documentation for our current release can be found [here](https://github.com/Vungle/vungle-resources/tree/master/English/Android/current-release). 
+
+Get started with the dev guide, which will help you integrate and play an ad. Once you've done that, our advanced settings doc will help you customize.
 
 You can find our sample app [here](https://github.com/Vungle/publisher-sample-android). Check out the code, or run it for a demo of our ad experience!
 
@@ -10,8 +12,8 @@ You can find our sample app [here](https://github.com/Vungle/publisher-sample-an
 
 * Added support for latest Google Play Services (6.5.87+)
 * Added support for multiple EventListeners
-** Updated `setEventListener()` to `setEventListeners()`
-** Added `addEventListeners()`, `clearEventListeners()`, and `removeEventListeners()`
+  * Updated `setEventListener()` to `setEventListeners()`
+  * Added `addEventListeners()`, `clearEventListeners()`, and `removeEventListeners()`
 * Updated `isCachedAdAvailable()` to `isAdPlayable()`
 * Updated `onCachedAvailable()` to `onAdPlayableChanged(boolean)`
 * Ad close now enabled during and after incentivized alert dialog 
@@ -19,8 +21,8 @@ You can find our sample app [here](https://github.com/Vungle/publisher-sample-an
 * Improved local caching performance
 * Improved cached ad retrieval logic and timing
 * Improved network request handling
-** Improved notifications around failed network requests
-** Improved logic and timing of queued network requests
+  * Improved notifications around failed network requests
+  * Improved logic and timing of queued network requests
 
 
 ### VERSION 3.2.2
