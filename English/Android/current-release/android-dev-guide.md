@@ -34,7 +34,7 @@ This should include the following libraries:
 
 If you already including the same versions of any of the above libraries, you don't need to include them again. If you are using a different version of any of the libraries, please test your app to determine which version works best.
 
-## 3. Update `AndroidManifest.xml` & add Google Play Services
+## 3. Update `AndroidManifest.xml`
 
 1) Add the following lines:
 
@@ -63,16 +63,14 @@ If you already including the same versions of any of the above libraries, you do
     
     <service android:name="com.vungle.publisher.VungleService"
       android:exported="false"/>
-
-    <meta-data android:name="com.google.android.gms.version"
-      android:value="@integer/google_play_services_version" />
     
   </application>
   
 </manifest>
 ```
 
-2) Add Google Play Services to your project.  We recommend using version 4.0.30 or higher.
+### Google Play Services (Optional)
+Including Google Play Services with your project will allow Vungle to provide a more customized ad experience to the end-user, but it's not required.  We recommend using version 4.0.30 or higher.
 
 http://developer.android.com/google/play-services/setup.html#Setup
 
