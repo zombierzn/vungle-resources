@@ -1,4 +1,4 @@
-# VungleSDK- Android Developer Guide
+# VungleSDK- Android Developer Guide - v3.3.0
 
 This guide will show you how you can easily integrate our SDK into your app so you can start monetizing!
 
@@ -72,7 +72,7 @@ If you already including the same versions of any of the above libraries, you do
 </manifest>
 ```
 
-2) Add Google Play Services to your project (we recommend using version 4.0.30). In this SDK version, we only support Google Play Services up to 6.1:
+2) Add Google Play Services to your project.  We recommend using version 4.0.30 or higher.
 
 http://developer.android.com/google/play-services/setup.html#Setup
 
@@ -159,7 +159,7 @@ public class GameActivity extends android.app.Activity {
 **Tip-** If you'd like to check if an ad is available before playing, use:
 ```java
 // indicates if an ad is downloaded (but ignores frequency cap)
-vunglePub.isCachedAdAvailable()
+vunglePub.isAdPlayable()
 ```
 
 That's it! Quick start guide complete. Stick around if you'd like to check out some of the ways you can customize the ad experience, but otherwise go forth and monetize!

@@ -1,8 +1,8 @@
-# VungleSDK- Android Advanced Settings
+# VungleSDK- Android Advanced Settings - v3.3.0
 
 ## Please note:
 
-This reference covers the more advanced settings and customizeable aspects of Vungle ads. If you're just getting started, you'll want to check out this [guide](https://github.com/Vungle/vungle-resources/blob/master/English/Android/3.2.x/android-dev-guide.md). 
+This reference covers the more advanced settings and customizeable aspects of Vungle ads. If you're just getting started, you'll want to check out this [guide](https://github.com/Vungle/vungle-resources/blob/master/English/Android/current-release/android-dev-guide.md). 
 
 ## Advanced Configuration 
 
@@ -26,7 +26,7 @@ public class FirstActivity extends android.app.Activity {
 
       vunglePub.init(this, app_id);
 
-      // get a handle on the global AdConfig object
+      // get a reference to the global AdConfig object
       final AdConfig globalAdConfig = vunglePub.getGlobalAdConfig();
 
       // set any configuration options you like. 
@@ -40,7 +40,7 @@ public class FirstActivity extends android.app.Activity {
 
 ### playAd Configuration 
 
-You can optionally customize each individual ad you play by providing an `AdConfig` object to `playAd`. If you set any options in the global ad configuration (below), those options will be overriden by the provided options.
+You can optionally customize each individual ad you play by providing an `AdConfig` object to `playAd`. If you set any options in the global ad configuration (above), those options will be overriden by the provided options.
 ```java
 import com.vungle.publisher.VunglePub;
 import com.vungle.publisher.AdConfig;
@@ -57,8 +57,7 @@ public class GameActivity extends android.app.Activity {
   	  overrideConfig.setIncentivized(true);
   	  overrideConfig.setSoundEnabled(false);
 
-  	  // the overrideConfig object will only affect this ad play. 
-  	  // See the Application Startup section for how to set persistent global configurations.
+  	  // the overrideConfig object will only affect this ad play.
       vunglePub.playAd(overrideConfig);
   }
 }
@@ -98,7 +97,7 @@ VunglePub.setEventListener(eventListener)
 
 ##### UI Thread Note
 
-The callbacks are executed on a different thread than your main UI thread, so if you interact with your UI in the callback, you will need to use a technique to execute your callback on the main UI thread. Two common ways to run your code on the UI thread include the following:
+The callbacks are executed on a background thread, so any UI interaction/updates resulting from an event callback need to be passed to the main UI thread before executing. Two common ways to run your code on the UI thread are:
 
 * [Handler](http://developer.android.com/reference/android/os/Handler.html)
 
@@ -132,7 +131,7 @@ public class FirstActivity extends android.app.Activity {
     }
 
     @Override
-    public void onCachedAdAvailable() {
+    public void onAdPlayableChanged(boolean b) {
         // Called when an ad is downloaded and may be played
     }
     
@@ -148,7 +147,7 @@ public class FirstActivity extends android.app.Activity {
       ...
 
       vunglePub.init(this, app_id);
-      vunglePub.setEventListener(vungleListener);
+      vunglePub.setEventListeners(vungleListener);
 
   }
 }

@@ -1,6 +1,6 @@
 ## Android Resources
 
-Choose the folder that matches the SDK version you will be implementing. Get started with the dev guide, which will help you integrate and play an ad. Once you've done that, our advanced settings doc will help you customize.
+Documentation for our current release can be found [here](test.com). Get started with the dev guide, which will help you integrate and play an ad. Once you've done that, our advanced settings doc will help you customize.
 
 You can find our sample app [here](https://github.com/Vungle/publisher-sample-android). Check out the code, or run it for a demo of our ad experience!
 
@@ -10,6 +10,8 @@ You can find our sample app [here](https://github.com/Vungle/publisher-sample-an
 
 * Added support for latest Google Play Services (6.5.87+)
 * Added support for multiple EventListeners
+** Updated `setEventListener()` to `setEventListeners()`
+** Added `addEventListeners()`, `clearEventListeners()`, and `removeEventListeners()`
 * Updated `isCachedAdAvailable()` to `isAdPlayable()`
 * Updated `onCachedAvailable()` to `onAdPlayableChanged(boolean)`
 * Ad close now enabled during and after incentivized alert dialog 
