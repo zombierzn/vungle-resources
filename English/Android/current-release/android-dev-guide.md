@@ -152,7 +152,7 @@ public class GameActivity extends android.app.Activity {
 
 **Tip-** If you'd like to check if an ad is available before playing, use:
 ```java
-// indicates if an ad is downloaded (but ignores frequency cap)
+// indicates if an ad is ready to play
 vunglePub.isAdPlayable()
 ```
 
