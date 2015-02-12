@@ -132,7 +132,8 @@ public class FirstActivity extends android.app.Activity {
 
     @Override
     public void onAdPlayableChanged(boolean isAdPlayable) {
-        // Called when an ad is downloaded and may be played
+        // Called when the playability state changes. if isAdPlayable is true, you can now play an ad.
+        // If false, you cannot yet play an ad.
     }
     
     @Override
