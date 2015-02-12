@@ -11,19 +11,20 @@ You can find our sample app [here](https://github.com/Vungle/publisher-sample-an
 ### VERSION 3.3.0
 
 * Added support for latest Google Play Services (6.5.87+)
-* Added support for multiple EventListeners
-  * Updated `setEventListener()` to `setEventListeners()`
-  * Added `addEventListeners()`, `clearEventListeners()`, and `removeEventListeners()`
-* Updated `isCachedAdAvailable()` to `isAdPlayable()`
-* Updated `onCachedAvailable()` to `onAdPlayableChanged(boolean)`
-* Ad close now enabled during and after incentivized alert dialog 
-* Google Play Services is now an optional dependency
+* The Vungle SDK can now be integrated without Google Play Services if desired
+* Changed the `VunglePub` public API
+  * Added support for multiple EventListeners
+    * Renamed `setEventListener()` to `setEventListeners()`
+    * Added `addEventListeners()`, `clearEventListeners()`, and `removeEventListeners()`
+  * Renamed `isCachedAdAvailable()` to `isAdPlayable()`
+* Renamed `EventListener.onCachedAdAvailable()` to `EventListener.onAdPlayableChanged()`
+* `VunglePub.isAdPlayable()` and `EventListener.onAdPlayableChanged()` take into account minimum mdelays between ads and other conditions which might prevent an ad from being played if requested.  Previously, `VunglePub.isCachedAdAvailable()` and `EventListener.onCachedAdAvailable()` did not take these factors into account.
+* Ad close now enabled during and after incentivized alert dialog
 * Improved local caching performance
 * Improved cached ad retrieval logic and timing
 * Improved network request handling
   * Improved notifications around failed network requests
   * Improved logic and timing of queued network requests
-
 
 ### VERSION 3.2.2
 
