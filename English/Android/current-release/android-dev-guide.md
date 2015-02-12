@@ -60,10 +60,6 @@ If you already including the same versions of any of the above libraries, you do
       android:configChanges="keyboardHidden|orientation|screenSize"
       android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
     
-    
-    <service android:name="com.vungle.publisher.VungleService"
-      android:exported="false"/>
-    
   </application>
   
 </manifest>
@@ -156,7 +152,7 @@ public class GameActivity extends android.app.Activity {
 
 **Tip-** If you'd like to check if an ad is available before playing, use:
 ```java
-// indicates if an ad is downloaded (but ignores frequency cap)
+// indicates if an ad is ready to play
 vunglePub.isAdPlayable()
 ```
 
