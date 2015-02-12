@@ -60,10 +60,6 @@ If you already including the same versions of any of the above libraries, you do
       android:configChanges="keyboardHidden|orientation|screenSize"
       android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
     
-    
-    <service android:name="com.vungle.publisher.VungleService"
-      android:exported="false"/>
-    
   </application>
   
 </manifest>
