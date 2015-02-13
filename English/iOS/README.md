@@ -7,6 +7,8 @@ Switching from an older version of the SDK ( < v3.0 )? Check out our [migration 
 Once you've gotten an ad to play, our [advanced settings](https://github.com/Vungle/vungle-resources/blob/master/English/iOS/iOS-advanced-settings.md) will help you customize the experience.
 
 ## Changelog
+
+## Version 3.0.12
 * Fixes background crash
 * Improves re-queuing of network requests. It should improve the ability to re-send requests even after they failed.
 * [QA] Fixed crash in iOS 6 when postroll is blocked
