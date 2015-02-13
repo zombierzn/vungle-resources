@@ -8,13 +8,13 @@ Once you've gotten an ad to play, our [advanced settings](https://github.com/Vun
 
 ## Changelog
 
-## Version 3.0.12
+## VERSION 3.0.12
 * Fixes crash that happened on rare occasions when sending the app to the background
 * Improves re-queuing of network requests. It should improve the ability to re-send requests even after they failed.
 * Move saved /reportAds from cache directory to app support directory
 * Option to modify incentivized alert text (title, body, close button, and continue button)
 
-## VERSION 3.0.11
+### VERSION 3.0.11
 * Deprecated VunglePlayAdOptionKeyShowClose
 * Deprecated VungleSDK#playAd: & VungleSDK#playAd:withOptions:
 * Fixed some minor memory leaks
@@ -22,7 +22,7 @@ Once you've gotten an ad to play, our [advanced settings](https://github.com/Vun
 * Fixed some random crashes on very limited edge cases
 * Moved internal database from Documents to App Support
 
-## VERSION 3.0.10
+### VERSION 3.0.10
 * Fixed crash that killed the app when sent to the background (in rare conditions)
 * Fixed postroll and corrupted video bugs
 * Improved support for iOS 8
