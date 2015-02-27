@@ -20,11 +20,11 @@ may give you access to more inventory.</td></tr><tr><td>trk</td><td>Optional par
 
 Thus, in a typical case, for each install which your app registers, you will send a GET request to our endpoint of the form:
 
-`http://api.vungle.com/api/v3/new?app_id=[vungle_app_id]&aaid=[Google_Advertising_ID]&conversion=[1|0]`
+`http://api.vungle.com/api/v3/new?app_id=[Vungle_App_Id]&aaid=[Google_Advertising_ID]&conversion=[1|0]&event_id=[Event_ID]`
 
 or
 
-`http://api.vungle.com/api/v3/new?app_id=[vungle_app_id]&ifa=[iOS_Identifier_For_Advertisers]&conversion=[1|0]`
+`http://api.vungle.com/api/v3/new?app_id=[Vungle_App_Id]&ifa=[iOS_Identifier_For_Advertisers]&conversion=[1|0]&event_id=[Event_ID]`
 
 #####API Versions 1 & 2
 ___
