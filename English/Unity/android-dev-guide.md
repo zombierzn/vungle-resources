@@ -24,7 +24,7 @@ public static void onPause()
 public static void onResume()
 
 // Checks to see if a video is available
-public static bool isVideoAvailable()
+public static bool isAdPlayable()
 
 // Sets if sound should be enabled or not
 public static void setSoundEnabled( bool isEnabled )
@@ -48,7 +48,7 @@ public static event Action onAdStartEvent;
 public static event Action onAdEndEvent;
 
 // Fired when a Vungle ad is cached and ready to be displayed
-public static event Action onCachedAdAvailableEvent;
+public static event Action onAdPlayableChanged;
 
 // Fired when a Vungle video is dismissed. Includes the watched and total duration in milliseconds.
 public static event Action<double,double> onVideoViewEvent;
