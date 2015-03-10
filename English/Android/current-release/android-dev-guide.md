@@ -70,7 +70,7 @@ Including Google Play Services with your project will allow Vungle to provide a 
 
 http://developer.android.com/google/play-services/setup.html#Setup
 
-3) In your app, ensure that the device has a sufficiently up-to-date version of Google Play Services:
+2) In your app, ensure that the device has a sufficiently up-to-date version of Google Play Services:
 
 http://developer.android.com/google/play-services/setup.html#ensure
 
