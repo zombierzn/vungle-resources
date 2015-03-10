@@ -152,4 +152,4 @@ That's it! Quick start guide complete. Stick around if you'd like to check out s
 <a name="advancedStartupConfig"></a>
 ## Advanced Settings
 
-Check out our [advanced settings](https://github.com/Vungle/vungle-resources/blob/master/English/Android/past-releases/3.0.x/android-advanced-settings.md) for instructions on ad customization, debugging, and event callbacks!
+Check out our [advanced settings](android-advanced-settings.md) for instructions on ad customization, debugging, and event callbacks!
