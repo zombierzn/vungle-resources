@@ -173,3 +173,7 @@ If you are using Proguard, please ensure the following lines are in your Proguar
 `-keep class javax.inject.*`
 
 `-keepattributes *Annotation*`
+
+`-keepattributes Signature`
+
+`-keep class dagger.*`

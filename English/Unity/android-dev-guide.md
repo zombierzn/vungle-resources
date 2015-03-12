@@ -1,5 +1,7 @@
 # VungleSDK Unity- Android Developer Guide
 
+* For compatibility purposes with Android 5.+, the Vungle Unity plugin requires JDK 7 to be installed on the development system
+
 ## Setup
 
 * If you haven't already done so, head over to our [dashboard](https://v.vungle.com/dashboard/login) and add your app to your account. You need to do this in order to get your App ID. It’s in **red** on your app’s page.

@@ -77,3 +77,28 @@ The following is a list of methods who have been renamed.
 </tbody>
 </table>
 <p>&nbsp;</p>
+
+
+### Proguard
+
+If you are using Proguard,  the following lines need to be added to the proguard file:
+
+`-keepattributes Signature`
+
+`-keep class dagger.* `
+
+All lines required to use Proguard with the Vungle Android SDK are now :
+
+`-keep class com.vungle.** { public *; }`
+
+`-keep class javax.inject.*`
+
+`-keepattributes *Annotation*`
+
+`-keepattributes Signature`
+
+`-keep class dagger.*`
+
+### Java
+
+To suppport the latest versions of Android, our SDK now requires JDK 7 to be installed on the development system
