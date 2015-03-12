@@ -98,3 +98,7 @@ All lines required to use Proguard with the Vungle Android SDK are now :
 `-keepattributes Signature`
 
 `-keep class dagger.*`
+
+### Java
+
+To suppport the latest versions of Android, our SDK now requires JDK 7 to be installed on the development system

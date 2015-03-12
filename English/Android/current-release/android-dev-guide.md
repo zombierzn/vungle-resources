@@ -6,6 +6,7 @@ This guide will show you how you can easily integrate our SDK into your app so y
 
 * Android 2.3 (Gingerbread - API version 9) or later
 * If your application is written in C/C++, you'll need to use JNI to interface with the Publisher SDK written in Java
+* Java 1.7 - For Android 5.+ compatibility purposes, JDK 7 is required on the development system
 
 ### Here are a few important tips:
 

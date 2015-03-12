@@ -4,6 +4,8 @@
 
 * **The Vungle Extension Requires Adobe AIR SDK 4.0 or higher.** For instructions on updating the AIR SDK in Flash Builder or Flash Professional, refer to “How do I update the AIR SDK?” at the end of this guide.
 
+* If working with Android, the Vungle AIR extension requires JDK 7 to be installed on the development system.
+
 * You can view the ActionScript 3 Class Documentation [here](http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/index.html).
 
 * Review 'example/VungleExample.as' for a sample application class. (If you're a Flash Professional user and are not sure how to use a Document Class, see “How do I use the VungleExample Document Class in Flash CS6?” at the end of this guide.)
