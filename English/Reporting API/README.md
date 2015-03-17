@@ -73,7 +73,7 @@ Example Response:
 
 ```JSON
 {
-    "id": "51896d9c3436ae313c3939b8"
+    "id": "51896d9c3436ae313c3939b8",
     "appId" : "com.amazingGames.ProjectComet",
     "name" : "Project Comet", 
     "installs" : 1372,

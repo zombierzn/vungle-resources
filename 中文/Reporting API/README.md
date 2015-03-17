@@ -73,7 +73,7 @@ Reporting API是一种为广告投放商还有发行商提供控制板上数据�
 
 ```JSON
 {
-    "id": "51896d9c3436ae313c3939b8"
+    "id": "51896d9c3436ae313c3939b8",
     "appId" : "com.amazingGames.ProjectComet",
     "name" : "Project Comet", 
     "installs" : 1372,
