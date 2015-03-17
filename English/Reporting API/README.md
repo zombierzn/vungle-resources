@@ -73,24 +73,26 @@ Example Response:
 
 ```JSON
 {
-    "status" : "a",
-    "platform" : "iOS",
-    "appId" : "51896d9c3436ae313c3939b8",
+    "id": "51896d9c3436ae313c3939b8",
+    "appId" : "com.amazingGames.ProjectComet",
+    "name" : "Project Comet", 
     "installs" : 1372,
-    "name" : "Project Comet",
-    "connection" : "all", "id": "51896d9c3436ae313c3939b8"
+    "platform" : "iOS",
+    "connection" : "all", 
+    "status" : "a"
 }
 ```
 
 |Resource       |Parameters             |Description    |
 | :-----------  | :-------------------  |:-----------   |
-|`GET /api/applications/[App ID]`         |`key=[API Key] date=[YYYY-MM-DD]` <br> or <br> `key=[API Key] start=[YYYY-MM-DD] end=[YYYY-MM-DD]` | Returns a list of the statistics for the specified application on the specified date(s).|
+|`GET /api/applications/[REPORTING API ID]`         |`key=[API Key] date=[YYYY-MM-DD]` <br> or <br> `key=[API Key] start=[YYYY-MM-DD] end=[YYYY-MM-DD]` | Returns a list of the statistics for the specified application on the specified date(s).|
 Example Response: 
 
 ```JSON
 {
     "date" : "2012-08-16",
-    "impressions" : 5165, "views" : 5156,
+    "impressions" : 5165,
+    "views" : 5156,
     "completes" : 1686,
     "revenue" : 16.86,
     "eCPM" : 3.26

@@ -73,24 +73,26 @@ Reporting API是一种为广告投放商还有发行商提供控制板上数据�
 
 ```JSON
 {
-    "status" : "a",
-    "platform" : "iOS",
-    "appId" : "51896d9c3436ae313c3939b8",
+    "id": "51896d9c3436ae313c3939b8",
+    "appId" : "com.amazingGames.ProjectComet",
+    "name" : "Project Comet", 
     "installs" : 1372,
-    "name" : "Project Comet",
-    "connection" : "all", "id": "51896d9c3436ae313c3939b8"
+    "platform" : "iOS",
+    "connection" : "all", 
+    "status" : "a"
 }
 ```
 
 |资源       |参数             |描述    |
 | :-----------  | :-------------------  |:-----------   |
-|`GET /api/applications/[App ID]`         |`key=[API Key] date=[YYYY-MM-DD]` <br> or <br> `key=[API Key] start=[YYYY-MM-DD] end=[YYYY-MM-DD]` | 返回特定应用程序在特定时间的一系列相关数据.|
+|`GET /api/applications/[REPORTING API ID]`         |`key=[API Key] date=[YYYY-MM-DD]` <br> or <br> `key=[API Key] start=[YYYY-MM-DD] end=[YYYY-MM-DD]` | 返回特定应用程序在特定时间的一系列相关数据.|
 回复范例: 
 
 ```JSON
 {
     "date" : "2012-08-16",
-    "impressions" : 5165, "views" : 5156,
+    "impressions" : 5165,
+    "views" : 5156,
     "completes" : 1686,
     "revenue" : 16.86,
     "eCPM" : 3.26
