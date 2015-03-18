@@ -8,7 +8,7 @@ Applicable to Version 3.0+
 
 ## playAd Options
 
-You can pass a dictionary into playAd which changes the default behaviour of the experience. Each key is optional to add to the dictionary, and if omitted they will take a default value. You need to pass in the dictionary each time you show an ad, else the default settings will be used. You can find an example of an options dictionary on [line 70](https://github.com/Vungle/publisher-sample-ios/blob/master/Vungle%20Sample%20App/FirstViewController.m) of the sample app.
+You can pass a dictionary into playAd which changes the default behaviour of the experience. Each key is optional to add to the dictionary, and if omitted they will take a default value. You need to pass in the dictionary each time you show an ad, else the default settings will be used. You can find an example of an options dictionary on [line 99](https://github.com/Vungle/publisher-sample-ios/blob/master/Vungle%20Sample%20App/FirstViewController.m) of the sample app.
 
 * If you are updating from a version prior to 3.0.8, please note that the keys (below) are now constants.
 
