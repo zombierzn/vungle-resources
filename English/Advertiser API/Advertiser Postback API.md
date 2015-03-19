@@ -1,9 +1,9 @@
-##Advertiser API
+##Advertiser Postback API
 
 ###Overview
 In order to provide robust reporting and attribution for your advertising campaigns, Vungle needs to track installs of your app. This way, we can make sure your campaigns are performing well, and driving quality traffic and users to your app. The most common way to send Vungle install information is through a 3rd party tracking solution
 
-###Advertiser API
+###Advertiser Postback API
 ___
 ***TAKE NOTE*** : *As of August 1, 2014, all apps being uploaded to the Google Play Store should use the Play Services Advertising ID in lieu of any other identifiers, or else risk ejection from the Play Store. See the [Google Play Services Documentation](https://developer.android.com/google/play-services/id.html) for more details.*
 ___
