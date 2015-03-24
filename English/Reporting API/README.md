@@ -11,7 +11,7 @@ The reporting API is meant to give advertisers and publishers a programmatic way
 
 |Resource       |Parameters             |Description    |
 | :-----------  | :-------------------  |:-----------   |
-|`GET /api/campaigns`         |`key=[API Key]`         | Returns a list of the campaigns you own. |
+|`GET /api/campaigns`         |`key=[API Key] active=[true/false]`         | Returns a list of the campaigns you own. If active is specified, the campaigns will be filtered to show only active or inactive campaigns.  |
 Example Response:
 
 ```JSON
