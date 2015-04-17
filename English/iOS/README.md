@@ -7,6 +7,8 @@ Switching from an older version of the SDK ( < v3.0 )? Check out our [migration 
 Once you've gotten an ad to play, our [advanced settings](https://github.com/Vungle/vungle-resources/blob/master/English/iOS/iOS-advanced-settings.md) will help you customize the experience.
 
 ## Changelog
+## VERSION 3.0.13
+* Minor Bug Fixes
 
 ## VERSION 3.0.12
 * Fixes crash that happened on rare occasions when sending the app to the background
