@@ -14,6 +14,8 @@ Our SDK supports iOS 6 and higher.
 
 * If you haven't already done so, head over to our [dashboard](https://v.vungle.com/dashboard/login) and add your app to your account. You need to do this so that you can get your App ID that you’ll be adding to your app with our SDK. It’s in **red** on your app’s page.
 
+* Our newest iOS SDK (3.0.13) was released in support of the newest XCode 6.3. Please ensure you are using XCode 6.3 or higher to ensure smooth integration.
+
 * If you’d rather just jump right in with our sample app, head [here](https://github.com/Vungle/publisher-sample-ios/tree/master). 
 
 * If you’re using Adobe Air, Unity, or Corona, check out our [plugins page](https://v.vungle.com/dev/plugins).
