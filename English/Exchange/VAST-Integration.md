@@ -47,7 +47,7 @@ ________________________________________________________________________________
 | Device Type        | {{{device_model}}}             | String     |                                              |                                                                                                                                                 |
 | City               | {{{city}}}                     | String     |                                              |                                                                                                                                                 |
 | Country            | {{{country}}}                  | String     |                                              |                                                                                                                                                 |
-| Connection Type    | {{{language}}}                 | String     | two character Language from headers          | UK                                                                                                                                              |
+|  Language    | {{{language}}}                 | String     | two character Language from headers          | UK                                                                                                                                              |
 
 ### Sample VAST Request URL (VAST tag) with unfilled parameters:
 __________________________________________________________________________________________
