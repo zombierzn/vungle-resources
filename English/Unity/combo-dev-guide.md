@@ -34,7 +34,6 @@ public static void playAd( bool incentivized = false, string user = "" )
 // Plays an ad with more options. Use Dictionary<string,object> to set options.
 public static void playAdWithOptions( Dictionary<string,object> options )
 
-
 // Clear cache (for ios only)
 public static void clearCache()
 
