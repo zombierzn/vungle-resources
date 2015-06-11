@@ -28,9 +28,6 @@ public static bool isAdvertAvailable()
 // Plays an ad with the given options. The user option is only supported for incentivized ads.
 public static void playAd( bool incentivized = false, string user = "" )
 
-// Plays an ad with the given options. The user option is only supported for incentivized ads.
-public static void playAd( bool incentivized = false, string user = "" )
-
 // Plays an ad with more options. Use Dictionary<string,object> to set options.
 public static void playAdWithOptions( Dictionary<string,object> options )
 
@@ -55,7 +52,7 @@ public static void setLogEnable(bool enable)
 | `alertText` | String that is used as the body text of the alert dialog presented when a user closes an incentivized ad experience prematurely. |
 | `closeText` | String title for the close button text of the alert dialog presented when a user closes an incentivized ad experience prematurely. |
 | `continueText` | String title for the close button text of the alert dialog presented when a user closes an incentivized ad experience prematurely. |
-| `large` | Immersive mode |
+| `immersive` | Immersive mode |
 | `key1..8` | We have 8 keys built in here |
 
 #### Vungle.cs fires the following events:
