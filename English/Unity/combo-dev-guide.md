@@ -34,6 +34,17 @@ public static void playAd( bool incentivized = false, string user = "" )
 // Plays an ad with more options. Use Dictionary<string,object> to set options.
 public static void playAdWithOptions( Dictionary<string,object> options )
 
+
+// Clear cache (for ios only)
+public static void clearCache()
+
+// Clear sleep (for ios only)
+public static void clearSleep()
+
+// Set enable/disable fire log event (for ios only)
+public static void setLogEnable(bool enable)
+```
+#### Options
 | Key          | Description |
 | :----------- |:----------- |
 | `incentivized` | You can choose to be notified whenever a user has completed an ad. A typical use case of this is when you are offering some sort of value exchange (‘watch this video and receive 100gems!’). If you choose to make your ads incentivized, we’ll immediately send a message to your server along with a user id (that you provide) so that you can reward your users. YES means this ad will be incentivized. Instructions for setting up incentivized ads are [here](https://github.com/Vungle/vungle-resources/tree/master/English/Incentivized-Ads). |
@@ -47,16 +58,6 @@ public static void playAdWithOptions( Dictionary<string,object> options )
 | `continueText` | String title for the close button text of the alert dialog presented when a user closes an incentivized ad experience prematurely. |
 | `large` | Immersive mode |
 | `key1..8` | We have 8 keys built in here |
-
-// Clear cache (for ios only)
-public static void clearCache()
-
-// Clear sleep (for ios only)
-public static void clearSleep()
-
-// Set enable/disable fire log event (for ios only)
-public static void setLogEnable(bool enable)
-```
 
 #### Vungle.cs fires the following events:
 ```
