@@ -8,6 +8,16 @@ You can find our sample app [here](https://github.com/Vungle/publisher-sample-an
 
 ## Changelog
 
+### VERSION 3.3.1
+
+* Improved event bus performance
+* Added support for remote error reporting
+* Added support for installed app data collection
+* Updated incentivized dialogs to use the default application theme
+* Added link to Vungle's privacy policy in the ad experience
+* Replaced the countdown timer with a progress bar timer
+* Fixed some minor bugs
+
 ### VERSION 3.3.0
 
 * Added support for latest Google Play Services (6.5.87+)
