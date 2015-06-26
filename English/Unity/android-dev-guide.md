@@ -39,7 +39,23 @@ public static bool isSoundEnabled()
 
 // Plays an ad with the given options. The user option is only supported for incentivized ads.
 public static void playAd( bool incentivized = false, string user = "" )
+
+// Plays an ad with the given options.
+public static void playAdEx( Dictionary<string,object> options)
 ```
+#### Options
+| Key          | Description |
+| :----------- |:----------- |
+| `incentivized` | You can choose to be notified whenever a user has completed an ad. A typical use case of this is when you are offering some sort of value exchange (‘watch this video and receive 100gems!’). If you choose to make your ads incentivized, we’ll immediately send a message to your server along with a user id (that you provide) so that you can reward your users. YES means this ad will be incentivized. Instructions for setting up incentivized ads are [here](https://github.com/Vungle/vungle-resources/tree/master/English/Incentivized-Ads). |
+| `orientation` |Set true for matchVideo and false for autoRotate |
+| `userTag` | The key user is the one passed as user in the S2S call (if there are any). |
+| `placement` | You'll want to pass an indicator of which ad was played, for example, 'Level2'. |
+| `alertTitle` | String that is used as the title of the alert dialog presented when a user closes an incentivized ad experience prematurely. |
+| `alertText` | String that is used as the body text of the alert dialog presented when a user closes an incentivized ad experience prematurely. |
+| `closeText` | String title for the close button text of the alert dialog presented when a user closes an incentivized ad experience prematurely. |
+| `continueText` | String title for the close button text of the alert dialog presented when a user closes an incentivized ad experience prematurely. |
+| `immersive` | Immersive mode |
+| `key1..8` | We have 8 keys built in here |
 
 #### VungleAndroidManager.cs fires the following events:
 ```
