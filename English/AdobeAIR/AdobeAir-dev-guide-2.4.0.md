@@ -113,7 +113,7 @@ Initialize the API when your application starts. (If using pure ActionScript, do
 
 2. Initialize the API by calling Vungle.create(), and passing in an array containing your application ID from the Vungle Dashboard. If you are targeting both iOS and Android from the same project, include both IDs in the array- with the iOS id first and the Android id second.
   
-  You should wrap your call to Vungle.create() in a try/catch since Vungle may through an error during the creation process (for instance, the extension throws an error if running on the Desktop):
+  You should wrap your call to Vungle.create() in a try/catch since Vungle may throw an error during the creation process (for instance, the extension throws an error if running on the Desktop):
 
   ```as3
   try
@@ -130,35 +130,25 @@ Initialize the API when your application starts. (If using pure ActionScript, do
 
 ### Display an Interstitial Ad
 
-To display an interstitial ad, call displayAd(). You'll want to first check than ad is available using the isAdAvailable() method:
+To display an interstitial ad, call playAd(). You'll want to first check than ad is available using the isAdAvailable() method:
 
 ```as3
-if(Vungle.vungle.isAdAvailable()) 
-{ 
-// Parameters for displayAd(showCloseButton:Boolean=false, orientationHint:int=0)
-Vungle.vungle.displayAd(false, VungleOrientation.IOS_PORTRAIT | VungleOrientation.ANDROID_MATCH_VIDEO); 
+if (Vungle.vungle.isAdAvailable())
+{
+	Vungle.vungle.playAd();
 }
-
-/** VungleOrientation options:
-        public class VungleOrientation
-        {
-                private static const NUMBER_OF_IOS_BITS:int = 2;
-                public static const ANDROID_AUTOROTATE:int = 3 << NUMBER_OF_IOS_BITS;
-                public static const ANDROID_MATCH_VIDEO:int = 1 << NUMBER_OF_IOS_BITS;
-                public static const IOS_LANDSCAPE:int = 1;
-                public static const IOS_PORTRAIT:int = 2;
-        } */
 ```
 
 ### Display an Incentivized Ad
 
-To display an incentivized ad, call displayIncentivizedAd(). You'll want to first check than ad is available using the isAdAvailable() method. The function takes two Optional parameters: whether to display a Close button on the ad, and an optional user-identifying string (which can be used with Vungle's server-side webhooks, to trigger an HTTP GET whenever a user completes a view):
+To display an incentivized ad, call playAd() with a configuration object and set `incentivized` option to `true`. You'll want to first check than ad is available using the isAdAvailable() method.
 
 ```as3
-if(Vungle.vungle.isAdAvailable())
-{ 
-// Parameters for displayIncentivizedAd(name:String=null, showCloseButton:Boolean=false, orientationHint:int=0)
-Vungle.vungle.displayIncentivizedAd("userName123", false, VungleOrientation.IOS_LANDSCAPE | VungleOrientation.ANDROID_AUTOROTATE);
+if (Vungle.vungle.isAdAvailable())
+{
+	var config:VungleAdConfig = new VungleAdConfig();
+	config.incentivized = true;
+	Vungle.vungle.playAd(config);
 }
 ```
 
@@ -166,9 +156,20 @@ To reward the player for completing an incentivized view, you'll want to impleme
 
 ### Add Event Listeners
 
-The Vungle Extension dispatches three events: VungleEvent.AD_STARTED, VungleEvent.AD_FINISHED, and VungleEvent.AD_VIEWED.
+The Vungle Extension dispatches five events: VungleEvent.AD_PLAYABLE, VungleEvent.AD_STARTED, VungleEvent.AD_FINISHED, VungleEvent.AD_VIEWED and VungleEvent.AD_LOG.
 
-1. The AD_STARTED and AD_FINISHED events are dispatched when an ad is displayed and dismissed, respectively:
+1. The AD_PLAYABLE is dispatched when an ad is ready to play (on Android) or is cached (on iOS):
+
+```as3
+Vungle.vungle.addEventListener(VungleEvent.AD_PLAYABLE, onAdPlayable);
+
+function onAdPlayable(e:VungleEvent):void
+{
+	trace("ad playable");
+}
+```
+
+2. The AD_STARTED and AD_FINISHED events are dispatched when an ad is displayed and dismissed, respectively:
 
   ```as3
   Vungle.vungle.addEventListener(VungleEvent.AD_STARTED, onAdStarted); 
@@ -181,11 +182,11 @@ The Vungle Extension dispatches three events: VungleEvent.AD_STARTED, VungleEven
 
   function onAdFinished(e:VungleEvent):void
   { 
-    trace("ad dismissed"); 
+    trace("ad dismissed: " + e.wasCallToActionClicked);
   }
   ```
 
-2. The AD_VIEWED event is triggered when the user is no longer in a Vungle ad, and has watched some portion of the video. The 'watched' property is the amount of time, in seconds, of a video that the user watched. The 'length' property is the total length of the video. 
+3. The AD_VIEWED event is triggered when the user is no longer in a Vungle ad, and has watched some portion of the video. The 'watched' property is the amount of time, in seconds, of a video that the user watched. The 'length' property is the total length of the video. 
 
   (This event may not be called in some cases, such as when there is a pre-roll HTML asset in the advertisement and the user opts out of the ad before seeing the video.) 
 
@@ -205,30 +206,92 @@ The Vungle Extension dispatches three events: VungleEvent.AD_STARTED, VungleEven
   }
   ```
 
-### Toggle Auto-rotation
-
-You can use the setAutoRotationEnabled() method to toggle whether videos will automatically rotate to the orientation of the user's device:
+4. The AD_LOG is dispatched when a log message is sent by the Vungle SDK. You can use it for debugging. Logging is implemented only in Vungle SDK for iOS, so this event is platform-specific.
 
 ```as3
-Vungle.vungle.setAutoRotation(true);
+Vungle.vungle.setLoggingEnabled(true);
+Vungle.vungle.addEventListener(VungleEvent.AD_LOG, onAdLog);
+
+private function onAdLog(e:VungleEvent):void
+{
+	log("ad log: " + e.message);
+}
+
 ```
 
-### Toggle Sound
+### More options
 
-You can use the setSoundEnabled() method to toggle whether ads will play sound, or be muted:
+As you have already seen before, you can pass an object with configuration options when calling `playAd()` method. These are the available properties in `VungleAdConfig`:
+
+#### orientation
+
+With this property you can specify the orientation of the ad. There are different set of flags for Android and iOS, see `VungleOrientation` class for details. The flags can be combined with a bitwise `OR` operator:
 
 ```as3
-Vungle.vungle.setSoundEnabled(true);
+config.orientation = VungleOrientation.ANDROID_AUTOROTATE | VungleOrientation.IOS_PORTRAIT;
 ```
 
-### Toggle Back-Button Enabled (Android Only)
+#### soundEnabled
 
-You can use the setBackButtonEnabled() and setIncentivizedBackButtonEnabled() methods to toggle whether the back button will be enable during ads on Android devices. On iOS, these functions will have no effect:
+You can use this property to toggle whether ads will play sound, or be muted.
+
+#### backButtonImmediatelyEnabled
+
+This option is Android-specific. If `true`, allows the user to immediately exit an ad using the back button. If `false`, the user cannot use the back button to exit the ad until the on-screen close button is shown.
+
+#### immersiveMode
+
+This option is Android-specific. It enables or disables [immersive mode](https://developer.android.com/training/system-ui/immersive.html) on KitKat+ devices.
+
+#### incentivized
+
+Sets the incentivized mode. If `true`, user will be prompted with a confirmation dialog when attempting to skip the ad.
+
+#### incentivizedUserId
+
+The unique user id to be passed to your application to verify that this user should rewarded for watching an incentivized ad.
+
+#### incentivizedCancelDialogTitle, incentivizedCancelDialogBodyText, incentivizedCancelDialogCloseButtonText, incentivizedCancelDialogKeepWatchingButtonText
+
+These options allow you to customize the confirmation dialog that appears when skipping an incentivized ad.
+
+#### extra1 … extra8
+
+You can use this to keep track of metrics such as age group, gender, etc.
+
+#### placement
+
+An optional ad placement name for enhanced reporting on the dashboard.
+
+#### largeButtons
+
+This option is iOS-specific. If set to `true`, the on-screen buttons displayed over the video will be larger.
+
+### Global defaults
+
+You can use global configuration object to set default values for the options:
 
 ```as3
-Vungle.vungle.setBackButtonEnabled(true); 
-Vungle.vungle.setIncentivizedBackButtonEnabled(true);
+// set any configuration options you like
+VungleAdConfig.globalConfig.orientation = VungleOrientation.ANDROID_MATCH_VIDEO;
+VungleAdConfig.globalConfig.soundEnabled = false;
 ```
+
+Then enery new `VungleAdConfig` object is created with these values set by default. `playAd()` without options also uses the global configuration.
+
+### Deprecated methods
+
+Since v2.4.0 the following methods are deprecated:
+
+```as3
+Vungle.vungle.displayAd(showCloseButton:Boolean, orientationHint:int):void;
+Vungle.vungle.displayIncentivizedAd(name:String, showCloseButton:Boolean, orientationHint:int):void;
+Vungle.vungle.setSoundEnabled(enabled:Boolean):void;
+Vungle.vungle.setBackButtonEnabled(backEnabled:Boolean):void;
+Vungle.vungle.setIncentivizedBackButtonEnabled(backEnabled:Boolean):void;
+```
+
+These methods have been kept for backward compatibility. It's not recommended to use them in new applications or mix with the `playAd()` method call.
 
 ## Troubleshooting and FAQ
 
