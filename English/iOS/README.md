@@ -7,6 +7,13 @@ Switching from an older version of the SDK ( < v3.0 )? Check out our [migration 
 Once you've gotten an ad to play, our [advanced settings](https://github.com/Vungle/vungle-resources/blob/master/English/iOS/iOS-advanced-settings.md) will help you customize the experience.
 
 ## Changelog
+
+## VERSION 3.1.0
+* API changed in Vungle delegate protocol: `vungleSDKhasCachedAdAvailable` changed to `vungleSDKAdPlayableChanged:`
+* API changed in Vungle singleton: `isCachedAdAvailable` deprecated in favor of `isAdPlayable`
+* New UI while playing video
+* Bug fixes (background related bug, networking improvements)
+
 ## VERSION 3.0.13
 * Minor Bug Fixes
 
