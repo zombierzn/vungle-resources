@@ -8,6 +8,9 @@ Once you've gotten an ad to play, our [advanced settings](https://github.com/Vun
 
 ## Changelog
 
+## VERSION 3.1.2
+* Bug fixes
+
 ## VERSION 3.1.0
 * API changed in Vungle delegate protocol: `vungleSDKhasCachedAdAvailable` changed to `vungleSDKAdPlayableChanged:`
 * API changed in Vungle singleton: `isCachedAdAvailable` deprecated in favor of `isAdPlayable`
