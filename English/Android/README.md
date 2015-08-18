@@ -7,6 +7,8 @@ Get started with the dev guide, which will help you integrate and play an ad. On
 You can find our sample app [here](https://github.com/Vungle/publisher-sample-android). Check out the code, or run it for a demo of our ad experience!
 
 ## Changelog
+### VERSION 3.3.2
+* fixed a bug that might cause ad to crash when returning to foreground
 
 ### VERSION 3.3.1
 
