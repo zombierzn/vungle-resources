@@ -8,6 +8,12 @@ Once you've gotten an ad to play, our [advanced settings](https://github.com/Vun
 
 ## Changelog
 
+## VERSION 3.2.0
+* The iOS SDK only supports iOS 7+
+* Added SSL communication to server
+* Updates to improve compatibility with mediation layers
+* Bug fixes
+
 ## VERSION 3.1.2
 * Bug fixes
 
