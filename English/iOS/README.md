@@ -9,10 +9,14 @@ Once you've gotten an ad to play, our [advanced settings](https://github.com/Vun
 ## Changelog
 
 ## VERSION 3.2.0
-* The iOS SDK only supports iOS 7+
-* Added SSL communication to server
-* Updates to improve compatibility with mediation layers
-* Bug fixes
+* Enabled SSL as default for all internal network requests
+* Improved caching performance
+* Resolved race-condition crash around fetchConfig request
+* Unified adPlayable behavior across flags & events
+* Fix for playAd return code inconsistency during streaming ad plays
+* Fix for progress bar location on smaller screens
+* Fix for AppStore failing to load on some occasions
+* Fix for issues resulting in inaccessible postroll
 
 ## VERSION 3.1.2
 * Bug fixes
